@@ -1,0 +1,20 @@
+Leer previamente:
+    https://support.comodo.com/index.php?/Default/Knowledgebase/Article/View/1/19/csr-generation-using-openssl-apache-wmod_ssl-nginx-os-x
+    https://support.comodo.com/index.php?/Default/Knowledgebase/Article/View/789/37/certificate-installation-nginx
+    https://www.namecheap.com/support/knowledgebase/article.aspx/9446/0/apache-opensslmodsslnginx
+    
+Nota: Recomendaciones no usar caracteres especiales para passwords, solo alfanumericos
+    
+Crear key y csr:    
+    # mkdir -p /usr/local/nginx/conf/
+    # cd /usr/local/nginx/conf/
+    # openssl req -new -newkey rsa:2048 -nodes -keyout server.key -out server.csr
+    
+Solicitar certificado en comodo:
+Copiar archivos en /usr/local/nginx/conf/
+    # cat server.crt server.ca-bundle > ssl-bundle.crt
+    
+Configurar en nginx:    
+    # nano /etc/nginx/conf.d/odoo-nginx.conf 
+    ssl_certificate /usr/local/nginx/conf/ssl-bundle.crt;
+    ssl_certificate_key /usr/local/nginx/conf/server.key;

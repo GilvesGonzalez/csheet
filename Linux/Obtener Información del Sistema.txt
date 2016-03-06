@@ -1,0 +1,48 @@
+Conocer ip publica:
+    $ curl ip.appspot.com
+    
+    
+Fabricante del equipo:
+    # dmidecode -s system-manufacturer
+    
+    
+Fabricante del procesador:
+    # dmidecode -s processor-manufacturer
+    
+    
+Nombre del producto:
+    # dmidecode -s system-product-name
+    
+    
+Versión del producto:
+    # dmidecode -s system-version
+    
+    
+Número de serie del equipo:
+    # dmidecode -s system-serial-number
+    
+    
+SKU (Stock Keeping Unit) ó P/N (Part Number) del producto:
+    # dmidecode | grep -i sku
+    
+    
+Información detallada del equipo:
+    # dmidecode
+    # dmidecode -s
+
+    
+Mostrar datos del cpu:
+    $ lscpu
+    
+    
+Informacion del sistema:
+    $ uname -a
+    $ cat /etc/system-release
+    $ cat /etc/*-release
+
+    
+Información de red:
+    $ ifconfig
+    $ ifconfig -a
+    $ ifconfig [INTERFAZ]
+

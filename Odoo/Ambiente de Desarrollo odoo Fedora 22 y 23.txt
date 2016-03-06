@@ -1,0 +1,73 @@
+Introducción
+============
+Este documento es un manual explica paso a paso la preparación del 
+ambiente de desarrollo de odoo 9.0.
+
+Se debe leer los estándares de nombre de repositorios previamente.
+
+
+Instalar utilidades
+-------------------
+# dnf update
+
+
+Configuración postgresql
+------------------------
+# dnf install -y postgresql-server postgresql-devel postgresql-contrib pgadmin3
+# postgresql-setup --initdb
+# systemctl enable postgresql
+# systemctl start postgresql
+# su - postgres
+$ createuser -s odoo
+$ createdb odoo -O odoo
+$ pslq
+postgres=# ALTER USER postgres WITH password 'PASSWORD';
+postgres=# ALTER USER odoo WITH password 'odoo';
+postgres=# \q
+$ exit
+# cd /var/lib/pgsql/data/
+# nano postgresql.conf
+Cambiar listen_addresses a listen_addresses = '*'
+Descomentar port = 5432
+# nano pg_hba.conf
+Cambiar métodos de autenticación a md5
+# systemctl restart postgresql
+    
+    
+Instalar odoo
+-------------
+# dnf install -y git gcc libxml2-devel libxslt-devel python-devel openldap openldap-devel zip unzip zlib-devel python-pillow python-pillow-devel openssl openssl-devel libjpeg-turbo libjpeg-turbo-devel python-virtualenv
+# dnf install -y npm
+# npm install -g less less-plugin-clean-css
+$ git clone https://github.com/odoo/odoo.git
+Si ya existe el branch 9
+$ git checkout 9.0
+Si no exise el branch 9
+$ git checkout -b 9.0 origin/9.0
+$ virtualenv odoo9
+$ cd odoo9
+$ source bin/activate
+(odoo9)$ cd RUTA_ODOO
+(odoo9)$ pip install -r requirements.txt
+(odoo9)$ python odoo.py -d odoo -r odoo -w odoo
+Configurar pycharm
+
+
+Pycharm virtualenv
+------------------
+https://www.jetbrains.com/pycharm/help/creating-virtual-environment.html
+https://www.jetbrains.com/pycharm/help/adding-existing-virtual-environment.html
+
+
+En caso de problemas con dateutil
+---------------------------------
+# pip uninstall python-dateutil
+# pip install python-dateutil==2.2
+
+
+Debug en odoo
+-------------
+En primer lugar se debe aplicar un pacth para esta función
+Patch: Recursos/odoo-debug.patch
+
+Posteriormente configurar pycharm

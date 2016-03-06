@@ -1,0 +1,38 @@
+Utilidades
+----------
+- Fedy
+- Skype
+- TeamViewer
+- VirtualBox
+- Mega
+- ownCloud
+
+Desarrollo
+----------
+- Eclipse Luna: IDE para iDempiere 3.1
+- Eclipse Kepler: IDE para iDempiere 2.1
+- Eclipse Mars: IDE Java
+- Android Studio: IDE Android
+- Pycharm: IDE Python
+- iReport 5.5.1: Editor de reportes
+- Atom: Editor de texto
+- SmartGit: GUI Git y Mercurial
+- TortoiseHG: GUI Mercurial
+- Meld: Comparador
+- pgAdmin: Administrador PostgreSQL
+- Datastudio: Administrados de bases de datos
+- Visual Paradigm: UML
+- yEd: Editor de graficos en general
+- Pencil: Diseño de interfaces
+- MonoDevelop: Desarrollo en .Net, c#
+- Bytecode Viewer: Decompilador Java
+- SQLite browser: Administrador de bases de datos SQLite
+
+Oficina
+-------
+- LibreOffice
+- Kile, LaTeX: Edicion de textos
+
+Internet
+--------
+- Google Chrome

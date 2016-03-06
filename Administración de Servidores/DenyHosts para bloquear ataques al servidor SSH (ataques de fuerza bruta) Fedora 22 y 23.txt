@@ -1,0 +1,32 @@
+Revisar previamente:
+http://www.linux-party.com/index.php/57-seguridad/8971-instalar-denyhosts-para-bloquear-ataques-al-servidor-ssh-ataques-de-fuerza-bruta
+http://www.tecmint.com/block-ssh-server-attacks-brute-force-attacks-using-denyhosts/
+http://blog.desdelinux.net/tips-para-proteger-tu-servidor-linux-de-ataques-externos/
+
+
+Instalacion
+-----------
+# dnf install -y denyhosts
+# systemctl enable denyhosts.service
+# systemctl start denyhosts.service
+
+
+Personalizar configuracion
+--------------------------
+# nano /etc/denyhosts.conf
+
+
+Revisar log
+-----------
+# tail -f /var/log/secure
+
+
+Para quitar o eliminar direcciones IP prohibido completamente. 
+Hay que editar los siguientes archivos y eliminar la dirección IP.
+------------------------------------------------------------------
+# nano /etc/hosts.deny
+# nano /var/lib/denyhosts/hosts
+# nano /var/lib/denyhosts/hosts-restricted
+# nano /var/lib/denyhosts/hosts-root
+# nano /var/lib/denyhosts/hosts-valid
+# nano /var/lib/denyhosts/users-hosts

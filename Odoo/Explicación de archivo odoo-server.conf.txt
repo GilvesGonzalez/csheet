@@ -1,0 +1,272 @@
+Documentación oficial:
+https://www.odoo.com/documentation/8.0/reference/cmdline.html#reference-cmdline-config
+
+
+Otros links:
+http://www.vionblog.com/openerp-server-conf-for-openerp-7-explained/
+
+
+Más opciones de configuración del servidor:
+El servidor Odoo soporta un buen número de otras opciones. 
+Podemos comprobar todas opciones disponibles  con el parámetro --help:
+./odoo.py --help
+
+
+Para obtener un archivo de configuración ejemplo:
+    $ ~/odoo-dev/odoo/odoo.py --save --stop-after-init
+    Genera un archivo en la siguiente ruta ~/.openerp_serverrc
+    $ more ~/.openerp_serverrc
+
+    
+Opciones Comunes
+----------------
+# Contraseña de administrador para la creación, restauración y copia de 
+# seguridad de bases de datos
+admin_passwd = admin
+
+# Separador por defecto para la importación y exportación con archivo CSV 
+csv_internal_sep = ,
+
+# Para comprimir informes
+reportgz = False
+
+# Carga de datos de demostración para desactivar los módulos que se instalen 
+# (separados por comas, utilice "all" para todos los módulos)
+without_demo = False
+
+# Utilice esto para gran importación de datos, si se bloquea usted será 
+# capaz de continuar en el estado actual. Proporcione un nombre de archivo 
+# para almacenar los estados intermedios de importación.
+import_partial = 
+
+# Archivo donde se almacenará el pid del servidor
+pidfile = None
+
+# Especificar rutas de addons adicionales (separados por comas)
+addons_path = /full/path/to/addons
+
+# Lista de módulos separador por comas a nivel de servidor por defecto = web
+server_wide_modules = None
+
+
+Opciones de base de datos relacionados
+--------------------------------------
+# Especificar el nombre de la base de datos
+db_name = False
+
+# Especificar el nombre de usuario de base de datos
+db_user = False
+
+# Especificar la contraseña de la base de datos
+db_password = False
+
+# Especificar la ruta ejecutable pg
+pg_path = None
+
+# Especificar el host de base de datos
+db_host = False
+
+# Especificar el puerto de la base de datos
+db_port = False
+
+# Especificar el número máximo de conexiones físicas para PosgreSQL
+db_maxconn = 64
+
+# Especificar una plantilla de base de datos personalizada
+# para crear una nueva base de datos
+db_template = template1
+
+
+Opciones avanzadas
+------------------
+# Habilitar el modo de depuración
+debug_mode = False
+
+# Especificar referencia zona horaria para el servidor 
+# (por ejemplo, Europa / Bruselas ")
+timezone = False
+
+# Forzar un límite en el número máximo de registros conservados 
+# en las tablas osv_memory virtuales. 
+# El valor predeterminado es Falso, que significa que no hay 
+# límite relacionado con la cuenta.
+osv_memory_count_limit = False 
+
+# Forzar un límite en la edad máxima de registros conservados 
+# en las tablas osv_memory virtuales.
+# Este es un valor decimal expresado en horas, y el valor por 
+# defecto es de 1 hora.
+osv_memory_age_limit = 1.0 
+
+# El número máximo de subprocesos de procesamiento trabajos 
+# simultáneamente cron (por defecto 2)
+max_cron_threads = 2
+
+# Utilice la función unaccent proporcionada por la 
+# base de datos cuando esté disponible.
+unaccent = False
+
+
+XML-RPC / HTTP - Configuración XML-RPC
+--------------------------------------
+# Desactivar el protocolo XML-RPC
+xmlrpc = True
+
+# Especifique la dirección IP de TCP para el protocolo XML-RPC. 
+# La cadena vacía se une a todas las interfaces.
+xmlrpc_interface = 
+
+# Especificar el puerto TCP para el protocolo XML-RPC
+xmlrpc_port = 8069
+
+# Habilitar el comportamiento correcto cuando detrás de un proxy inverso
+proxy_mode = False
+
+
+Configuración de seguridad XML-RPC/HTTPS 
+----------------------------------------
+# Deshabilitar el protocolo Secure XML-RPC
+xmlrpcs = True
+
+# Especifique la dirección IP de TCP para el protocolo Secure XML-RPC. La cadena vacía se une a todas las interfaces.
+xmlrpcs_interface = 
+
+# Especificar el puerto TCP para el protocolo Secure XML-RPC
+xmlrpcs_port = 8071
+
+# Especificar el archivo de certificado para la conexión SSL
+secure_cert_file = server.cert
+
+# Especificar el archivo de clave privada para la conexión SSL
+secure_pkey_file = server.pkey
+
+
+Configuración NET-RPC
+---------------------
+# Activar el protocolo NETRPC
+netrpc = False
+
+# Especificar la dirección IP TCP para el protocolo NETRPC
+netrpc_interface = 
+
+# Especificar el puerto TCP para el protocolo NETRPC
+netrpc_port = 8070
+
+
+WEB - interfaz de configuración Web
+-----------------------------------
+# Filtro que aparece REGEXP base de datos
+dbfilter =. *
+
+
+Servicio HTTP estático
+----------------------
+# Habilitar el servicio HTTP estático para servir archivos HTML sin formato
+static_http_enable = False 
+
+# Especificar el directorio que contiene los archivos HTML 
+# estáticos (por ejemplo: /var/ www/)
+static_http_document_root = None
+
+# Especificar el prefijo raíz URL donde desea navegadores 
+# web para acceder a los archivos HTML estáticos (por ejemplo '/')
+static_http_url_prefix = None
+
+
+Configuración de Pruebas de Grupo
+---------------------------------
+# Lance un archivo de prueba YML
+test_file = False
+
+# Si se establece, salvará muestra de todos los informes en este directorio
+test_report_directory = False
+
+# Habilitar YAML y pruebas unitarias.
+test_enable = False
+
+# Comprometerse cambios de base de datos realizadas por YAML o pruebas XML
+test_commit = False
+
+
+Registro de Grupo - Configuración de registro
+---------------------------------------------
+# Archivo donde se almacenará el registro del servidor
+logfile = None
+
+# No rotar el archivo de registro
+logrotate = True
+
+# Enviar el registro al servidor syslog
+syslog = False
+
+# Configurar un manejador al NIVEL para un prefijo dado. 
+# Un prefijo vacío indica el registrador raíz. 
+# Esta opción se puede repetir. 
+# Ejemplo: "openerp.orm:DEBUG" or "werkzeug:CRITICAL" (default: ":INFO")
+log_handler = [':INFO']
+
+# Especificar el nivel de la explotación forestal. 
+# Los valores aceptados: info, debug_rpc, 
+# warn, test, critical, debug_sql, error, 
+# debug, debug_rpc_answer, notset
+log_level = info
+
+
+Grupo SMTP - Configuración SMTP
+-------------------------------
+# Especificar la dirección de correo electrónico SMTP 
+# para el envío de correo electrónico
+email_from = False 
+
+# Especificar el servidor SMTP para el envío de correo electrónico
+smtp_server = localhost 
+
+# Especificar el puerto SMTP
+smtp_port = 25 
+
+# Especificar el soporte SSL del servidor SMTP o no
+smtp_ssl = False 
+
+# Especificar el nombre de usuario SMTP para el envío de correo electrónico
+smtp_user = False
+
+# Especificar la contraseña SMTP para el envío de correo electrónico
+smtp_password = False
+
+
+Opciones de internacionalización
+--------------------------------
+translate_modules = ['all']
+
+
+Opciones relacionadas con la seguridad
+---------------------------------------
+# Deshabilitar la capacidad de devolver la lista de bases de datos
+list_db = True
+
+
+Opciones multiprocesamiento
+---------------------------
+# Especifique el número de trabajadores, 0 Modo prefork desactivar.
+workers = 0
+
+# Máximo permitido la memoria virtual por trabajador, 
+# cuando se alcanzó el trabajador se restablece después
+# de la petición actual (por defecto 671088640 aka 640 MB)
+limit_memory_soft = 671088640
+
+# Máximo permitido la memoria virtual por trabajador, 
+# cuando llegó, cualquier asignación de memoria fallará 
+# (predeterminado 805306368 aka 768 MB)
+limit_memory_hard = 805306368
+
+# Máximo permitido tiempo de CPU por solicitud (por defecto 60)
+limit_time_cpu = 60
+
+# Máximo permitido en tiempo real por la petición (por defecto 120)
+limit_time_real = 120
+
+# Número máximo de solicitud para ser procesada por 
+# trabajador (por defecto 8192)
+limit_request = 8192
+

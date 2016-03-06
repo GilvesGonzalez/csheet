@@ -1,0 +1,59 @@
+Consultar version:
+    systemd --version
+    
+
+Calcular tiempos de arranque:
+    systemd-analyze
+    systemd-analyze blame
+
+
+Consultar servicios:
+    systemctl list-unit-files
+    
+    
+Consultar servicios iniciados:
+    systemctl list-units
+    
+    
+Activar servicio al iniciar sistema:
+    systemctl enable name.service
+    
+    
+Desactivar servicio al iniciar sistema:
+    systemctl disable name.service
+    
+    
+Iniciar servicio:
+    systemctl start name.service
+    
+    
+Detener servicio:
+    systemctl stop name.service
+    
+
+Reiniciar servicio:
+    systemctl restart name.service
+    
+
+Informacion de servicio:
+    systemctl status name.service
+    
+    
+Recargar servicio:
+    systemctl reload name.service
+    
+    
+Evitar que un servicio se inicie:
+    systemctl mask name.service
+    
+
+Desactivar mask:
+    systemctl unmask name.service
+    
+    
+Reiniciar systemd:
+    systemctl daemon-reload
+    
+    
+Historial de servicio:
+    journalctl -u name.service

@@ -1,0 +1,12 @@
+Recargar y mostrar
+------------------
+    ldconfig -v
+    
+    
+Nueva ruta 
+----------
+- Agregar archivo .conf a /etc/ld.so.conf.d/
+- Agregar al archivo la ruta deseada 
+    
+Ejemplo archivo aria.conf
+/usr/local/Aria/lib

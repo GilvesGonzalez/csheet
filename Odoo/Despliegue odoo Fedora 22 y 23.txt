@@ -1,0 +1,154 @@
+Introducción
+============
+Este documento es un manual explica paso a paso el despliegue de odoo 9.0 en 
+producción.
+Se debe leer los estándares de nombre de repositorios previamente.
+
+
+Conocer sistema operativo
+-------------------------
+# cat /etc/system-release
+
+O para mayor información
+# cat /etc/*-release
+
+Además asegurarse del hostname
+# hostname
+
+
+Generación de ssh key local
+---------------------------
+Generar ssh local si no se tiene
+$ ssh-keygen
+
+Enviar ssh a servidor y crear carpeta
+$ cat ~/.ssh/id_rsa.pub | ssh root@IP_O_DNS "mkdir -p ~/.ssh && cat >>  ~/.ssh/authorized_keys"
+
+Enviar ssh carpeta previamente creada
+$ cat ~/.ssh/id_rsa.pub | ssh root@IP_O_DNS "cat >> ~/.ssh/authorized_keys"
+
+
+Instalar utilidades
+-------------------
+# dnf update -y
+# dnf install -y mlocate ntp nano
+
+
+Configuración del timezone
+--------------------------
+# timedatectl status
+# timedatectl list-timezones | grep America
+# timedatectl set-timezone America/Guayaquil
+# timedatectl set-ntp yes
+# systemctl enable ntpdate.service
+# systemctl start ntpdate.service
+# date
+
+
+Configuración de firewall
+-------------------------
+# dnf install -y iptables-services
+# systemctl stop firewalld.service
+# systemctl mask firewalld.service
+# systemctl disable firewalld.service
+# systemctl enable iptables.service
+# systemctl start iptables.service
+# iptables -L
+# /usr/libexec/iptables/iptables.init save
+# nano /etc/sysconfig/iptables
+Agregar las siguientes lineas:
+-A INPUT -p tcp -m state --state NEW -m tcp --dport 80 -j ACCEPT
+-A INPUT -p tcp -m state --state NEW -m tcp --dport 443 -j ACCEPT
+# systemctl restart iptables.service
+# systemctl daemon-reload
+
+
+Configuración postgresql
+------------------------
+# dnf install -y postgresql-server postgresql-devel postgresql-contrib
+# postgresql-setup --initdb
+# systemctl enable postgresql.service
+# systemctl start postgresql.service
+# su - postgres
+$ psql
+postgres=# ALTER USER postgres WITH password 'PASSWORD';
+postgres=# \q
+$ exit
+    
+    
+Instalar odoo
+-------------
+# dnf install -y git gcc libxml2-devel libxslt-devel python-devel openldap openldap-devel zip unzip zlib-devel python-pillow python-pillow-devel openssl openssl-devel libjpeg-turbo libjpeg-turbo-devel
+# dnf install -y npm
+# npm install -g less less-plugin-clean-css
+# useradd -m odoo
+# passwd odoo
+Escribir password
+# su - postgres -c "createuser -s odoo"
+# su - postgres -c "createdb odoo9 -O odoo"
+# su - odoo
+$ cd ~
+$ git clone https://github.com/odoo/odoo.git --depth 1 --branch 9.0 --single-branch odoo9
+$ chmod 700 odoo9
+$ exit
+# cd /home/odoo/odoo9
+# pip install -r requirements.txt
+
+
+Configurar odoo
+---------------
+# su - odoo
+$ cd /home/odoo/odoo9
+$ nano odoo-server.conf
+Copiar las configuraciones del archivo Recursos/odoo-server.conf
+
+
+Configurar nohup odoo
+---------------------
+# su - odoo
+$ cd /home/odoo/odoo9
+$ nano odoo-server.sh
+Copiar el script del archivo Recursos/odoo-server.sh
+$ chmod 700 odoo-server.conf
+$ chmod 700 odoo-server.sh
+$ chmod 700 odoo.py
+$ chmod 700 openerp-server
+
+
+Configuracion de nginx
+----------------------
+# dnf install -y nginx
+# mkdir /etc/nginx/ssl_cert
+# cd /etc/nginx/ssl_cert
+# openssl req -new -newkey rsa:2048 -nodes -keyout server.key -out server.csr
+# openssl x509 -req -days 365 -in server.csr -signkey server.key -out server.crt
+# nano /etc/nginx/conf.d/odoo-nginx.conf
+Copiar las configuraciones del archivo Recursos/odoo-nginx.conf
+# setsebool -P httpd_can_network_connect true
+# systemctl enable nginx.service
+# systemctl start nginx.service
+# systemctl daemon-reload
+
+
+Ejecutar odoo con nohup
+-----------------------
+$ su odoo
+$ cd /home/odoo/odoo9
+$ ./odoo-server.sh start
+
+
+En caso de problemas con dateutil
+---------------------------------
+# pip uninstall python-dateutil
+# pip install python-dateutil==2.2
+
+
+Configuracion de service
+------------------------------------------
+# nano /usr/lib/systemd/system/odoo.service
+Copiar las configuraciones del archivo Recursos/odoo.service
+# chown odoo:odoo /usr/lib/systemd/system/odoo.service
+# chmod 664 /usr/lib/systemd/system/odoo.service
+# systemctl daemon-reload
+# systemctl enable odoo.service
+# systemctl start odoo.service

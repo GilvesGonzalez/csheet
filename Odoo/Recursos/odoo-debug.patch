@@ -1,0 +1,19 @@
+Index: openerp/__init__.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- openerp/__init__.py	(revision 8595bc2ff762e4c5ecbb4103a73d9fa1e428bb2b)
++++ openerp/__init__.py	(revision )
+@@ -8,9 +8,8 @@
+ #----------------------------------------------------------
+ # Is the server running with gevent.
+ import sys
+-evented = False
+-if sys.modules.get("gevent") is not None:
+-    evented = True
++evented = (sys.modules.get("gevent") is not None
++           and sys.gettrace() is None)
+ 
+ # Is the server running in pefork mode (e.g. behind Gunicorn).
+ # If this is True, the processes have to communicate some events,

@@ -1,0 +1,91 @@
+Tips
+----
+- Usuario por defecto root
+
+
+Leer
+----
+https://elbinario.net/2014/10/23/comandos-basicos-para-bases-de-datos-mysql/
+
+
+Acceder a mariadb
+-----------------
+$ mysql -u nombreusuario -p
+
+
+Salir
+-----
+> exit;
+
+
+Mostrar bases de datos actuales para el usuario con el que hemos accedido
+-------------------------------------------------------------------------
+> show databases;
+
+
+Listar usuarios
+---------------
+> select user from mysql.user;
+
+
+Crear base de datos
+-------------------
+> create database shit;
+
+
+Crear Usuario
+-------------
+> create user 'nombreusuario'@'localhost' identified by 'laclave';
+> create user 'nombreusuario' identified by 'laclave';
+
+
+Accesos limitados
+-----------------
+> grant select, insert on basededatos.* to 'nombreusuario'@'localhost' identified by 'laclave';
+
+
+Acceder/conectar/usar una base de datos
+---------------------------------------
+> use nombrebasededatos;
+> connect nombrebasededatos;
+
+
+Mostrar las tablas de una base de datos
+---------------------------------------
+> show tables;
+> show tables from nombrebasededatos;
+
+
+Mostrar las columnas de una tabla determinada 
+---------------------------------------------
+> describe nombrebasededatos.nombretabla;
+> describe nombretabla;
+
+
+Eliminar una tabla y su contenido
+---------------------------------
+> drop table nombretabla;
+
+
+Eliminar el contenido de la tabla (los registros) pero no su estructura
+-----------------------------------------------------------------------
+> truncate table nombretabla;
+
+
+Renombrar una tabla
+-------------------
+> rename table nombretabla to nuevonombretabla;
+
+
+Realizar copia de una base de datos determinada
+-----------------------------------------------
+$ mysqldump -u nombreusuario -p nombrebasededatos > nombrebasededatos.sql
+
+
+Realizar copia de una base de datos determinada permitiendo restaurarla sin tener que eliminar la vieja
+-------------------------------------------------------------------------------------------------------
+$ mysqldump --add-drop-table -u nombreusuario -p nombrebasededatos > nombrebasededatos.sql
+
+
+Realizar restauración de la copia:
+$ mysql -u nombreusuario -p nombrebasededatos < nombrebasededatos.sql

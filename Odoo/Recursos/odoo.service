@@ -1,0 +1,12 @@
+[Unit]
+Description=Odoo 9.0 ERP and CRM server  
+After=postgresql.service
+
+[Service]
+Type=simple  
+User=odoo  
+Group=odoo  
+ExecStart=/bin/python /home/odoo/odoo9/odoo.py -c /home/odoo/odoo9/odoo-server.conf
+
+[Install]
+WantedBy=multi-user.target 

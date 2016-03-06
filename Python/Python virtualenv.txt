@@ -1,0 +1,53 @@
+Introducción
+------------
+Un entorno virtual de Python es un espacio completamente independiente de otros
+entornos virtuales y de los paquetes instalados globalmente en el sistema
+
+
+Instalacion
+-----------
+Fedora
+$ sudo dnf install python-virtualenv
+
+Debian, Ubuntu
+$ sudo apt-get install virtualenv python-virtualenv
+
+
+Creación de entorno
+-------------------
+$ virtualenv mi_proyecto
+
+Lo que crea el directorio mi_proyecto/ con la siguiente estructura:
+mi_proyecto/
+    bin/
+    include/
+    lib/
+    
+    
+Activar entorno
+---------------
+$ cd mi_proyecto
+$ source bin/activate
+(mi_proyecto)$
+
+
+Desactivar entorno
+------------------
+(mi_proyecto)$ deactivate
+$
+
+
+Instalación de paquetes
+-----------------------
+Activar entorno
+
+(mi_proyecto)$ pip install paquete
+
+O para archivo de requerimientos
+(mi_proyecto)$ pip install -r requirements.txt
+
+
+Pycharm virtualenv
+------------------
+https://www.jetbrains.com/pycharm/help/creating-virtual-environment.html
+https://www.jetbrains.com/pycharm/help/adding-existing-virtual-environment.html

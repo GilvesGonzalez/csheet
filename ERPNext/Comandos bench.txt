@@ -1,0 +1,32 @@
+Crear app:
+  $ bench new-app NOMBRE
+
+Crear site:
+  $ bench new-site NOMBRE
+
+Seleccionar sitio:
+  $ bench use NOMBRE
+
+Set modo desarrollador:
+  $ bench --site NOMBRE set-config developer_mode 1
+
+Instalar app en site:
+  $ bench --site NOMBRE install-app NOMBRE
+  $ bench install-app NOMBRE
+
+Desinstalar app en site:
+  $ bench --site NOMBRE uninstall-app NOMBRE
+  $ bench uninstall-app NOMBRE
+
+Iniciar frappe:
+  $ bench start
+
+Reinstalar site:
+  $ bench --site NOMBRE reinstall
+  $ bench reinstall
+
+Limpiar cache:
+  $ bench clear-cache
+
+Ir a mariadb desde bench:
+  $ bench mysql

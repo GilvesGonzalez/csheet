@@ -1,0 +1,11 @@
+Revisar http://www.if-not-true-then-false.com/2013/install-mariadb-on-fedora-centos-rhel/
+
+# dnf install -y mariadb mariadb-server
+# systemctl start mariadb.service
+# systemctl enable mariadb.service
+# mysql_secure_installation
+# mysql -u root -p
+
+MariaDB [(none)]> select user,host,password from mysql.user;
+MariaDB [(none)]> show databases;
+MariaDB [(none)]> exit

@@ -1,0 +1,2 @@
+Detectar monitores para bug en KDE:
+    $ xrandr --output VGA1 --auto  
