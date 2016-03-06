@@ -89,6 +89,11 @@ Fusionar:
     $ git merge NOMBRE
     
 
+Fusionar sin FF:
+Situarse en la rama que va a fusionar
+    $ git merge --no-ff NOMBRE
+    
+
 Clonar proyecto:
     $ git clone RUTA
     
