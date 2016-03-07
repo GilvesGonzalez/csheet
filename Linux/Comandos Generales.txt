@@ -46,7 +46,7 @@ Copia segura:
     
 Ssh:
     ssh [-p [PUERTO SSH]] [USUARIO]@[IP]
-    ssh [-p [PUERTO SSH]] -L [PUERTO LOCAL]:[IP REMOTO]:[PUERTO REMOTO] [USUARIO]@[IP REMOTO] (ssh -L 9443:localhost:8443 usuario@ingeint.com)
+    ssh [-p [PUERTO SSH]] -L [PUERTO LOCAL]:[IP REMOTO]:[PUERTO REMOTO] [USUARIO]@[IP REMOTO] (ssh -L 9443:localhost:8443 usuario@dns)
 
     
 Seguimiento de archivo de texto:
