@@ -1,0 +1,43 @@
+Post-Instalación Debian 8 Gnome
+-------------------------------
+
+Configurar paqueteria
+---------------------
+$ su
+# cd /etc/apt
+# cp sources.list sources.list.orig
+# nano sources.list
+Copiar:
+deb http://ftp.us.debian.org/debian/ jessie main contrib non-free
+deb-src http://ftp.us.debian.org/debian/ jessie main contrib non-free
+# apt-get update -y
+
+
+Configurar sudo
+---------------
+$ su
+# apt-get install -y sudo
+# adduser [NOMBRE] [GRUPO]
+Reiniciar sesion
+
+
+Instalar google-chrome:
+-----------------------
+$ su
+# nano /etc/apt/sources.list
+Copiar:
+deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main
+# gpg --keyserver keys.gnupg.net --recv-key A040830F7FAC5991
+# gpg --export --armor A040830F7FAC5991 | apt-key add -
+# apt-get update
+# apt-get install -y google-chrome-stable
+
+
+Instalar utilidades
+-------------------
+$ sudo apt-get install -y dkms build-essential gdb git mercurial meld rar unrar flashplugin-nonfree gparted clementine vlc openjdk-7-jdk screenfetch
+
+Instalar latex
+--------------
+$ sudo apt-get install texlive-full
+
