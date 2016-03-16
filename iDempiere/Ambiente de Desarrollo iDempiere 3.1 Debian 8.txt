@@ -8,28 +8,24 @@ http://wiki.idempiere.org/en/Setting_up_Eclipse
 
 Instalar utilidades
 -------------------
-# dnf update -y
-# dnf install -y ant svn maven mercurial dos2unix
+$ sudo apt-get install -y ant subversion maven mercurial dos2unix
 
 
 Configuración postgresql
 ------------------------
-# dnf install -y postgresql-server postgresql-devel postgresql-contrib pgadmin3
-# postgresql-setup --initdb
-# systemctl enable postgresql.service
-# systemctl start postgresql.service
+$ sudo apt-get install -y postgresql-9.4 postgresql-client-9.4 postgresql-contrib-9.4 pgadmin3
+$ su
+# passwd postgres
 # su - postgres
 $ psql
 postgres=# ALTER USER postgres WITH password 'postgres';
 postgres=# \q
 $ exit
-# cd /var/lib/pgsql/data/
-# nano postgresql.conf
-Cambiar listen_addresses a listen_addresses = '*'
-Descomentar port = 5432
-# nano pg_hba.conf
-Cambiar métodos de autenticación a md5
-# systemctl restart postgresql.service
+$ sudo nano /etc/postgresql/9.4/main/pg_hba.conf
+Revisar metodo de autenticacion md5, y trust para local
+$ sudo nano /etc/postgresql/9.4/main/postgresql.conf
+Asegurarse que la ip sea *: listen_addresses = '*'
+$ sudo systemctl restart postgresql.service
 
 
 Clonar proyecto
@@ -40,16 +36,32 @@ $ hg clone ssh://hg@bitbucket.org/idempiere/idempiere -r release-3.1 idempiere31
 
 Variables de entorno
 --------------------
-$ nano ~/.bashrc
+$ nano ~/.bash_aliases
 Agregar al final:
 export IDEMPIERE31_REPOSITORY="$HOME/Workspace/idempiere31"
-$ source ~/.bashrc
+$ source ~/.bash_aliases
 $ echo $IDEMPIERE31_REPOSITORY
 
 
-Instalar IDE
-------------
-- Instalar Eclipse Luna
+Instalar eclipse luna
+---------------------
+$ cd ~/Descargas
+$ wget http://eclipse.c3sl.ufpr.br/technology/epp/downloads/release/luna/SR2/eclipse-jee-luna-SR2-linux-gtk-x86_64.tar.gz
+$ tar -zxvf eclipse-jee-luna-SR2-linux-gtk-x86_64.tar.gz
+$ sudo mv eclipse /opt/eclipseluna
+$ sudo nano /usr/share/applications/eclipseluna.desktop 
+
+Copiar:
+[Desktop Entry]
+Type=Application
+Name=Eclipse Luna
+Exec=/opt/eclipseluna/eclipse
+Icon=/opt/eclipseluna/icon.xpm
+Terminal=false
+StartupNotify=true
+Categories=Development
+
+- Guardar y entrar a eclipse workspace $IDEMPIERE31_REPOSITORY
 - Instalar Mecurial en Eclipse Luna desde: Help > Eclipse Marketplace 
 - Instalar buckmister en Eclipse Luna desde: Help > Install New Software > Add
 - Ingresar http://download.eclipse.org/tools/buckminster/updates-4.4
@@ -81,7 +93,7 @@ Materialización del proyecto
 Creación de base de datos semilla
 ---------------------------------
 $ psql -U postgres -c "CREATE ROLE adempiere SUPERUSER LOGIN PASSWORD 'adempiere'"
-$ createdb  --template=template0 -E UNICODE -O adempiere -U adempiere idempiere31_seed
+$ createdb --template=template0 -E UNICODE -O adempiere -U adempiere idempiere31_seed
 $ psql -d idempiere31_seed -U adempiere -c "ALTER ROLE adempiere SET search_path TO adempiere, pg_catalog"
 $ psql -d idempiere31_seed -U adempiere -c 'CREATE EXTENSION "uuid-ossp"'
 $ cd /tmp
@@ -93,7 +105,7 @@ Migración de semilla
 --------------------
 Usar el archivo syncApplied.sh de la carpeta Recursos
 $ chmod +x syncApplied.sh
-$ ./syncApplied.sh idempiere31_seed "$IDEMPIERE31_REPOSITORY/migration"
+$ ./syncApplied.sh idempiere31_seed "$IDEMPIERE31_REPOSITORY/migration" ""
 
 
 Creación de base de datos desarrollo
@@ -110,15 +122,3 @@ Correr proyecto
 - Nombre Base de Datos: idempiere31_dev
 - Luego ejecutar Eclipse Aplication > server.product
 
-
-Errores posibles
-----------------
-Si al ejecutar iDempiere ocurre "Too many open files" 
-es por configuración del jetty. Solución:
-
-# nano /etc/security/limits.conf
-Agregar al final:
-*         hard    nofile      500000
-*         soft    nofile      500000
-root      hard    nofile      500000
-root      soft    nofile      500000

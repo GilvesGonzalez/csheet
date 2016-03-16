@@ -10,7 +10,13 @@ $ su
 Copiar:
 deb http://ftp.us.debian.org/debian/ jessie main contrib non-free
 deb-src http://ftp.us.debian.org/debian/ jessie main contrib non-free
-# apt-get update -y
+
+deb http://security.us.debian.org/ jessie/updates main contrib non-free
+deb-src http://security.us.debian.org/ jessie/updates main contrib non-free
+
+deb http://ftp.us.debian.org/debian/ jessie-updates main contrib non-free
+deb-src http://ftp.us.debian.org/debian/ jessie-updates main contrib non-free
+# apt-get update
 
 
 Configurar sudo
@@ -35,9 +41,97 @@ deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main
 
 Instalar utilidades
 -------------------
-$ sudo apt-get install -y dkms build-essential gdb git mercurial meld rar unrar flashplugin-nonfree gparted clementine vlc openjdk-7-jdk screenfetch
+$ sudo apt-get install -y dkms build-essential gdb git mercurial meld rar unrar flashplugin-nonfree gparted clementine vlc openjdk-7-jdk screenfetch gnome-tweak-tool gnome-shell-pomodoro
+
 
 Instalar latex
 --------------
 $ sudo apt-get install texlive-full
+
+
+Instalar mega
+-------------
+$ cd ~/Descargas
+$ wget https://mega.nz/linux/MEGAsync/Debian_8.0/amd64/megasync-Debian_8.0_amd64.deb
+$ sudo gdebi --n megasync-Debian_8.0_amd64.deb
+$ wget https://mega.nz/linux/MEGAsync/Debian_8.0/amd64/nautilus-megasync-Debian_8.0_amd64.deb
+$ sudo gdebi --n nautilus-megasync-Debian_8.0_amd64.deb
+
+
+Instalar eclipse mars
+---------------------
+$ cd ~/Descargas
+$ wget http://eclipse.c3sl.ufpr.br/technology/epp/downloads/release/mars/2/eclipse-jee-mars-2-linux-gtk-x86_64.tar.gz
+$ tar -zxvf eclipse-jee-mars-2-linux-gtk-x86_64.tar.gz
+$ sudo mv eclipse /opt/eclipsemars
+$ sudo nano /usr/share/applications/eclipsemars.desktop 
+Copiar:
+[Desktop Entry]
+Type=Application
+Name=Eclipse Mars
+Exec=/opt/eclipsemars/eclipse
+Icon=/opt/eclipsemars/icon.xpm
+Terminal=false
+StartupNotify=true
+Categories=Development
+
+
+Instalar ireport
+----------------
+$ cd ~/Descargas
+$ wget https://sourceforge.net/projects/ireport/files/iReport/iReport-5.5.1/iReport-5.5.1.tar.gz/download -O iReport-5.5.1.tar.gz
+$ tar -zxvf iReport-5.5.1.tar.gz
+$ sudo mv iReport-5.5.1 /opt/ireport
+$ sudo nano /usr/share/applications/ireport.desktop
+Copiar:
+[Desktop Entry]
+Type=Application
+Name=iReport     
+Exec=/opt/ireport/bin/ireport
+Icon=/opt/ireport/bin/document.ico
+Terminal=false
+StartupNotify=true
+Categories=Development
+
+
+Instalar gitkraken
+------------------
+$ cd ~/Descargas
+$ wget https://release.gitkraken.com/linux/gitkraken-amd64.deb
+$ sudo gdebi --n gitkraken-amd64.deb
+
+
+Instalar smartgit
+-----------------
+$ cd ~/Descargas
+$ wget http://www.syntevo.com/static/smart/download/smartgit/smartgit-linux-7_1_2.tar.gz
+$ tar -zxvf smartgit-linux-7_1_2.tar.gz
+$ sudo mv smartgit /opt/smartgit
+$ sudo nano /usr/share/applications/smartgit.desktop
+[Desktop Entry]
+Type=Application
+Name=SmartGitHg
+Exec=/opt/smartgit/bin/./smartgit.sh
+Icon=/opt/smartgit/bin/smartgit-256.png
+Terminal=false
+StartupNotify=true
+Categories=Development
+
+
+Instalar atom
+-------------
+$ cd ~/Descargas
+$ wget https://atom-installer.github.com/v1.5.4/atom-amd64.deb?s=1456874580 -O atom-amd64.deb
+$ sudo gdebi --n atom-amd64.deb
+
+
+Instalar virtualbox
+-------------------
+$ sudo nano /etc/apt/sources.list
+Copiar:
+deb http://download.virtualbox.org/virtualbox/debian jessie contrib
+$ wget -q https://www.virtualbox.org/download/oracle_vbox.asc -O- | sudo apt-key add -
+$ sudo apt-get update
+$ sudo apt-get install -y virtualbox-5.0
+
 

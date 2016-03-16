@@ -2,8 +2,8 @@ Configuracion de username:
 Editar ~/.hgrc
     $ nano ~/.hgrc
 Escribir:
-    [ui]
-    username = First Last <email@address.com>
+[ui]
+username = First Last <email@address.com>
 
 
 Eliminar archivos ignorados:
