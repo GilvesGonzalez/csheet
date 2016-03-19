@@ -41,7 +41,7 @@ deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main
 
 Instalar utilidades
 -------------------
-$ sudo apt-get install -y dkms build-essential gdb git mercurial meld rar unrar flashplugin-nonfree gparted clementine vlc openjdk-7-jdk screenfetch gnome-tweak-tool gnome-shell-pomodoro shutter
+$ sudo apt-get install -y dkms build-essential gdb git mercurial meld rar unrar flashplugin-nonfree gparted clementine vlc openjdk-7-jdk screenfetch gnome-tweak-tool gnome-shell-pomodoro shutter kazam openshot
 
 
 Instalar latex
