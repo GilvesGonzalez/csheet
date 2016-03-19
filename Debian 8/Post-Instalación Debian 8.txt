@@ -27,6 +27,16 @@ $ su
 Reiniciar sesion
 
 
+Instalar utilidades
+-------------------
+$ sudo apt-get install -y dkms build-essential gdb git mercurial meld rar unrar flashplugin-nonfree gparted clementine vlc openjdk-7-jdk screenfetch gnome-tweak-tool gnome-shell-pomodoro shutter kazam openshot audacity
+
+
+Instalar latex
+--------------
+$ sudo apt-get install texlive-full latexila
+
+
 Instalar google-chrome:
 -----------------------
 $ su
@@ -37,16 +47,6 @@ deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main
 # gpg --export --armor A040830F7FAC5991 | apt-key add -
 # apt-get update
 # apt-get install -y google-chrome-stable
-
-
-Instalar utilidades
--------------------
-$ sudo apt-get install -y dkms build-essential gdb git mercurial meld rar unrar flashplugin-nonfree gparted clementine vlc openjdk-7-jdk screenfetch gnome-tweak-tool gnome-shell-pomodoro shutter kazam openshot audacity
-
-
-Instalar latex
---------------
-$ sudo apt-get install texlive-full
 
 
 Instalar mega
