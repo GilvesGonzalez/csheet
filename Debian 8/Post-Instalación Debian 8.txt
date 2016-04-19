@@ -134,4 +134,20 @@ $ wget -q https://www.virtualbox.org/download/oracle_vbox.asc -O- | sudo apt-key
 $ sudo apt-get update
 $ sudo apt-get install -y virtualbox-5.0
 
+Instalar Aquadata
+-----------------
+$ cd ~/Descargas
+$ wget http://www.aquafold.com/download/v17.0.0/linux/ads-linux-x64-17.0.3.tar.gz
+$ tar -zxvf ads-linux-x64-17.0.3.tar.gz
+$ sudo mv datastudio /opt/datastudio
+$ sudo nano /usr/share/applications/datastudio.desktop
+[Desktop Entry]
+Type=Application
+Name=Data Studio
+Exec=/opt/datastudio/datastudio.sh
+Icon=/opt/datastudio/datastudio-128x128.png
+Terminal=false
+StartupNotify=true
+Categories=Development
+
 

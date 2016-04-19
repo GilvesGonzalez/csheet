@@ -19,8 +19,8 @@ Mostrar datos del cpu:
 
 Informacion del sistema:
     uname -a
-    cat /etc/system-release
-    cat /etc/*-release
+    Fedora: cat /etc/system-release, cat /etc/*-release
+    Debian: cat /etc/os-release
 
     
 Manusl de comandos:
