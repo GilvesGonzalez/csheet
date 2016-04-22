@@ -4,166 +4,157 @@ COMANDOS GIT
 Ayuda:
     $ git help
     $ git help COMANDO
-    
+
 
 Configuracion de username:
     $ git config --global user.name "NOMBRE"
     $ git config --global user.email "CORREO"
     $ git config --global color.ui true
-    
-    
+
+
 Listar configuración:
     $ git config --global --list
     $ git config --list
 
-    
+
 Agregar archivo/cambio:
     $ git add NOMBRE
-    
-    
+
+
 Agregar todos los archivos/cambios:
     $ git add -A
-    
-    
+
+
 Comfirmar cambios:
     $ git commit -m "MENSAJE"
-    
+
 
 Estatus del repositorio:
     $ git status
-    
+
 
 Registro de commits:
     $ git log
-    
-    
+
+
 Ir a commit:
     $ git checkout SHA
-    
-    
-Ir a branch:
-    $ git checkout NOMBRE
-    
-    
-Eliminar commit sin tocar el fuente:
-    $ git reset --soft SHA
-    
-    
-Eliminar commit completamente:
-    $ git reset --hard SHA
-    
-    
-Limpiar proyecto en punto actual completamente:
-    $ git reset --hard
-    
-    
-Crear branch:
-    $ git branch NOMBRE
-    
+
 
 Ir a branch:
     $ git checkout NOMBRE
-    
-    
+
+
+Eliminar commit sin tocar el fuente:
+    $ git reset --soft SHA
+
+
+Eliminar commit completamente:
+    $ git reset --hard SHA
+
+
+Limpiar proyecto en punto actual completamente:
+    $ git reset --hard
+
+Limpiar commits hasta upstream:
+    $ git reset --hard @{u}
+
+Crear branch:
+    $ git branch NOMBRE
+
+
+Ir a branch:
+    $ git checkout NOMBRE
+
+
 Ir a branch nueva:
     $ git checkout -b NOMBRE
     $ git checkout -b NOMBRE origin/NOMBRE
-    
+
 
 Listar branch:
     $ git branch
     $ git branch -a (todas)
     $ git branch -v
-    
-    
+
+
 Borrar rama:
     $ git branch -d NOMBRE
-    
+
 
 Borrar rama fusionada:
     $ git branch -D NOMBRE
-    
+
 
 Fusionar:
     Situarse en la rama que va a fusionar
     $ git merge NOMBRE
-    
+
 
 Fusionar sin FF:
 Situarse en la rama que va a fusionar
     $ git merge --no-ff NOMBRE
-    
+
 
 Clonar proyecto:
     $ git clone RUTA
-    
-    
+
+
 Agregar un origen:
     $ git remote add origin RUTA_REMOTA
-    
-    
+
+
 Agregar otro remoto:
     $ git remote add NOMBRE RUTA_REMOTA
-    
-    
+
+
 Remover remoto:
     $ git remote remove NOMBRE
-    
-    
+
+
 Listar repos remotos:
     $ git remote
     $ git remote -v
-    
-    
+
+
 Enviar cambios:
     $ git push
     $ git push origin
     $ git push REMOTO
     $ git push REMOTO BRANCH
     $ git push -f
-    
-    
+
+
 Editar commit:
     $ git commit --amend -m "MENSAJE"
-    
-    
+
+
 Crear tag:
     $ git tag VERSION
     $ git tag VERSION SHA
     $ git tag -a VERSION -m "MENSAJE"
     $ git tag -a VERSION -m "MENSAJE" SHA
-    
+
 
 Subir tag:
     $ git push origin --tags
     $ git push origin TAG
     $ git push REMOTO TAG
-    
-    
+
+
 Descargar cambios remotos:
     $ git fetch origin
     Luego:
     $ git merge origin/master
-    
+
 
 Descargar cambios remotos y fusionar:
     $ git pull
-    
-    
+
+
 Clonar proyecto sin historial:
     $ git clone RUTA_REMOTA --depth 1 --branch NOMBRE_BRANCH --single-branch DIRECTORIO
 
-    
+
 Limpiar repo:
     $ git clean -f -d
-
-    
-
-
-    
-
-    
-    
-
-
-    
