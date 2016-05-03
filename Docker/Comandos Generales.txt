@@ -1,0 +1,30 @@
+Listar contenedores
+-------------------
+docker ps
+docker ps -a
+
+Borrar desde compose
+--------------------
+docker-compose rm -fv
+
+Construir
+---------
+docker-compose build
+
+Iniciar
+-------
+docker-compose up
+
+Ejecutar Comandos
+-----------------
+docker-compose run NOMBRE_MAQUINA COMANDO
+
+Eliminar todo
+-------------
+docker stop $(docker ps -a -q)
+docker rm $(docker ps -a -q)
+
+Eliminar todo y imagenes
+------------------------
+docker rm `docker ps -a | grep Exited | awk '{print $1 }'`
+docker rmi `docker images -aq`

@@ -2,6 +2,10 @@ Variables de Entorno
 --------------------
 source ~/.bash_login
 
+Servicios
+---------
+Listar: brew services list
+
 
 Virtualenvwrapper
 -----------------
@@ -26,3 +30,14 @@ Vagrant
 Aprovisionar: vagrant provision
 SSH: vagrant ssh
 Iniciar: vagrant up
+
+
+Docker
+------
+Instalar:
+  brew cask install dockertoolbox
+  docker-machine create --driver virtualbox docker
+
+Habilitar docker:
+  docker-machine create --driver virtualbox docker
+  eval "$(docker-machine env docker)"

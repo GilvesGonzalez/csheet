@@ -10,8 +10,6 @@ Correr server
 -------------
 python manage.py runserver 0.0.0.0:8000
 
-Variables de entorno
---------------------
-export DB_PASS=
-export DB_URL=127.0.0.1
-export DB_USER=spinia
+Correr pruebas
+--------------
+python manage.py test
