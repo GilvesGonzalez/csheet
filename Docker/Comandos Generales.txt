@@ -22,9 +22,8 @@ docker-compose run NOMBRE_MAQUINA COMANDO
 Eliminar todo
 -------------
 docker stop $(docker ps -a -q)
-docker rm $(docker ps -a -q)
+docker rm -f $(docker ps -a -q)
 
 Eliminar todo y imagenes
 ------------------------
-docker rm `docker ps -a | grep Exited | awk '{print $1 }'`
-docker rmi `docker images -aq`
+docker rmi -f $(docker images -a -q)
