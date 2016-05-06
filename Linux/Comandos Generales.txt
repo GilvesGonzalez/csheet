@@ -5,32 +5,32 @@ Usar función de retorno de comando:
 
 Crear iso de carpeta:
     mkisofs -o [DESTINO].iso [CARPETA]
-    
+
 
 Mostrar particiones:
     lsblk
     blkid
     fdisk -l
 
-    
+
 Mostrar datos del cpu:
     lscpu
-    
+
 
 Informacion del sistema:
     uname -a
     Fedora: cat /etc/system-release, cat /etc/*-release
     Debian: cat /etc/os-release
 
-    
+
 Manusl de comandos:
     man [COMANDO]
 
-    
+
 Quemar iso en usb:
     dd if=[ISO] of=/dev/sd[LETRA]
 
-    
+
 Buscar dentro de archivos de texto:
     grep [PATRON] *
     grep -r [PATRON]
@@ -38,76 +38,76 @@ Buscar dentro de archivos de texto:
     grep -r [PATRON] [RUTA]
     grep -Lr [PATRON] [RUTA] (Archivos que no coinciden)
 
-    
+
 Copia segura:
     scp [RUTA] [USUARIO]@[IP]:[RUTA]
-    scp [USUARIO]@[IP]:[RUTA] [RUTA] 
+    scp [USUARIO]@[IP]:[RUTA] [RUTA]
 
-    
+
 Ssh:
     ssh [-p [PUERTO SSH]] [USUARIO]@[IP]
     ssh [-p [PUERTO SSH]] -L [PUERTO LOCAL]:[IP REMOTO]:[PUERTO REMOTO] [USUARIO]@[IP REMOTO] (ssh -L 9443:localhost:8443 usuario@dns)
 
-    
+
 Seguimiento de archivo de texto:
     tailf [ARCHIVO]
-    
-    
+
+
 Leer archivo de texto:
     more [ARCHIVO]
     cat [ARCHIVO]
 
-    
+
 Mostrar variables de entorno:
     env
     printenv
     echo $[NOMBRE]
-    
-    
+
+
 Ejecutar variable de entorno:
     source [RUTA]
 
-    
+
 Fecha:
     date
     date +"%Y%m%d%H%M"
-    
-    
+
+
 Calendario:
     cal
     cal -y
     cal -y [AÑO]
 
-    
+
 Duración de ejecución de un comando:
     time [COMANDO]
-    
+
 
 Buscar archivos duplicados:
     duff -r [RUTA]
     fdupes -r [RUTA]
 
-    
+
 Listar procesos:
     htop
     ps -ae
     ps -ae | grep [NOMBRE]
     top
 
-    
+
 Listar procesos con usuario:
     ps -ef
     ps -eF
 
-    
+
 Matar proceso:
     kill [PROCESO]
 
-    
+
 Historial de comandos:
     history
 
-    
+
 Montar dispositivo:
     mount [PARTICION] [RUTA]
 
@@ -115,7 +115,7 @@ Montar dispositivo:
 Desmontar dispoditivo:
     umount [PARTICION]
     eject [PARTICION]
-    
+
 
 Mover/renombrar archivo:
     mv [RUTA] [RUTA DESTINO]
@@ -123,107 +123,107 @@ Mover/renombrar archivo:
 
 Copiar archivo:
     cp [RUTA] [RUTA DESTINO]
-    
+
 
 Eliminar archivo:
     rm [RUTA]
-    
+
 
 Editar contraseña:
     passwd
     passwd [USUARIO]
-    
+
 
 Agregar usuario:
     useradd -m [NOMBRE]
     useradd -m [NOMBRE] -g [GRUPO]
-    
+
 
 Remover usuario:
-    userdel [NOMBRE] 
+    userdel [NOMBRE]
     userdel -r [NOMBRE]
 
-    
+
 Agregar grupo:
     groupadd [NOMBRE]
 
-    
+
 Remover grupo:
     groupdel [NOMBRE]
 
-    
+
 Añadir usuario a grupo:
     adduser [NOMBRE] [GRUPO]
-    
+
 
 Remover usuario de grupo:
     deluser [NOMBRE] [GRUPO]
-    
+
 
 Descargar:
     wget [URL]
-    
+
 
 Listar conexiones de red locales:
     netstat -lnt
 
-    
+
 Crear enlace simbólico:
     ln -s [ORIGEN] [DESTINO]
 
-    
+
 Propietario grupo:
     chgrp [GRUPO] [RUTA]
 
-	
+
 Propietario usuario:
     chown [USUARIO] [RUTA]
     chown [USUARIO]:[GRUPO] [RUTA]
 
-    
+
 Localizar archivo:
     locate [NOMBRE]
 
-    
+
 Actualizar BD de archivos:
     updatedb
-    
+
 
 Localizar programa:
     whereis  [NOMBRE]
-    
+
 
 Buscar archivo:
     find [RUTA] -name [NOMBRE]
 
-    
+
 Tamaño de carpeta:
     du -h [RUTA]
-    
-    
+
+
 Tamaño de disco:
     df -h
-        
-        
+
+
 Generar clave ssh:
     ssh-keygen
-    
-        
+
+
 Copiar archivo al portapapeles:
     xclip -sel clip < [ARCHIVO]
-    
+
 
 Correr en segundo plano:
     nohup [PROGRAMA] &
-    
-        
+
+
 Navegador web:
     elinks [URL]
-        
-        
+
+
 Mostrar usuario actual:
     whoami
-    
+
 
 Mostrat usuarios conectados:
     w
@@ -232,47 +232,48 @@ Mostrat usuarios conectados:
     who -H
     users
     finger
-    
-    
+
+
 Listar usuarios:
     cat /etc/passwd
     cat /etc/passwd | awk -F ":" '{print $1}'
-    
-    
+
+
 Listar grupos:
     cat /etc/group
-    
-        
+
+
 Mostrar hostname:
     hostname
-        
+
 
 Mostrar directorio actual:
     pwd
-    
-    
+
+
 Conocer ip publica:
     curl ip.appspot.com
-    
-    
+
+
 Información de red:
     ifconfig
     ifconfig -a
     ifconfig [INTERFAZ]
-    
-    
+    ip addr
+
+
 Crear archivo de texto vacío:
     touch [NOMBRE]
 
 
 Numero de procesadore:
     nproc
-    
-    
+
+
 Crear carpeta:
     mkdir [NOMBRE]
     mkdir -p [NOMBRE]
-    
+
 
 Listar archivos:
     ls
