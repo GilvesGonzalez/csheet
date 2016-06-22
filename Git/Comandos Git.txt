@@ -17,6 +17,11 @@ Listar configuración:
     $ git config --list
 
 
+Iniciar repo:
+    $ git init
+    $ git init FOLDER
+
+
 Agregar archivo/cambio:
     $ git add NOMBRE
 
@@ -29,6 +34,10 @@ Comfirmar cambios:
     $ git commit -m "MENSAJE"
 
 
+Comfirmar cambios y agregar:
+    $ git commit -am "MENSAJE"
+
+
 Estatus del repositorio:
     $ git status
 
@@ -37,12 +46,8 @@ Registro de commits:
     $ git log
 
 
-Ir a commit:
-    $ git checkout SHA
-
-
-Ir a branch:
-    $ git checkout NOMBRE
+Reset archivo:
+    $ git reset ARCHIVO
 
 
 Eliminar commit sin tocar el fuente:
@@ -56,14 +61,20 @@ Eliminar commit completamente:
 Limpiar proyecto en punto actual completamente:
     $ git reset --hard
 
+
 Limpiar commits hasta upstream:
     $ git reset --hard @{u}
+
 
 Crear branch:
     $ git branch NOMBRE
 
 
-Ir a branch:
+Ir a commit:
+    $ git checkout SHA
+
+
+Ir a branch o archivo:
     $ git checkout NOMBRE
 
 
@@ -89,6 +100,10 @@ Borrar rama fusionada:
 Fusionar:
     Situarse en la rama que va a fusionar
     $ git merge NOMBRE
+
+
+Cancelar merge:
+    $ git merge --abort
 
 
 Fusionar sin FF:
@@ -123,6 +138,7 @@ Enviar cambios:
     $ git push REMOTO
     $ git push REMOTO BRANCH
     $ git push -f
+    $ git push -u origin master (-u recordar parametros)
 
 
 Editar commit:
@@ -150,6 +166,7 @@ Descargar cambios remotos:
 
 Descargar cambios remotos y fusionar:
     $ git pull
+    $ git pull origin master
 
 
 Clonar proyecto sin historial:
@@ -158,3 +175,24 @@ Clonar proyecto sin historial:
 
 Limpiar repo:
     $ git clean -f -d
+
+
+Stash:
+    $ git stash
+
+
+Aplicar stash:
+    $ git stash apply
+
+
+Revisar cambios:
+    $ git diff (para cambios no agregados)
+    $ git diff --staged (para cambios agregados)
+
+
+Remover:
+    $ git rm NOMBRE
+    $ git rm -r FOLDER
+
+Otros:
+  -- No mas opciones

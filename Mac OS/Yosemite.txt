@@ -1,3 +1,13 @@
+Crear disco con dd
+------------------
+http://osxdaily.com/2015/06/05/copy-iso-to-usb-drive-mac-os-x-command/
+https://www.lastdragon.net/?p=1360
+
+Generales
+---------
+Mostrar discos: diskutil list
+
+
 Variables de Entorno
 --------------------
 source ~/.bash_login
