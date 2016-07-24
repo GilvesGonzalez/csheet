@@ -194,5 +194,9 @@ Remover:
     $ git rm NOMBRE
     $ git rm -r FOLDER
 
+Borrar commit en github:
+    $ git reset --hard <sha-commit-name-to-go-back-to>
+    $ git push -f origin HEAD^:master
+
 Otros:
   -- No mas opciones
