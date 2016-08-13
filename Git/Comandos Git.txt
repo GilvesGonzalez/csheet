@@ -30,12 +30,16 @@ Agregar todos los archivos/cambios:
     $ git add -A
 
 
-Comfirmar cambios:
+Commit cambios:
     $ git commit -m "MENSAJE"
 
 
-Comfirmar cambios y agregar:
+Commit cambios y agregar:
     $ git commit -am "MENSAJE"
+
+
+Commit cambios:
+    $ git commit --amend -m "MENSAJE"
 
 
 Estatus del repositorio:
@@ -47,11 +51,14 @@ Registro de commits:
 
 
 Reset archivo:
-    $ git reset ARCHIVO
+    $ git reset --soft ARCHIVO
+    $ git reset --soft HEAD ARCHIVO
 
 
 Eliminar commit sin tocar el fuente:
     $ git reset --soft SHA
+    $ git reset --soft HEAD^
+    $ git reset --soft HEAD^^ (dos commit atras)
 
 
 Eliminar commit completamente:
@@ -70,17 +77,25 @@ Crear branch:
     $ git branch NOMBRE
 
 
+Ir a branch o archivo:
+    $ git checkout NOMBRE
+
+
 Ir a commit:
     $ git checkout SHA
 
 
-Ir a branch o archivo:
-    $ git checkout NOMBRE
+Descartar cambios (para wip):
+    $ git checkout -- NOMBRE
 
 
 Ir a branch nueva:
     $ git checkout -b NOMBRE
     $ git checkout -b NOMBRE origin/NOMBRE
+
+
+Crear branch:
+    $ git branch NOMBRE
 
 
 Listar branch:
@@ -89,12 +104,20 @@ Listar branch:
     $ git branch -v
 
 
+Listar branch remotas:
+    $ git branch -r
+
+
 Borrar rama:
     $ git branch -d NOMBRE
 
 
 Borrar rama fusionada:
     $ git branch -D NOMBRE
+
+
+Borrar rama remota:
+    $ git push REMOTE :NOMBRE
 
 
 Fusionar:
@@ -124,7 +147,15 @@ Agregar otro remoto:
 
 
 Remover remoto:
-    $ git remote remove NOMBRE
+    $ git remote rm NOMBRE
+
+
+Mostar un remoto:
+    $ git remote show origin
+
+
+Podar ramas remotas:
+    $ git remote prune origin
 
 
 Listar repos remotos:
@@ -136,13 +167,22 @@ Enviar cambios:
     $ git push
     $ git push origin
     $ git push REMOTO
-    $ git push REMOTO BRANCH
+    $ git push REMOTO BRANCH (crea rama)
     $ git push -f
     $ git push -u origin master (-u recordar parametros)
 
 
+Enviar cambios a rama master desde ejemplo:
+    $ git push remoto ejemplo:master
+
+
 Editar commit:
+    Antes se puede hacer add de algo
     $ git commit --amend -m "MENSAJE"
+
+
+Listar tags:
+    $ git tag
 
 
 Crear tag:
@@ -167,6 +207,17 @@ Descargar cambios remotos:
 Descargar cambios remotos y fusionar:
     $ git pull
     $ git pull origin master
+    En caso de conflictos, resolverlos y luego:
+    $ git add -A
+    Hacer commit y push
+
+
+Pull rebase:
+    Al tener commits
+    $ git pull -r
+    En caso de conflictos, resolverlos y luego:
+    $ git add -A
+    $ git rebase --continue
 
 
 Clonar proyecto sin historial:
@@ -194,9 +245,7 @@ Remover:
     $ git rm NOMBRE
     $ git rm -r FOLDER
 
+
 Borrar commit en github:
     $ git reset --hard <sha-commit-name-to-go-back-to>
     $ git push -f origin HEAD^:master
-
-Otros:
-  -- No mas opciones
