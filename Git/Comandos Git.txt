@@ -30,6 +30,10 @@ Agregar todos los archivos/cambios:
     $ git add -A
 
 
+Agregar dinamicamente:
+    $ git add -p
+
+
 Commit cambios:
     $ git commit -m "MENSAJE"
 
@@ -48,6 +52,8 @@ Estatus del repositorio:
 
 Registro de commits:
     $ git log
+    $ git log --oneline
+    $ git log --graph
 
 
 Reset archivo:
@@ -67,6 +73,15 @@ Eliminar commit completamente:
 
 Limpiar proyecto en punto actual completamente:
     $ git reset --hard
+
+
+Eliminar ultimo commit atras:
+    $ git reset --hard HEAD~1
+    $ git reset --hard HEAD^
+
+
+Eliminar varios commit atras:
+    $ git reset --hard HEAD~NUMERO
 
 
 Limpiar commits hasta upstream:
@@ -241,6 +256,13 @@ Revisar cambios:
     $ git diff --staged (para cambios agregados)
 
 
+Comparación con commit anterior:
+    $ git diff HEAD^ HEAD
+    $ git diff HEAD^ HEAD ARCHIVO
+    $ git diff HEAD~NUMERO_MAYOR HEAD~NUMERO_MENOR
+    $ git diff SHA_ANTERIOR SHA_MAS_RECIENTE
+
+
 Remover:
     $ git rm NOMBRE
     $ git rm -r FOLDER
@@ -249,3 +271,22 @@ Remover:
 Borrar commit en github:
     $ git reset --hard <sha-commit-name-to-go-back-to>
     $ git push -f origin HEAD^:master
+
+
+Mostrar commit:
+    $ git show HEAD
+    $ git show SHA
+
+
+Mostrar un commit anterior:
+    $ git show HEAD^
+    $ git show HEAD~1
+
+
+Mostrar dos commit anterior:
+    $ git show HEAD^^
+    $ git show HEAD~2
+
+
+Mostrar varios commit anterior:
+    $ git show HEAD~NUMERO
