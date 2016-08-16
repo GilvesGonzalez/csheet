@@ -290,3 +290,11 @@ Mostrar dos commit anterior:
 
 Mostrar varios commit anterior:
     $ git show HEAD~NUMERO
+
+
+Respaldar cambios en wip (Stash):
+    $ git stash
+
+
+Recuperar cambios del wip:
+    $ git stash pop
