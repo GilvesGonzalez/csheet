@@ -257,7 +257,9 @@ Aplicar stash:
 
 Revisar cambios:
     $ git diff (para cambios no agregados)
+    $ git diff ARCHIVO
     $ git diff --staged (para cambios agregados)
+    $ git diff HEAD~NUMERO ARCHIVO
 
 
 Comparación con commit anterior:
