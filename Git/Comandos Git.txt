@@ -325,6 +325,12 @@ Aplicar patch:
     $ git apply -3 ARCHIVO
 
 
+Rebase:
+Situarse en la rama desde la cual se quiere hacer rebase
+    $ git rebase master
+    $ git rebase BRANCH
+
+
 ALIAS GIT
 ---------
 
