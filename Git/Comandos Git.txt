@@ -304,3 +304,45 @@ Respaldar cambios en wip (Stash):
 
 Recuperar cambios del wip:
     $ git stash pop
+
+
+Crear patch:
+    $ git format-patch -1
+    $ git format-patch -1 SHA
+    $ git format-patch -NUMBER
+
+
+Ver patch:
+    $ git apply --stat ARCHIVO
+
+
+Verificar patch:
+    $ git apply --check ARCHIVO
+
+
+Aplicar patch:
+    $ git apply ARCHIVO
+    $ git apply -3 ARCHIVO
+
+
+ALIAS GIT
+---------
+
+co = checkout
+st = status -b
+ci = commit
+br = branch
+ff = merge --ff-only
+rt = remote -v
+fp = fetch --prune
+df = diff --cached
+lg = log --graph --pretty=format:\"%Cgreen%h%Creset - %Cred%aN%Creset - %Cblue%ad (%ar)%Creset - %s\"
+flog = log --pretty=fuller
+top = log -1
+ftop = log -1 --pretty=fuller
+cim = commit --amend --reset-author
+refreshcommit = commit --amend --only --reset-author --no-edit
+tip = rev-parse HEAD
+rbi = rebase -i
+rbc = rebase --continue
+ct = branch -r --contains
