@@ -326,8 +326,7 @@ Aplicar patch:
 
 
 Rebase:
-Situarse en la rama desde la cual se quiere hacer rebase
-    $ git rebase master
+Situarse en la rama que va a fusionar
     $ git rebase BRANCH
 
 
