@@ -204,14 +204,14 @@ Listar tags:
     $ git tag
 
 
-Crear tag:
+Crear tag (-f forzar):
     $ git tag VERSION
     $ git tag VERSION SHA
     $ git tag -a VERSION -m "MENSAJE"
     $ git tag -a VERSION -m "MENSAJE" SHA
 
 
-Subir tag:
+Subir tag (-f forzar):
     $ git push origin --tags
     $ git push origin TAG
     $ git push REMOTO TAG
