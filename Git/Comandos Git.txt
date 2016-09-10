@@ -245,6 +245,7 @@ Clonar proyecto sin historial:
 
 Limpiar repo:
     $ git clean -f -d
+    $ git clean -xfd
 
 
 Stash:
