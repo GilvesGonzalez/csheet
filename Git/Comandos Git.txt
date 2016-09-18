@@ -108,6 +108,10 @@ Descartar cambios (para wip):
     $ git checkout -- NOMBRE
 
 
+Descartar cambios interativamente (para wip):
+    $ git checkout -p
+
+
 Ir a branch nueva:
     $ git checkout -b NOMBRE
     $ git checkout -b NOMBRE origin/NOMBRE
