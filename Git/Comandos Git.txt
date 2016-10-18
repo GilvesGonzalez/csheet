@@ -252,12 +252,17 @@ Limpiar repo:
     $ git clean -xfd
 
 
-Stash:
+Respaldar cambios en wip (Stash):
     $ git stash
 
 
-Aplicar stash:
-    $ git stash apply
+Recuperar cambios del wip:
+    $ git stash pop
+
+
+Diff stash:
+    $ git diff stash
+    $ git diff stash -- ARCHIVO
 
 
 Revisar cambios:
@@ -301,14 +306,6 @@ Mostrar dos commit anterior:
 
 Mostrar varios commit anterior:
     $ git show HEAD~NUMERO
-
-
-Respaldar cambios en wip (Stash):
-    $ git stash
-
-
-Recuperar cambios del wip:
-    $ git stash pop
 
 
 Crear patch:
