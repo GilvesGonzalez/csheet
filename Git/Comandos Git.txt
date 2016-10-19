@@ -265,6 +265,10 @@ Diff stash:
     $ git diff stash -- ARCHIVO
 
 
+Limpiar stash:
+    $ git stash clear
+
+
 Revisar cambios:
     $ git diff (para cambios no agregados)
     $ git diff ARCHIVO
