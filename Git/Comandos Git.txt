@@ -221,6 +221,10 @@ Subir tag (-f forzar):
     $ git push REMOTO TAG
 
 
+Descargar tags:
+    $ git fetch --tags
+
+
 Descargar cambios remotos:
     $ git fetch origin
     Luego:
