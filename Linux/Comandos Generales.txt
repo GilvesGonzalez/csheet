@@ -279,3 +279,23 @@ Listar archivos:
     ls
     ls -l
     ls -tr (por fecha)
+
+
+Empaquetar folder:
+    zip -r NOMBRE.zip FOLDER/
+
+
+Empaquetar archivo:
+    zip NOMBRE.zip ARCHIVO
+
+
+Extraer zip:
+    unzip NOMBRE.zip
+
+
+Extraer zip en folder:
+    unzip NOMBRE.zip -d /FOLDER
+
+
+Extraer zip en archivo:
+    unzip NOMBRE.zip ARCHIVO
