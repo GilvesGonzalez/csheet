@@ -21,9 +21,22 @@ docker-compose run NOMBRE_MAQUINA COMANDO
 
 Eliminar todo
 -------------
-docker stop $(docker ps -a -q)
-docker rm -f $(docker ps -a -q)
+docker stop $(docker ps -aq)
+docker rm -f $(docker ps -aq)
 
 Eliminar todo y imagenes
 ------------------------
-docker rmi -f $(docker images -a -q)
+docker rmi -f $(docker images -aq)
+
+Descargar imagen
+----------------
+docker pull IMAGEN
+
+Ejecutar consola dentro de contenedor
+-------------------------------------
+docker exec -ti CONTENEDOR /bin/sh
+docker-compose exec NOMBRE_SERVICIO sh
+
+Ejecutar imagen con puerto, volumen y variable
+----------------------------------------------
+docker run -d -p LOCAL:CONTENEDOR -e VARIABLE=valor -v /LOCAL:/CONTENEDOR IMAGEN

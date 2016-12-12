@@ -299,3 +299,7 @@ Extraer zip en folder:
 
 Extraer zip en archivo:
     unzip NOMBRE.zip ARCHIVO
+
+
+Crear proyecto gradle:
+    gradle init --type java-library
