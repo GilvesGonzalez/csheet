@@ -1,6 +1,6 @@
 $ sudo apt update
 $ sudo apt upgrade
-$ sudo apt install vim git texlive-full openjdk-8-jdk docker.io docker-compose build-essential vlc rar unrar meld gdebi xclip gradle
+$ sudo apt install vim git texlive-full openjdk-8-jdk docker.io docker-compose build-essential vlc rar unrar meld gdebi xclip gradle plantuml
 
 
 Generar y copiar clave pública SSH:
@@ -19,6 +19,7 @@ $ sudo lshw -c video
 
 Ver tarjeta en uso:
 $ lspci -nnk | grep -i vga -A3
+
 
 Agregar Java Home:
 $ sudo nano /etc/environment
