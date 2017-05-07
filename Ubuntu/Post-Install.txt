@@ -1,6 +1,6 @@
 $ sudo apt update
 $ sudo apt upgrade
-$ sudo apt install vim git texlive-full openjdk-8-jdk docker.io docker-compose build-essential vlc rar unrar meld gdebi xclip gradle plantuml
+$ sudo apt install vim shutter git texlive-full openjdk-8-jdk docker.io docker-compose build-essential vlc rar unrar meld gdebi xclip gradle plantuml
 
 
 Generar y copiar clave pública SSH:
