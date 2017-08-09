@@ -30,3 +30,7 @@ Generar archivo requirements.txt:
 
 Instalar desde requirements.txt:
     pip install -r requirements.txt
+
+
+Instalar paquetes científicos:
+    pip install numpy scipy matplotlib ipython jupyter pandas sympy nose scikit-learn
