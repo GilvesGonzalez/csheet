@@ -33,4 +33,4 @@ Instalar desde requirements.txt:
 
 
 Instalar paquetes científicos:
-    pip install numpy scipy matplotlib ipython jupyter pandas sympy nose scikit-learn
+    pip install -U numpy scipy matplotlib ipython jupyter pandas sympy nose scikit-learn tensorflow
