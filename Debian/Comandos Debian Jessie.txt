@@ -1,0 +1,232 @@
+BASICOS
+*******
+- Editar contraseña:
+  $ passwd
+  
+- Editar contraseña usuario:
+  $ passwd <<nombre>>
+  
+- Agregar usuario:
+  # useradd <<nombre>>
+  
+- Remover usuario:
+  # userdel <<-r>> <<nombre>>
+  
+- Crear grupo:
+  # groupadd <<nombre>>
+  
+- Eliminar grupo:
+  # groupdel <<nombre>>
+  
+- Agregar usuario a grupo:
+  # gpasswd -a <<usuario>> <<grupo>>
+  
+- Remover usuario de grupo:
+  # userdel <<usuario>> <<grupo>>
+  
+- Problemas de dependencia:
+  # apt-get -f install
+
+- Actualizar repositorios:
+  # apt-get update
+
+- Limpiar repositorios:
+  # apt-get clean
+  
+- Actualizar sistema:
+  # apt-get upgrade
+                 
+- Codificar archivo a utf8:
+  $ iconv -f windows-1252 -t utf-8 <<filename.from>> > <<filename.to>>
+  
+- Renombrar dispositivos (ext4):
+  # e2label <<dispositivo>> <<etiqueta>>
+  
+- Lista de dispositivos montados:
+  $ mount -l
+
+- Buscar:
+  $ find <<ruta>> -name <<nombre>> -print 2>/dev/null 
+  
+- Probar puerto:
+  # telnet <<ip>> <<puerto>>
+  
+- Ver servicios:
+  # service --status-all
+  
+- Agregar servicio:
+  # update-rc.d <<servicio>> defaults
+  
+- Remover servicio:
+  # update-rc.d -f <<servicio>> remove
+  
+- Permisos de un servicio:
+  # chmod 655 /etc/init.d/<<servicio>>
+  
+- Listar conexiones de red:
+  $ netstat -lnt
+  
+- Zona Horaria:	
+  # dpkg-reconfigure tzdata
+  
+- Seguimiento de archivo:
+  $ tailf <<ruta archivo>>
+  
+- Acceder como sudo:
+  $ sudo su -
+  
+- Abrir como root aplicaciones graficas:
+  $ kdesudo <<comando>>
+       
+- Empaquetar y comprimir tar:
+  $ tar czvf archivo.tar.gz /archivo/mayo/*
+  
+- Desempaquetar y descomprimir tar:
+  $ tar xzvf archivo.tar.gz
+  
+- Ver el contenido (sin extraer) tar:
+  $ tar tzvf archivo.tar.gz
+
+- Md5 de archivo:
+  $ md5sum <<archivo>>
+ 
+- Instalar empaquetado
+  # dpkg -i <<paquete.deb>>
+  
+- Listar discos
+  # fdisk -l
+  
+- Escribir iso a usb
+  # dd if=<<ruta iso>> of=/dev/sd<<letra del usb>>
+  
+- Especificaciones del cpu
+  $ lscpu
+
+VARIABLES
+*********
+Mostrar: env
+Mostrar: printenv
+Nueva: - Agregar archivo .sh a /etc/profile.d/
+       - Agregar al archivo: 
+       #!/bin/bash 
+       export VARIABLE="valor"
+       
+LIBRERIAS
+*********
+Recargar y mostrar: ldconfig -v
+Nueva: - Agregar archivo .conf a /etc/ld.so.conf.d/
+       - Agregar al archivo la ruta deseada     
+       
+CONFIGURAR VARIOS G++
+*********************
+
+# update-alternatives --remove-all gcc
+# update-alternatives --remove-all g++
+# update-alternatives --install /usr/bin/g++ g++ /usr/bin/g++-4.6 60
+# update-alternatives --install /usr/bin/g++ g++ /usr/bin/g++-4.9 40
+# update-alternatives --config g++
+# update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-4.6 60
+# update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-4.9 40
+# update-alternatives --config gcc
+
+POST INSTALAR
+*************
+* Configurar sudo
+  - Agregar linea a "/etc/sudoers": %sudo   ALL=(ALL:ALL) ALL
+  # gpasswd -a <<usuario>> sudo
+  
+* Activar auto completar del terminal
+  - Descomentar el "bash completion" en "/etc/bash.bashrc"
+  
+* Montar partición ntfs con el sistema
+  # mkdir /mnt/archivos
+  # blkid
+  - Agregar a /etc/fstab: UUID=F4CE3C4DCE3C0A7E /mnt/archivos ntfs-3g defaults 0 0
+  # mount -a
+
+* Configurar repositorios
+  # cp /etc/apt/sources.list /etc/apt/sources.list.original
+  - Comentar cdrom
+  - Agregar lineas:
+  deb http://ftp.us.debian.org/debian/ jessie main contrib non-free
+  deb-src http://ftp.us.debian.org/debian/ jessie main contrib non-free 
+  
+* Intalar linux headers
+  # apt-get install linux-headers-686-pae
+  
+* Instalar DKMS
+  # apt-get install dkms
+  
+* Instalar carpetas personales
+  # apt-get install xdg-user-dirs
+
+* Instalar c/c++
+  # apt-get install build-essential gdb cmake
+  
+* Instalar temas GTK
+  # apt-get install kde-config-gtk-style gtk2-engines-oxygen gtk3-engines-oxygen qtcurve
+  - Ingresar como root a configurar gtk
+  # kdesudo systemsettings
+
+* Flash
+  # apt-get install flashplugin-nonfree
+  
+* Instalar RAR
+  # apt-get install rar unrar
+
+* Instalar torrent
+  # apt-get install ktorrent plasma-widget-ktorrent
+
+* Instalar manejador de particiones
+  # apt-get install gparted
+  
+* Clementine
+  # apt-get install clementine amarok
+  
+* Touchpad en caso de ser una laptop
+  # apt-get install kde-config-touchpad
+  
+* Instalar meld
+  # apt-get install meld
+
+* Instalar dia editor de diagramas
+  # apt-get install dia
+  
+* Instalar mercurial git
+  # apt-get install mercurial git
+
+* Instalar screenfetch
+  # cd /usr/bin/
+  # wget -c https://raw.github.com/KittyKatt/screenFetch/master/screenfetch-dev -O screenfetch
+  # chmod +x screenfetch
+  # screenfetch
+
+* Instalar latex
+  # apt-get install texlive-full kile texmaker kbibtex
+  
+* Tablaturas
+  # apt-get install timidity tuxguitar-alsa tuxguitar-oss tuxguitar-fluidsynth tuxguitar-jack tuxguitar-jsa tuxguitar
+  
+* Instalar Openjdk
+  # apt-get install openjdk-7-jdk
+  
+* Instalar java oracle, desacargar tar.gz de la pagina oficial
+  # mkdir /opt/jdk
+  # tar -zxf jdk-8u11-linux-i586.tar.gz -C /opt/jdk
+  # update-alternatives --install /usr/bin/java java /opt/jdk/jdk1.8.0_11/bin/java 100
+  # update-alternatives --install /usr/bin/javac javac /opt/jdk/jdk1.8.0_11/bin/javac 100
+  # update-alternatives --install /usr/bin/jar jar  /opt/jdk/jdk1.8.0_11/bin/jar 100
+  # update-alternatives --install /usr/bin/javaws javaws  /opt/jdk/jdk1.8.0_11/bin/javaws 100
+  # update-alternatives --display java
+  # update-alternatives --config java
+  # java -version
+  
+* Instalar plugin de java
+  # cd /usr/lib/mozilla/plugins/
+  # ln -s /opt/jdk/jdk1.8.0_11/jre/lib/i386/libnpjp2.so 
+  # mkdir /opt/google/chrome/plugins
+  # cd /opt/google/chrome/plugins
+  # ln -s /opt/jdk/jdk1.8.0_11/jre/lib/i386/libnpjp2.so 
+
+* Instalar manualmente jdownloader, google-chrome, smartgithg
+

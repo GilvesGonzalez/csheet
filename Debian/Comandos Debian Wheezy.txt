@@ -1,0 +1,248 @@
+BASICOS
+*******
+- Editar contraseña:
+  $ passwd
+  
+- Editar contraseña usuario:
+  $ passwd <<nombre>>
+  
+- Agregar usuario:
+  # useradd <<nombre>>
+  
+- Remover usuario:
+  # userdel <<-r>> <<nombre>>
+  
+- Crear grupo:
+  # groupadd <<nombre>>
+  
+- Eliminar grupo:
+  # groupdel <<nombre>>
+  
+- Agregar usuario a grupo:
+  # gpasswd -a <<usuario>> <<grupo>>
+  
+- Remover usuario de grupo:
+  # userdel <<usuario>> <<grupo>>
+  
+- Problemas de dependencia:
+  # apt-get -f install
+
+- Actualizar repositorios:
+  # apt-get update
+
+- Limpiar repositorios:
+  # apt-get clean
+  
+- Actualizar sistema:
+  # apt-get upgrade
+                 
+- Codificar archivo a utf8:
+  $ iconv -f windows-1252 -t utf-8 <<filename.from>> > <<filename.to>>
+  
+- Renombrar dispositivos (ext4):
+  # e2label <<dispositivo>> <<etiqueta>>
+  
+- Lista de dispositivos montados:
+  $ mount -l
+
+- Buscar:
+  $ find <<ruta>> -name <<nombre>> -print 2>/dev/null 
+  
+- Probar puerto:
+  # telnet <<ip>> <<puerto>>
+  
+- Ver servicios:
+  # service --status-all
+  
+- Agregar servicio:
+  # update-rc.d <<servicio>> defaults
+  
+- Remover servicio:
+  # update-rc.d -f <<servicio>> remove
+  
+- Permisos de un servicio:
+  # chmod 655 /etc/init.d/<<servicio>>
+  
+- Listar conexiones de red:
+  $ netstat -lnt
+  
+- Zona Horaria:	
+  # dpkg-reconfigure tzdata
+  
+- Seguimiento de archivo:
+  $ tailf <<ruta archivo>>
+  
+- Acceder como sudo:
+  $ sudo su -
+  
+- Abrir como root aplicaciones graficas:
+  $ kdesudo <<comando>>
+       
+- Empaquetar y comprimir tar:
+  $ tar czvf archivo.tar.gz /archivo/mayo/*
+  
+- Desempaquetar y descomprimir tar:
+  $ tar xzvf archivo.tar.gz
+  
+- Ver el contenido (sin extraer) tar:
+  $ tar tzvf archivo.tar.gz
+
+- Md5 de archivo:
+  $ md5sum <<archivo>>
+ 
+- Instalar empaquetado
+  # dpkg -i <<paquete.deb>>
+  
+- Listar discos
+  # fdisk -l
+  
+- Escribir iso a usb
+  # dd if=<<ruta iso>> of=/dev/sd<<letra del usb>>
+  
+- Especificaciones del cpu
+  $ lscpu
+
+VARIABLES
+*********
+Mostrar: env
+Mostrar: printenv
+Nueva: - Agregar archivo .sh a /etc/profile.d/
+       - Agregar al archivo: 
+       #!/bin/bash 
+       export VARIABLE="valor"
+       
+LIBRERIAS
+*********
+Recargar y mostrar: ldconfig -v
+Nueva: - Agregar archivo .conf a /etc/ld.so.conf.d/
+       - Agregar al archivo la ruta deseada     
+       
+QUITAR BEEP
+***********
+    - sudo alsamixer
+    - Posicionarse en BEEP
+    - Presionar m para ponerlo en mute
+    - Escape
+
+POST INSTALAR
+*************
+1. Configurar sudo
+    - Agregar linea a "/etc/sudoers": 
+      %sudo   ALL=(ALL:ALL) ALL
+    - gpasswd -a <<usuario>> sudo
+2. Configurar repositorios
+    - cp /etc/apt/sources.list /etc/apt/sources.list.original
+    * Manera A
+    - Agregar lineas a "/etc/apt/sources.list":
+      deb http://ftp.debian.org/debian/ wheezy main contrib non-free
+      deb-src http://ftp.debian.org/debian/ wheezy main contrib non-free      
+    - Comentar cdrom
+    - Guardar
+    * Manera B    
+    - apt-get install netselect-apt
+    - netselect-apt -n wheezy
+    - mv sources.list /etc/apt/sources.list
+3. Activar auto completar
+    - Descomentar el "bash completion" en "/etc/bash.bashrc"
+4*. Activar multiarch si es 64 bit
+    - dpkg --add-architecture i386
+5. Actualizar repositorios
+    - apt-get update
+6*. Intalar linux headers
+    - apt-get install linux-headers-...
+7. Instalar DKMS
+    - apt-get install dkms
+8*. Remover menu repetido
+    - apt-get remove menu-xdg
+9. Instalar carpetas personales
+    - apt-get install xdg-user-dirs
+10.Instalar libcurl3
+    - apt-get install libcurl3
+11.Instalar mercurial
+    - apt-get install mercurial
+12.Instalar openjdk7
+    - apt-get install openjdk-7-jdk
+    - update-alternatives --config java
+13.Instalar compatibilidad con GTK
+    - apt-get install kde-config-gtk-style
+    - apt-get install gtk2-engines-oxygen gtk3-engines-oxygen
+14.Instalar RAR
+    - apt-get install rar unrar
+15.Instalar torrent
+    - apt-get install ktorrent plasma-widget-ktorrent
+    - apt-get install deluge
+16.Instalar Skype
+    - *apt-get install libpulse0:i386
+    - dpkg -i skype-debian_4.2.0.11-1_i386.deb 
+    - *apt-get -f install
+17.Instalar postgres
+    - Agregar lineas a "/etc/apt/sources.list":
+      deb http://apt.postgresql.org/pub/repos/apt/ wheezy-pgdg main
+    - wget --quiet -O - https://www.postgresql.org/media/keys/ACCC4CF8.asc | sudo apt-key add -
+    - apt-get update
+    - apt-get install postgresql-9.3 pgadmin3 postgresql-contrib-9.3
+    - su - postgresql
+    - psql
+    - \password postgres
+    - \q
+18.Instalar chrome
+    - dpgk -i google-chrome-stable_current_amd64.deb
+    - chmod -R 4755 /opt/google/chrome/chrome-sandbox
+19*.Instalar libreoffice 4
+    - Agregar lineas a "/etc/apt/sources.list":
+      deb <<URL>> wheezy-backports main contrib non-free
+    - apt-get -t wheezy-backports install libreoffice
+20*.Instalar amule
+    - apt-get install amule
+21*.Instalar firewall
+    - apt-get install ufw gufw
+    - nano /usr/share/applications/gufw.desktop 
+    - Eliminar linea: "OnlyShowIn=Unity;"
+21.Instalar samba
+    - apt-get install samba smbclient
+    - Para version inestable: apt-get -t wheezy-backports install samba smbclient
+    - Agregar lineas al final a "/etc/samba/smb.conf"
+      [<<nombre>>]
+      comment = <<comentario>>
+      path = <<ruta>>
+      browseable = yes
+      read only = no
+      guest ok = yes
+    - service samba restart 
+22*.Instalar dos2unix
+    - apt-get install dos2unix
+23*.Instalar pidgin
+    - apt-get install pidgin
+24*.Instalar cairo dock o docky
+    - apt-get install cairo-dock
+    - apt-get install docky
+25*.Instalar calibre
+    - apt-get install calibre
+26.Instalar manejador de particiones
+    - apt-get install partitionmanager
+    - apt-get install gparted
+27.Clementine
+    - apt-get install clementine
+28.Mouse
+    - sudo apt-get install kde-config-touchpad
+29.Mtools
+    - sudo apt-get install mtools
+30.Permitir montar ntfs
+    - sudo nano /usr/share/polkit-1/actions/org.freedesktop.udisks.policy 
+    En org.freedesktop.udisks.filesystem-mount-system-internal, cambiar allow_active a yes
+31.Instalar latex
+    -* apt-get install textlive-full
+    -* sudo apt-get install texlive biblatex texlive-fonts-extra texlive-latex-extra texlive-science
+    - sudo apt-get install texlive texlive-science
+32.Instalar c++
+    - sudo apt-get install build-essential cmake
+33.Instalar meld
+    - sudo apt-get install meld
+34.Instalar Texmaker o gummi
+    - apt-get install texmaker
+    - apt-get install gummi
+34.Instalar Texmaker
+    - apt-get install dia
+35.Flash
+    - apt-get install flashplugin-nonfree
+    - apt-get install gnash

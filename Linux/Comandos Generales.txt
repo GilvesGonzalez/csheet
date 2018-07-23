@@ -2,6 +2,11 @@ Usar función de retorno de comando:
     La funcion $() permite usar el retorno de un comando en otros comandos
     Ejemplo: $ echo $(whoami)
 
+    
+Directorios:
+    cd [RUTA]
+    cd - (ruta anterior)
+    
 
 Crear iso de carpeta:
     mkisofs -o [DESTINO].iso [CARPETA]
@@ -13,8 +18,11 @@ Mostrar particiones:
     fdisk -l
 
 
-Mostrar datos del cpu:
-    lscpu
+Mostrar información:
+    lscpu   (cpu)
+    lsblk   (dispositivos)
+    lsusb   (buses usb)
+    lsmod   (módulos del kernel)
 
 
 Informacion del sistema:
@@ -203,6 +211,7 @@ Tamaño de carpeta:
 
 Tamaño de disco:
     df -h
+    df -Th (con formato de archivo)
 
 
 Generar clave ssh:
@@ -277,8 +286,10 @@ Crear carpeta:
 
 Listar archivos:
     ls
-    ls -l
+    ls -l (permisos)
     ls -tr (por fecha)
+    ls -a (archivos ocultos)
+    ls -lh (incluye tamaño)
 
 
 Empaquetar folder:
