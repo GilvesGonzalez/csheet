@@ -19,14 +19,18 @@ Ejecutar Comandos
 -----------------
 docker-compose run NOMBRE_MAQUINA COMANDO
 
-Eliminar todo
--------------
+Eliminar todos los contenedores
+-------------------------------
 docker stop $(docker ps -aq)
 docker rm -f $(docker ps -aq)
 
-Eliminar todo y imagenes
+Eliminar todas las imagenes
 ------------------------
 docker rmi -f $(docker images -aq)
+
+Eliminar todos los volúmenes
+----------------------------
+docker volume rm $(docker volume ls -q)
 
 Descargar imagen
 ----------------
