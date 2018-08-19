@@ -1,0 +1,12 @@
+Instalar utilitarios:
+sudo apt install mesa-utils glmark2
+
+Ver tarjetas:
+xrandr --listproviders
+lspci -k | grep -EA3 'VGA|3D|Display'
+
+Correr con diferentes tarjetas:
+DRI_PRIME=0 glxinfo | grep "OpenGL renderer"
+DRI_PRIME=1 glxinfo | grep "OpenGL renderer"
+DRI_PRIME=0 glmark2 --fullscreen
+DRI_PRIME=1 glmark2 --fullscreen
