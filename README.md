@@ -6,3 +6,4 @@ Base de conocimientos sobre comandos linux en español.
 - [docker](docker)
 - [python](python)
 - [postgresql](postgresql)
+- [eclipse](eclipse)
