@@ -1,4 +1,4 @@
-# Configuracion de **zsh** (ubuntu 18.04)
+# Configuración de **zsh** (ubuntu 18.04)
 
 #### Prerequisitos
 
