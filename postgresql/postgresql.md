@@ -1,16 +1,19 @@
-Listar base de datos:
-    psql -l
+# Comandos para PostgreSQL
 
-    
-Mostrar ayuda para backup
--------------------------
+#### Listar base de datos:
+```
+psql -l
+```
+
+#### Mostrar ayuda para backup:
+```
 pg_dump -?
 pg_restore -?
 psql -?
+```
 
-
-Backup tipo custom
-------------------
+#### Backup tipo custom:
+```
 pg_dump -i -h localhost -p 5432 -U postgres -F c -b -v -f "RUTA.backup" NOMBRE_BD
 
 -p, --port=PORT database server port number
@@ -25,10 +28,10 @@ pg_dump -i -h localhost -p 5432 -U postgres -F c -b -v -f "RUTA.backup" NOMBRE_B
 -b, --blobs include large objects in dump
 -v, --verbose verbose mode
 -f, --file=FILENAME output file name
+```
 
-
-Restore tipo custom
--------------------
+Restore tipo custom:
+```
 pg_restore -i -v -h localhost -p 5432 -U postgres -d NOMBRE_BD "RUTA.backup"
 
 -p, --port=PORT database server port number
@@ -38,10 +41,12 @@ pg_restore -i -v -h localhost -p 5432 -U postgres -d NOMBRE_BD "RUTA.backup"
 -W, --password force password prompt (should happen automatically)
 -d, --dbname=NAME connect to database name
 -v, --verbose verbose mode
+```
 
 
-Restore tipo custom y crear bd (creará la bd que se referencia dentro del backup y usa la bd postgres para conectarse)
-----------------------------------------------------------------------------------------------------------------------
+####  Restore tipo custom y crear DB:
+(creará la bd que se referencia dentro del backup y usa la bd postgres para conectarse):
+```
 pg_restore -i -h localhost -p 5432 -U postgres -C -d postgres -v "RUTA.backup"
 
 -p, --port=PORT database server port number
@@ -52,10 +57,10 @@ pg_restore -i -h localhost -p 5432 -U postgres -C -d postgres -v "RUTA.backup"
 -d, --dbname=NAME connect to database name
 -v, --verbose verbose mode
 -C, --create Create database
+```
 
-
-Backup tipo plain
------------------
+#### Backup tipo plain:
+```
 pg_dump -i -h localhost -p 5432 -U postgres -F p -b -v -f "RUTA.sql" NOMBRE_BD
 
 -p, --port=PORT database server port number
@@ -70,10 +75,10 @@ pg_dump -i -h localhost -p 5432 -U postgres -F p -b -v -f "RUTA.sql" NOMBRE_BD
 -b, --blobs include large objects in dump
 -v, --verbose verbose mode
 -f, --file=FILENAME output file name
+```
 
-
-Restore tipo plain
-------------------
+#### Restore tipo plain:
+```
 psql -h localhost -p 5432 -U postgres -d NOMBRE_BD -f "RUTA.backup"
 
 -p, --port=PORT database server port number
@@ -82,3 +87,4 @@ psql -h localhost -p 5432 -U postgres -d NOMBRE_BD -f "RUTA.backup"
 -W, --password force password prompt (should happen automatically)
 -d, --dbname=NAME connect to database name
 -f, --file file
+```
