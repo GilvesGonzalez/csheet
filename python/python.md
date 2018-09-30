@@ -1,0 +1,45 @@
+# Comandos en python
+
+### PIP
+
+Listar paquetes:
+```
+pip list
+pip freeze
+```
+
+Listar paquetes desactualizados:
+```
+pip list --outdated
+```
+
+Mostrar información de un paquete:
+```
+pip show NOMBRE
+pip show --files NOMBRE
+```
+
+Instalar paquete:
+```
+pip install NOMBRE
+```
+
+Desinstalar paquete:
+```
+pip uninstall NOMBRE
+```
+
+Actualizar paquete:
+```
+pip install --upgrade NOMBRE
+```
+
+Generar archivo requirements.txt:
+```
+pip freeze > requirements.txt
+```
+
+Instalar desde requirements.txt:
+```
+pip install -r requirements.txt
+```
