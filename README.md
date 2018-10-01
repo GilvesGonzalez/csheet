@@ -7,3 +7,4 @@ Base de conocimientos sobre comandos linux en español.
 - [python](python)
 - [postgresql](postgresql)
 - [eclipse](eclipse)
+- [mariadb](mariadb)
