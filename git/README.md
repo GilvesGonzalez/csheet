@@ -1,26 +1,39 @@
-COMANDOS GIT
-------------
+# Comandos git (alias de zsh)
 
-Ayuda:
-    $ git help
-    $ git help COMANDO
+### Help
+```
+$ git help
+$ git help COMANDO
+```
 
+### Config
 
-Configuracion de username:
-    $ git config --global user.name "NOMBRE"
-    $ git config --global user.email "CORREO"
-    $ git config --global color.ui true
-
+Usuario y correo:
+```
+$ git config --global user.name "NOMBRE"
+$ git config --global user.email "CORREO"
+```
 
 Listar configuración:
-    $ git config --global --list
-    $ git config --list
+```
+$ git config --global --list
+$ git config --list
+```
 
-
+### Init
 Iniciar repo:
-    $ git init
-    $ git init FOLDER
+```
+$ git init
+$ git init RUTA
+```
 
+### Add
+
+### Commit
+
+### Pull
+
+### Push
 
 Agregar archivo/cambio:
     $ git add NOMBRE
@@ -338,26 +351,3 @@ Aplicar patch:
 Rebase:
 Situarse en la rama que va a fusionar
     $ git rebase BRANCH
-
-
-ALIAS GIT
----------
-
-co = checkout
-st = status -b
-ci = commit
-br = branch
-ff = merge --ff-only
-rt = remote -v
-fp = fetch --prune
-df = diff --cached
-lg = log --graph --pretty=format:\"%Cgreen%h%Creset - %Cred%aN%Creset - %Cblue%ad (%ar)%Creset - %s\"
-flog = log --pretty=fuller
-top = log -1
-ftop = log -1 --pretty=fuller
-cim = commit --amend --reset-author
-refreshcommit = commit --amend --only --reset-author --no-edit
-tip = rev-parse HEAD
-rbi = rebase -i
-rbc = rebase --continue
-ct = branch -r --contains

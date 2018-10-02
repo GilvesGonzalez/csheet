@@ -3,8 +3,9 @@
 Base de conocimientos sobre comandos linux en español.
 
 - [zsh](zsh)
+- [git](git)
+- [eclipse](eclipse)
 - [docker](docker)
 - [python](python)
 - [postgresql](postgresql)
-- [eclipse](eclipse)
 - [mariadb](mariadb)
