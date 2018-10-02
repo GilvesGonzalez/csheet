@@ -9,3 +9,4 @@ Base de conocimientos sobre comandos linux en español.
 - [python](python)
 - [postgresql](postgresql)
 - [mariadb](mariadb)
+- [linux](linux)
