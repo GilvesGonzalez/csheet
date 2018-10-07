@@ -2,11 +2,11 @@ Usar función de retorno de comando:
     La funcion $() permite usar el retorno de un comando en otros comandos
     Ejemplo: $ echo $(whoami)
 
-    
+
 Directorios:
     cd [RUTA]
     cd - (ruta anterior)
-    
+
 
 Crear iso de carpeta:
     mkisofs -o [DESTINO].iso [CARPETA]
@@ -314,3 +314,9 @@ Extraer zip en archivo:
 
 Crear proyecto gradle:
     gradle init --type java-library
+
+    - Buscar:
+      $ find <<ruta>> -name <<nombre>> -print 2>/dev/null
+
+    - Probar puerto:
+      # telnet <<ip>> <<puerto>>

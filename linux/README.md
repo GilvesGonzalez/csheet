@@ -1,5 +1,8 @@
 # Comandos para linux
 
+## Comandos generales
+
+
 ## Información del sistema
 
 Mostrar información de manera agradable:
@@ -64,7 +67,7 @@ Información de red:
 $ ip a
 ```
 
-### Systemd
+## Systemd
 
 Consultar version:
 ```
@@ -181,4 +184,39 @@ Revisión de puestos escuchas TCP con nmap:
 Revisión de puestos escuchas con nmap:
 ```
 # nmap -sT -sU -O IP
+```
+
+## Benchmark GPU
+
+Instalar utilitarios:
+```
+# apt install mesa-utils glmark2
+```
+
+Ejecutar Benchmark:
+```
+$ glxgears
+$ glmark2
+```
+
+Ver tarjetas:
+```
+$ xrandr --listproviders
+$ lspci -k | grep -EA3 'VGA|3D|Display'
+$ lspci -nnk | grep -i vga -A3
+# lshw -c video
+```
+Correr con diferentes tarjetas:
+```
+$ DRI_PRIME=0 glxinfo | grep "OpenGL renderer"
+$ DRI_PRIME=1 glxinfo | grep "OpenGL renderer"
+$ DRI_PRIME=0 glmark2 --fullscreen
+$ DRI_PRIME=1 glmark2 --fullscreen
+```
+
+## SSH
+Generar y copiar clave pública SSH:
+```
+$ ssh-keygen
+$ cat ~/.ssh/id_rsa.pub | xclip -sel clip
 ```
