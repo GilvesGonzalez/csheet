@@ -11,14 +11,16 @@ $ git help COMANDO
 
 Usuario y correo:
 ```
-$ git config --global user.name "NOMBRE"
-$ git config --global user.email "CORREO"
+$ git config --global user.name "Saúl Piña"
+$ git config --global user.email "sauljabin@gmail.com"
+$ git config --global core.editor "vim"
 ```
 
 Listar configuración:
 ```
-$ git config --global --list
+$ git config --global --list (toda la máquina)
 $ git config --list
+(alias) $ gcf
 ```
 
 ### Init
@@ -34,6 +36,7 @@ $ git init RUTA
 Clonar proyecto:
 ```
 $ git clone RUTA
+(alias) $ gcl RUTA
 ```
 
 Clonar proyecto sin historial:
@@ -43,9 +46,12 @@ $ git clone RUTA_REMOTA --depth 1 --branch NOMBRE_BRANCH --single-branch DIRECTO
 
 ### Status
 
-Estatus del repositorio
+Estatus del repositorio:
 ```
+$ git status -s (reducido)
+(alias) $ gss
 $ git status
+(alias) $ gst
 ```
 
 ### Log
@@ -53,8 +59,13 @@ $ git status
 Registro de commits:
 ```
 $ git log
-$ git log --oneline
+(alias) $ glg
 $ git log --graph
+(alias) $ glgg
+(alias) $ glgga
+$ git log --oneline
+(alias) $ glo
+(alias) $ glog
 ```
 
 ### Add
@@ -62,28 +73,40 @@ $ git log --graph
 Agregar archivo/cambio:
 ```
 $ git add NOMBRE
+(alias) $ ga NOMBRE
 ```
 
 Agregar todos los archivos/cambios:
 ```
 $ git add -A
+(alias) $ gaa
 ```
 
 Agregar dinamicamente:
 ```
 $ git add -p
+(alias) $ gapa
+(alias) $ ga -p
 ```
 
 ### Commit
 
 Commit cambios:
 ```
+$ git commit
+(alias) $ gc
+```
+
+Commit cambios más mensaje:
+```
 $ git commit -m "MENSAJE"
+(alias) $ gcmsg "MENSAJE"
 ```
 
 Commit cambios y agregar:
 ```
 $ git commit -am "MENSAJE"
+(alias) $ gcam "MENSAJE"
 ```
 
 Commit cambios:
