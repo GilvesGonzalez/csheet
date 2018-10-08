@@ -103,20 +103,34 @@ $ git commit -m "MENSAJE"
 (alias) $ gcmsg "MENSAJE"
 ```
 
-Commit cambios y agregar:
+Se agregan cambios y commit:
+```
+$ git commit -a
+(alias) $ gca
+```
+
+Se agregan cambios y commit más mensaje:
 ```
 $ git commit -am "MENSAJE"
 (alias) $ gcam "MENSAJE"
 ```
 
-Commit cambios:
+Editar commit (antes se puede hacer add):
 ```
 $ git commit --amend -m "MENSAJE"
+(alias) $ gc! -m "MENSAJE"
 ```
 
-Editar commit: Antes se puede hacer add de algo
+Se agregan cambios y se edita commit:
 ```
-$ git commit --amend -m "MENSAJE"
+$ git commit --amend -am "MENSAJE"
+(alias) $ gca! -m "MENSAJE"
+```
+
+Se agregan cambios y se edita commit pero no se edita el mensaje:
+```
+$ git commit -a --no-edit --amend
+(alias) $ gcan!
 ```
 
 ### Pull
