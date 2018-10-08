@@ -3,6 +3,7 @@
 ## Comandos generales
 
 
+
 ## Información del sistema
 
 Mostrar información de manera agradable:
@@ -71,86 +72,86 @@ $ ip a
 
 Consultar version:
 ```
-systemd --version
+$ systemd --version
 ```    
 
 Calcular tiempos de arranque:
 ```
-systemd-analyze
-systemd-analyze blame
+$ systemd-analyze
+$ systemd-analyze blame
 ```
 
 Consultar servicios:
 ```
-systemctl list-unit-files
+$ systemctl list-unit-files
 ```    
 
 Consultar servicios iniciados:
 ```
-systemctl list-units
+$ systemctl list-units
 ```    
 
 Activar servicio al iniciar sistema:
 ```
-systemctl enable name.service
+# systemctl enable name.service
 ```    
 
 Desactivar servicio al iniciar sistema:
 ```
-systemctl disable name.service
+# systemctl disable name.service
 ```    
 
 Iniciar servicio:
 ```
-systemctl start name.service
+# systemctl start name.service
 ```    
 
 Detener servicio:
 ```
-systemctl stop name.service
+# systemctl stop name.service
 ```    
 
 Reiniciar servicio:
 ```
-systemctl restart name.service
+# systemctl restart name.service
 ```    
 
 Informacion de servicio:
 ```
-systemctl status name.service
+$ systemctl status name.service
 ```    
 
 Recargar servicio:
 ```
-systemctl reload name.service
+# systemctl reload name.service
 ```    
 
-Evitar que un servicio se inicie:
+Evitar que un servicio se inicie (elimina el servicio de la lista):
 ```
-systemctl mask name.service
+# systemctl mask name.service
 ```    
 
 Desactivar mask:
 ```
-systemctl unmask name.service
+# systemctl unmask name.service
 ```    
 
 Reiniciar systemd:
 ```
-systemctl daemon-reload
+# systemctl daemon-reload
 ```    
 
 Historial de servicio:
 ```
-journalctl -u name.service
+$ journalctl -u name.service
 ```    
 
 ## Variables de entorno
 
 Mostrar variables:
 ```
-env
-printenv
+$ env
+$ printenv
 ```
 
 Agregar variable: abrir `vi ~/.zshrc` (en el caso de usar zsh) y agregar la variable
@@ -160,7 +161,7 @@ export VAR=VALOR
 
 Luego:
 ```
-source ~/.zshrc
+$ source ~/.zshrc
 ```
 
 ## Revisión de puertos

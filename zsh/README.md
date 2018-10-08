@@ -3,25 +3,25 @@
 #### Prerequisitos
 
 ```
-sudo apt install zsh vim git curl wget
+# apt install zsh vim git curl wget
 ```
 
 #### Instalar [oh my zsh](https://ohmyz.sh/)
 
 ```
-sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+$ sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 ```
 
 actualizar el shell a zsh:
 
 ```
-chsh -s `which zsh`
+# chsh -s `which zsh`
 ```
 
 y cerrar/iniciar sesión:
 
 ```
-pkill -KILL -u $USER
+$ pkill -KILL -u $USER
 ```
 
 #### Actualizar tema a [agnoster](https://github.com/agnoster/agnoster-zsh-theme) (opcional)
@@ -29,13 +29,13 @@ pkill -KILL -u $USER
 instalar fuentes:
 
 ```
-sudo apt install fonts-powerline
+# apt install fonts-powerline
 ```
 
 abrir archivo de configuración:
 
 ```
-vi ~/.zshrc    
+$ vi ~/.zshrc    
 ```
 
 actualizar tema:

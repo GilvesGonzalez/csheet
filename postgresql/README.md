@@ -2,19 +2,19 @@
 
 #### Listar base de datos:
 ```
-psql -l
+$ psql -l
 ```
 
 #### Mostrar ayuda para backup:
 ```
-pg_dump -?
-pg_restore -?
-psql -?
+$ pg_dump -?
+$ pg_restore -?
+$ psql -?
 ```
 
 #### Backup tipo custom:
 ```
-pg_dump -i -h localhost -p 5432 -U postgres -F c -b -v -f "RUTA.backup" NOMBRE_BD
+$ pg_dump -i -h localhost -p 5432 -U postgres -F c -b -v -f "RUTA.backup" NOMBRE_BD
 
 -p, --port=PORT database server port number
 -i, --ignore-version proceed even when server version mismatches
@@ -32,7 +32,7 @@ pg_dump -i -h localhost -p 5432 -U postgres -F c -b -v -f "RUTA.backup" NOMBRE_B
 
 Restore tipo custom:
 ```
-pg_restore -i -v -h localhost -p 5432 -U postgres -d NOMBRE_BD "RUTA.backup"
+$ pg_restore -i -v -h localhost -p 5432 -U postgres -d NOMBRE_BD "RUTA.backup"
 
 -p, --port=PORT database server port number
 -i, --ignore-version proceed even when server version mismatches
@@ -47,7 +47,7 @@ pg_restore -i -v -h localhost -p 5432 -U postgres -d NOMBRE_BD "RUTA.backup"
 ####  Restore tipo custom y crear DB:
 (creará la bd que se referencia dentro del backup y usa la bd postgres para conectarse):
 ```
-pg_restore -i -h localhost -p 5432 -U postgres -C -d postgres -v "RUTA.backup"
+$ pg_restore -i -h localhost -p 5432 -U postgres -C -d postgres -v "RUTA.backup"
 
 -p, --port=PORT database server port number
 -i, --ignore-version proceed even when server version mismatches
@@ -61,7 +61,7 @@ pg_restore -i -h localhost -p 5432 -U postgres -C -d postgres -v "RUTA.backup"
 
 #### Backup tipo plain:
 ```
-pg_dump -i -h localhost -p 5432 -U postgres -F p -b -v -f "RUTA.sql" NOMBRE_BD
+$ pg_dump -i -h localhost -p 5432 -U postgres -F p -b -v -f "RUTA.sql" NOMBRE_BD
 
 -p, --port=PORT database server port number
 -i, --ignore-version proceed even when server version mismatches
@@ -79,7 +79,7 @@ pg_dump -i -h localhost -p 5432 -U postgres -F p -b -v -f "RUTA.sql" NOMBRE_BD
 
 #### Restore tipo plain:
 ```
-psql -h localhost -p 5432 -U postgres -d NOMBRE_BD -f "RUTA.backup"
+$ psql -h localhost -p 5432 -U postgres -d NOMBRE_BD -f "RUTA.backup"
 
 -p, --port=PORT database server port number
 -h, --host=HOSTNAME database server host or socket directory
