@@ -34,12 +34,12 @@ $ touch NOMBRE
 
 Crear carpeta:
 ```
-$ mkdir [NOMBRE]
+$ mkdir NOMBRE
 ```
 
 Crear carpeta y subcarpetas:
 ```
-$ mkdir -p [NOMBRE]
+$ mkdir -p NOMBRE
 ```
 
 Listar archivos:
