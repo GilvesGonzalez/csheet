@@ -1,6 +1,6 @@
 # Comandos en python
 
-_Si usas zsh puedes acivar el plugin virtualenv_
+_Si usas zsh puedes activar el plugin **python** y **virtualenv**_
 
 ### virtualenv/virtualenvwrapper
 
