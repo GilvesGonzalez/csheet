@@ -19,6 +19,7 @@ $ git config --global core.editor "vim"
 Listar configuración:
 ```
 $ git config --global --list (toda la máquina)
+
 $ git config --list
 (alias) $ gcf
 ```
@@ -50,6 +51,7 @@ Estatus del repositorio:
 ```
 $ git status -s (reducido)
 (alias) $ gss
+
 $ git status
 (alias) $ gst
 ```
@@ -60,9 +62,11 @@ Registro de commits:
 ```
 $ git log
 (alias) $ glg
+
 $ git log --graph
 (alias) $ glgg
 (alias) $ glgga
+
 $ git log --oneline
 (alias) $ glo
 (alias) $ glog
