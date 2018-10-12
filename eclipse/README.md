@@ -46,7 +46,7 @@ Shortcuts más utilizados en eclipse
 |Duplicar línea|Ctrl + Win + Alt + Down / Ctrl + Win + Alt + Up|
 |Borrar línea|Ctrl + D|
 |Borrar desde cursor hasta el final de la línea|Ctrl + Shift + Del|
-|Agregar import de método estático|Ctrl + Shift + m|
+|Agregar import de método estático|Ctrl + Shift + M|
 
 ### Búsqueda
 
