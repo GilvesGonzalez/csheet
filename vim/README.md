@@ -87,3 +87,7 @@ Cortar (también eliminar):
 ```
 d
 ```
+Insertar nueva línea:
+```
+o
+```
