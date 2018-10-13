@@ -368,7 +368,10 @@ $ git remote prune origin
 Listar repos remotos:
 ```
 $ git remote
+(alias) & gr
+
 $ git remote -v
+(alias) & grv
 ```
 
 ### Tag
@@ -406,11 +409,19 @@ $ git clean -xfd
 Respaldar cambios en wip (Stash):
 ```
 $ git stash
+(alias) & gsta
 ```
 
 Recuperar cambios del wip:
 ```
 $ git stash pop
+(alias) & gstp
+```
+
+Limpiar último stash:
+```
+$ git stash drop
+(alias) & gstd
 ```
 
 Limpiar stash:
@@ -429,8 +440,14 @@ $ git diff stash -- ARCHIVO
 Revisar cambios:
 ```
 $ git diff (para cambios no agregados)
+(alias) & gd
+
 $ git diff ARCHIVO
+
 $ git diff --staged (para cambios agregados)
+$ git diff --cached (para cambios agregados)
+(alias) & gdca
+
 $ git diff HEAD~NUMERO ARCHIVO
 ```
 
@@ -454,6 +471,9 @@ $ git rm -r FOLDER
 
 Mostrar commit:
 ```
+$ git show
+(alias) & gsps
+
 $ git show HEAD
 $ git show SHA
 ```
@@ -505,4 +525,5 @@ $ git apply -3 ARCHIVO
 Rebase: Situarse en la rama que va a fusionar
 ```
 $ git rebase BRANCH
+(alias) & grb BRANCH
 ```
