@@ -142,24 +142,27 @@ $ git commit -a --no-edit --amend
 **Descargar cambios remotos y fusionar:**
 ```
 $ git pull
-$ git pull origin master
+(alias) $ gl
+
+$ git pull origin master (se invoca el repositorio remoto "origin" y la rama "master")
 ```
-En caso de conflictos, resolverlos y luego:
-```
-$ git add -A
-```   
-Hacer commit y push
+En caso de conflictos, resolverlos y luego agregarlos al stage.
+Hacer commit y push.
 
 
 **Pull rebase: Al tener commits**
 ```
 $ git pull -r
+(alias) $ gup
 ```    
-En caso de conflictos, resolverlos y luego:
+
+En caso de conflictos, resolverlos y luego agregarlos al stage.
 ```
-$ git add -A
 $ git rebase --continue
+(alias) $ grbc
 ```
+
+Hacer push.
 
 ### Push
 
@@ -171,6 +174,8 @@ $ git push REMOTE :NOMBRE
 Enviar cambios:
 ```
 $ git push
+(alias) $ gp
+
 $ git push origin
 $ git push REMOTO
 $ git push REMOTO BRANCH (crea rama)
@@ -186,6 +191,8 @@ $ git push remoto ejemplo:master
 Subir tag (-f forzar):
 ```
 $ git push origin --tags
+(alias) & gpoat
+
 $ git push origin TAG
 $ git push REMOTO TAG
 ```
@@ -233,14 +240,23 @@ $ git reset --hard @{u}
 
 Borrar commit en github:
 ```
-$ git reset --hard <sha-commit-name-to-go-back-to>
+$ git reset --hard SHA
 $ git push -f origin HEAD^:master
 ```
 
 ### Checkout
 
+Reinicia archivos en el wip:
+```
+$ git checkout
+(alias) & gco
+```
+
 Ir a branch o archivo:
 ```
+$ git checkout master
+(alias) & gcm
+
 $ git checkout NOMBRE
 ```
 
@@ -275,17 +291,17 @@ $ git checkout -b NOMBRE origin/NOMBRE
 Crear branch:
 ```
 $ git branch NOMBRE
-```
-
-Crear branch:
-```
-$ git branch NOMBRE
+(alias) & gb NOMBRE
 ```
 
 Listar branch:
 ```
 $ git branch
+(alias) & gb
+
 $ git branch -a (todas)
+(alias) & gba
+
 $ git branch -v
 ```
 
@@ -297,6 +313,7 @@ $ git branch -r
 Borrar rama:
 ```
 $ git branch -d NOMBRE
+(alias) & gbd NOMBRE
 ```
 
 Borrar rama fusionada:
