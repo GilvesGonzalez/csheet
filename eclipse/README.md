@@ -34,7 +34,9 @@ Shortcuts más utilizados en eclipse
 |-|-|
 |Guardar cambios|Ctrl + S|
 |Guardar cambios para todos los archivos|Ctrl + Shift + S|
-|Autocompletar|Ctrl + Space|
+|Opciones de autocompletado|Ctrl + Space|
+|Al aparecer la ventana de autocompletado seleccionar el método|Enter|
+|Al aparecer la ventana de autocompletado seleccionar sólo nombre del método|Ctrl + Enter|
 |Organizar imports|Ctrl + Shift + O|
 |Formatear código|Ctrl + Shift + F|
 |Renombrar|Alt + Shift + R|
