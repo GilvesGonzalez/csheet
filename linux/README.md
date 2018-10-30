@@ -155,6 +155,7 @@ $ whereis NOMBRE
 Tamaño de carpeta:
 ```
 $ du -h RUTA
+$ du -sh /RUTA/*
 ```
 
 Tamaño de disco:
