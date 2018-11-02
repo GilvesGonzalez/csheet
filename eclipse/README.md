@@ -49,6 +49,8 @@ Shortcuts más utilizados en eclipse
 |Borrar línea|Ctrl + D|
 |Borrar desde cursor hasta el final de la línea|Ctrl + Shift + Del|
 |Agregar import de método estático|Ctrl + Shift + M|
+|To upper case|Ctrl + Shift + X|
+|To lower case|Ctrl + Shift + Y|
 
 ### Búsqueda
 
