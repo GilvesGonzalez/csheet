@@ -162,6 +162,11 @@ $ git rebase --continue
 (alias) $ grbc
 ```
 
+**Hacer pull de muchos repositorios**
+```
+find . -mindepth 1 -maxdepth 1 -type d -exec git --git-dir={}/.git --work-tree=$PWD/{} pull -r origin master \;
+```
+
 Hacer push.
 
 ### Push
@@ -169,11 +174,6 @@ Hacer push.
 Borrar rama remota:
 ```
 $ git push REMOTE :NOMBRE
-```
-
-**Hacer pull de muchos repositorios**
-```
-find . -mindepth 1 -maxdepth 1 -type d -exec git --git-dir={}/.git --work-tree=$PWD/{} pull -r origin master \;
 ```
 
 Enviar cambios:
