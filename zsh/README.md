@@ -1,12 +1,12 @@
 # Configuración de **zsh** (ubuntu 18.04)
 
-#### Prerequisitos
+### Prerequisitos
 
 ```
 # apt install zsh vim git curl wget
 ```
 
-#### Instalar [oh my zsh](https://ohmyz.sh/)
+### Instalar [oh my zsh](https://ohmyz.sh/)
 
 ```
 $ sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
@@ -24,7 +24,9 @@ y cerrar/iniciar sesión:
 $ pkill -KILL -u $USER
 ```
 
-#### Actualizar tema a [agnoster](https://github.com/agnoster/agnoster-zsh-theme) (opcional)
+### Temas
+
+#### Actualizar tema a [agnoster](https://github.com/agnoster/agnoster-zsh-theme)
 
 instalar fuentes ([aquí](https://powerline.readthedocs.io/en/latest/installation/linux.html#fonts-installation)):
 
@@ -62,6 +64,6 @@ actualizar tema:
 ZSH_THEME="powerlevel9k/powerlevel9k"
 ```
 
-#### Otros
+### Otros
 
 - [Cheat sheet](https://github.com/robbyrussell/oh-my-zsh/wiki/Cheatsheet)
