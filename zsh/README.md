@@ -44,7 +44,7 @@ actualizar tema:
 ZSH_THEME="agnoster"
 ```
 
-#### Instalar powerlevel9k
+#### Instalar [powerlevel9k](https://github.com/bhilburn/powerlevel9k)
 
 ```
 $ git clone https://github.com/bhilburn/powerlevel9k.git ~/.oh-my-zsh/custom/themes/powerlevel9k
