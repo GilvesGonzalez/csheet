@@ -43,13 +43,6 @@ $ vim +PlugInstall +qall
 
 Abre `vim` normalmente
 
-### Instalación de vim-airline
-
-```
-git clone https://github.com/vim-airline/vim-airline ~/.vim/bundle/vim-airline
-git clone https://github.com/vim-airline/vim-airline-themes ~/.vim/bundle/vim-airline-themes
-```
-
 # Comandos/Shortcuts en Vim
 
 Ayuda:
