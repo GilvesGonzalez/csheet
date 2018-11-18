@@ -7,7 +7,7 @@ $ sudo apt install vim
 ### Instalación de plugins
 
 - [vim-plug](https://github.com/junegunn/vim-plug) - Plugin Manager
-- vim-airline [1](https://github.com/vim-airline/vim-airline) [2](https://github.com/vim-airline/vim-airline/wiki/Screenshots) - Tema
+- [vim-airline](https://github.com/vim-airline/vim-airline), [vim-airline-themes](https://github.com/vim-airline/vim-airline/wiki/Screenshots) - Tema
 
 > Alternativa para vim-plug: [vundle](https://github.com/VundleVim/Vundle.vim)
 
