@@ -41,6 +41,8 @@ Guargar y ejecutar en la consola
 $ vim +PlugInstall +qall
 ```
 
+Abre `vim` normalmente
+
 ### Instalación de vim-airline
 
 ```
