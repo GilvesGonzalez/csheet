@@ -64,6 +64,13 @@ actualizar tema:
 ZSH_THEME="powerlevel9k/powerlevel9k"
 ```
 
+agregar configuraciones:
+
+```
+POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(context dir newline vcs)
+POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status ram time)
+```
+
 ### Otros
 
 - [Cheat sheet](https://github.com/robbyrussell/oh-my-zsh/wiki/Cheatsheet)
