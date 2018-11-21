@@ -58,7 +58,7 @@ $ git status
 
 **Ver status de muchos repositorios**
 ```
-$ find . -mindepth 1 -maxdepth 1 -type d -printf "\n>>>>%f\n" -exec git --git-dir={}/.git --work-tree=$PWD/{} status \;
+$ find . -mindepth 1 -maxdepth 1 -type d -printf "\n\n>>>>%f\n" -exec git --git-dir={}/.git --work-tree=$PWD/{} status \;
 ```
 
 ### Log
@@ -169,7 +169,7 @@ $ git rebase --continue
 
 **Hacer pull de muchos repositorios**
 ```
-$ find . -mindepth 1 -maxdepth 1 -type d -exec git --git-dir={}/.git --work-tree=$PWD/{} pull -r origin master \;
+$ find . -mindepth 1 -maxdepth 1 -type d -printf "\n\n>>>>%f\n" -exec git --git-dir={}/.git --work-tree=$PWD/{} pull -r origin master \;
 ```
 
 Hacer push.
