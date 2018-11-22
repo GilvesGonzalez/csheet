@@ -73,6 +73,13 @@ POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status ram time)
 
 ### Alias
 
+Abrir archivo de configuración y agregar alias:
+
+```
+$ vi ~/.zshrc    
+```
+
+
 #### Docker
 
 Remover contenedores:
