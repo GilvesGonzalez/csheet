@@ -71,6 +71,44 @@ POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(context dir newline vcs)
 POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status ram time)
 ```
 
+### Alias
+
+#### Docker
+
+Remover contenedores:
+
+```
+alias docker-destroy-all-ps='docker rm -f $(docker ps -aq)'
+```
+
+Remover contenedores y volúmenes:
+
+```
+alias docker-destroy-all='docker rm -f $(docker ps -aq) && docker volume rm $(docker volume ls -q)'
+```
+
+#### Sistema
+
+Actualizar:
+
+```
+alias upgrade='sudo apt update -y && sudo apt upgrade -y && sudo apt autoremove'
+```
+
+#### Git
+
+Pull rebase de muchos repositorios:
+
+```
+alias gup-all='find . -mindepth 1 -maxdepth 1 -type d -printf "\n\n>>>>%f\n" -exec git --git-dir={}/.git --work-tree=$PWD/{} pull -r origin master \;'
+```
+
+Git status de muchos repositorios:
+
+```
+alias gst-all='find . -mindepth 1 -maxdepth 1 -type d -printf "\n\n>>>>%f\n" -exec git --git-dir={}/.git --work-tree=$PWD/{} status \;'
+```
+
 ### Otros
 
 - [Cheat sheet](https://github.com/robbyrussell/oh-my-zsh/wiki/Cheatsheet)
