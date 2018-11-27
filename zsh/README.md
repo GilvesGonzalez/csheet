@@ -91,7 +91,7 @@ alias docker-destroy-all-ps='docker rm -f $(docker ps -aq)'
 Remover contenedores y volúmenes:
 
 ```
-alias docker-destroy-all-ps-v='docker rm -f $(docker ps -aq) && docker volume rm $(docker volume ls -q)'
+alias docker-destroy-all-ps-v='docker rm -f $(docker ps -aq) ; docker volume rm $(docker volume ls -q)'
 ```
 
 Remover imágenes:
@@ -103,7 +103,7 @@ alias docker-destroy-all-i='docker rmi -f $(docker images -aq)'
 Remover todo:
 
 ```
-alias docker-destroy-all='docker rm -f $(docker ps -aq) && docker volume rm $(docker volume ls -q) && docker rmi -f $(docker images -aq)'
+alias docker-destroy-all='docker rm -f $(docker ps -aq) ; docker volume rm $(docker volume ls -q) ; docker rmi -f $(docker images -aq)'
 ```
 
 #### Sistema
