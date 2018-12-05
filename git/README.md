@@ -414,7 +414,7 @@ $ git clean -f -d
 $ git clean -xfd
 ```
 
-### Satsh
+### Stash
 
 Respaldar cambios en wip (Stash):
 ```
