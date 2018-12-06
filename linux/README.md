@@ -450,10 +450,11 @@ $ source ~/.zshrc
 
 ## Revisión de puertos
 
-Revisión de puertos escuchas localmente:
+Revisión de puertos escuchas localmente (netstat se instala con `apt install net-tools`):
 ```
 # netstat -plnt
 # netstat -plunt
+# sudo lsof -i -P -n | grep LISTEN
 ```
 
 Revisión de puestos escuchas TCP con nmap:
