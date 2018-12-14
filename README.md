@@ -11,4 +11,5 @@ Base de conocimientos sobre comandos linux en español.
 - [mariadb](mariadb)
 - [linux](linux)
 - [vim](vim)
+- [tmux](tmux)
 - [proxmox](proxmox)
