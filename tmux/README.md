@@ -82,11 +82,6 @@ Modo copiar (activa el scroll del mouse):
 Prefijo + [
 ```
 
-Limpiar todo:
-```
-Prefijo + c
-```
-
 Moverse entre todos los paneles:
 ```
 Prefijo + o
