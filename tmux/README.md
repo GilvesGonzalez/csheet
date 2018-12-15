@@ -24,11 +24,11 @@ Configurar tmux `vim ~/.tmux.conf`:
 ```
 set -g @plugin 'tmux-plugins/tpm'
 set -g @plugin 'jimeh/tmux-themepack'
-set -g @themepack 'powerline/block/cyan'
+set -g @themepack 'powerline/double/blue'
 run -b '~/.tmux/plugins/tpm/tpm'
 ```
 
-Activar plugins:
+Activar/Actualizar plugins:
 ```
 Prefijo + I
 ```
@@ -47,6 +47,8 @@ set -g status-right "#[fg=colour235,bg=colour233]#[fg=colour240,bg=colour235]
 ```
 
 > Comando para ver la memoria disponible `free -m | awk 'NR==2 {print $7}'`
+
+actualizar plugin.
 
 ### Comandos
 
