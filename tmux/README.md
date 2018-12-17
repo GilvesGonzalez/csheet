@@ -77,6 +77,11 @@ Moverse entre panel:
 Prefijo + flechas
 ```
 
+Cambiar tamaño de panel:
+```
+Prefijo + Ctrl + flechas
+```
+
 Cerrar panel:
 ```
 Prefijo + x
