@@ -92,6 +92,11 @@ Moverse entre todos los paneles:
 Prefijo + o
 ```
 
+Rotar todos los paneles:
+```
+Prefijo + Ctrl + o
+```
+
 Moverse entre panel actual y el anterior:
 ```
 Prefijo + ;
