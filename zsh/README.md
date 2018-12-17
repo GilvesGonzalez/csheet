@@ -74,7 +74,7 @@ POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status ram time)
 en caso de usr [tmux](tmux):
 
 ```
-POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(dir vcs)
+POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(dir newline vcs)
 POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status)
 ```
 
