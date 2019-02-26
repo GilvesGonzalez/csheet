@@ -69,3 +69,29 @@ Ejecutar consola dentro de contenedor:
 ```
 $ docker-compose exec SERVICIO sh
 ```
+
+### Docker Swarm
+
+Inicializar:
+```
+$ docker swarm init  
+```
+
+Correr stack:
+```
+$ docker stack deploy -c ARCHIVO.yml NOMBRE
+```
+
+Ver stack:
+```
+$ docker stack ps NOMBRE
+```
+
+ELiminar stack:
+```
+$ docker stack rm NOMBRE
+```
+
+docker stack ls
+
+docker stack services portainer
