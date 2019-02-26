@@ -87,11 +87,17 @@ Ver stack:
 $ docker stack ps NOMBRE
 ```
 
-ELiminar stack:
+Eliminar stack:
 ```
 $ docker stack rm NOMBRE
 ```
 
-docker stack ls
+Ver stacks:
+```
+$ docker stack ls
+```
 
-docker stack services portainer
+Ver servicios:
+```
+$ docker stack services NOMBRE
+```
