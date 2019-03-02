@@ -13,3 +13,4 @@ Base de conocimientos sobre comandos linux en español.
 - [vim](vim)
 - [tmux](tmux)
 - [proxmox](proxmox)
+- [gpg](gpg)
