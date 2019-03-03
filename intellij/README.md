@@ -23,6 +23,7 @@ Shortcuts más utilizados en IntelliJ ([ver](https://resources.jetbrains.com/sto
 |Ir a línea|Ctrl + G|
 |Navegar entre archivos abiertos|Alt + Right/Left|
 |Ir a siguiente/previo método|Alt + Up/Down|
+|Ir al inicio/final de la palabra|Ctrl + Right/Left|
 |Ir al principio/final del bloque|Ctrl + [/]|
 |Abrir ventanas interna del IDE (Project, Structure, etc)|Alt + 0-9|
 |Volver a editor (desde ventana interna)|Esc|
@@ -43,14 +44,14 @@ Shortcuts más utilizados en IntelliJ ([ver](https://resources.jetbrains.com/sto
 |-|-|
 |Menú de autocompletado|Ctrl + Space|
 |Menú de sugerencias|Alt + Enter|
-|Información de parámetro|Ctrl + S|
+|Información de parámetro|Ctrl + P|
 |Muestra información, incluye javadoc|Ctrl + Q|
 |Menú para generación de código|Alt + Ins|
 |Sebreescribir método|Ctrl + O|
 |Implementar método|Ctrl + I|
 |Cerrar archivo|Ctrl + F4|
-|Comentar línea|Ctrl + /|
-|Comentar bloque|Ctrl + Shift + /|
+|Comentar/Descomentar línea|Ctrl + /|
+|Comentar/Descomentar bloque|Ctrl + Shift + /|
 |Extender selección|Ctrl + W|
 |Reducir selección|Ctrl + Shift + W|
 |Formatear código|Ctrl + Alt + L|
