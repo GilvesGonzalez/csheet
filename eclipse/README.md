@@ -1,6 +1,6 @@
 # Shortcuts para Eclipse
 
-Shortcuts más utilizados en eclipse
+Shortcuts más utilizados en eclipse. Teclado en inglés recomendado.
 
 ### Refactoring
 
@@ -61,3 +61,13 @@ Shortcuts más utilizados en eclipse
 |Buscar y reemplazar|Ctrl + F|
 |Buscar especializada|Ctrl + H|
 |Buscar en línea|Ctrl + J|
+
+### Debug
+
+|Descripción|Comando|
+|-|-|
+|Siguiente línea (entrar)|F5|
+|Siguiente línea|F6|
+|Siguiente línea (salir)|F7|
+|Avanzar hasta siguiente breakpoint|F8|
+|Finalizar|Ctrl + F2|
