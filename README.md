@@ -14,3 +14,4 @@ Base de conocimientos sobre comandos linux en español.
 - [tmux](tmux)
 - [proxmox](proxmox)
 - [gpg](gpg)
+- [intellij](intellij)

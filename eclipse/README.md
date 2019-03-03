@@ -16,7 +16,7 @@ Shortcuts más utilizados en eclipse. Teclado en inglés recomendado.
 
 |Descripción|Comando|
 |-|-|
-|Ir a implementación|F3|
+|Ir a declaración|F3|
 |Ver métodos|Ctrl + O|
 |Mover entre archivos|Alt + Right / Alt + Left|
 |Mover entre los miembros de una clase|Ctrl + Shift + Up / Ctrl + Shift + Down|
@@ -58,7 +58,7 @@ Shortcuts más utilizados en eclipse. Teclado en inglés recomendado.
 |-|-|
 |Buscar clase|Ctrl + Shift + T|
 |Buscar archivo|Ctrl + Shift + R|
-|Buscar y reemplazar|Ctrl + F|
+|Buscar y reemplazar en archivo|Ctrl + F|
 |Buscar especializada|Ctrl + H|
 |Buscar en línea|Ctrl + J|
 
@@ -69,5 +69,5 @@ Shortcuts más utilizados en eclipse. Teclado en inglés recomendado.
 |Siguiente línea (entrar)|F5|
 |Siguiente línea|F6|
 |Siguiente línea (salir)|F7|
-|Avanzar hasta siguiente breakpoint|F8|
+|Avanzar hasta siguiente breakpoint (continuar)|F8|
 |Finalizar|Ctrl + F2|
