@@ -14,7 +14,6 @@ Shortcuts más utilizados en IntelliJ ([ver](https://resources.jetbrains.com/sto
 |Extraer variable|Ctrl + Alt + V|
 |Extraer atributo|Ctrl + Alt + F|
 |Extraer constante|Ctrl + Alt + C|
-|Menú para generación de código|Alt + Ins|
 
 ### Navegación
 
@@ -24,7 +23,7 @@ Shortcuts más utilizados en IntelliJ ([ver](https://resources.jetbrains.com/sto
 |Ir a línea|Ctrl + G|
 |Navegar entre archivos abiertos|Alt + Right/Left|
 |Ir a siguiente/previo método|Alt + Up/Down|
-|Ir al principio/final del bloque|Alt + [/]|
+|Ir al principio/final del bloque|Ctrl + [/]|
 |Abrir ventanas interna del IDE (Project, Structure, etc)|Alt + 0-9|
 |Volver a editor (desde ventana interna)|Esc|
 |Cerrar ventana interna (desde ventana interna)|Shift + Esc|
@@ -36,13 +35,35 @@ Shortcuts más utilizados en IntelliJ ([ver](https://resources.jetbrains.com/sto
 |Ver árbol de invocaciones|Ctrl + Alt + H|
 |Ver definición en ventana emergente|Ctrl + Shift + I|
 |Abrir ventana de navegación del archivo|Ctrl + F12|
-|Cerrar archivo|Ctrl + F4|
 |Ir a barra de navegación|Alt + Home|
 
 ### Edición
 
 |Descripción|Comando|
 |-|-|
+|Menú de autocompletado|Ctrl + Space|
+|Menú de sugerencias|Alt + Enter|
+|Información de parámetro|Ctrl + S|
+|Muestra información, incluye javadoc|Ctrl + Q|
+|Menú para generación de código|Alt + Ins|
+|Sebreescribir método|Ctrl + O|
+|Implementar método|Ctrl + I|
+|Cerrar archivo|Ctrl + F4|
+|Comentar línea|Ctrl + /|
+|Comentar bloque|Ctrl + Shift + /|
+|Extender selección|Ctrl + W|
+|Reducir selección|Ctrl + Shift + W|
+|Formatear código|Ctrl + Alt + L|
+|Optimizar imports|Ctrl + Alt + O|
+|Duplicar línea|Ctrl + D|
+|Cortar línea|Ctrl + X|
+|Eliminar línea|Ctrl + Y|
+|Unir con línea de abajo|Ctrl + Shift + J|
+|Nueva línea abajo|Shift + Enter|
+|Nueva línea arriba|Ctrl + Alt + Enter|
+|Seleccionar hasta al principio/final del bloque|Ctrl + Shift + [/]|
+|Eliminar hasta el final de la palabra|Ctrl + Delete|
+|Eliminar hasta el inicio de la palabra|Ctrl + Backspace|
 
 ### Búsqueda
 
