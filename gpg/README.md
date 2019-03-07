@@ -2,6 +2,7 @@
 
 - https://msol.io/blog/tech/back-up-your-pgp-keys-with-gpg/
 - http://sidgan.me/technical/2015/01/05/creating-and-revoking-gpg-keys
+- http://www.jabberwocky.com/software/paperkey/
 
 ### Generar
 
