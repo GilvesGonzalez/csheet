@@ -89,7 +89,7 @@ POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status)
 Abrir archivo de configuración:
 
 ```
-$ vi ~/.oh-my-zsh/custom/themes/powerlevel9k
+$ vi ~/.oh-my-zsh/custom/themes/powerlevel9k/powerlevel9k.zsh-theme 
 ```
 
 Y reemplazar la función `prompt_virtualenv` por:
