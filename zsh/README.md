@@ -85,6 +85,26 @@ POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(dir newline nodeenv virtualenv vcs)
 POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status)
 ```
 
+#### Mejora del elemento `virtualenv`
+Abrir archivo de configuración:
+
+```
+$ vi ~/.oh-my-zsh/custom/themes/powerlevel9k
+```
+
+Y reemplazar la función `prompt_virtualenv` por:
+
+```
+prompt_virtualenv() {
+  [[ -z "$VIRTUAL_ENV" ]] && return
+
+  local info="\ue63c v$(python --version | cut -d' ' -f2)[${VIRTUAL_ENV:t}]"
+  "$1_prompt_segment" "$0" "$2" "black" "green" "$info"
+}
+```
+
+Instalar en el sistema la fuente: [devicons](https://github.com/gabrielelana/awesome-terminal-fonts/blob/master/fonts/devicons-regular.ttf)
+
 ### Alias
 
 Abrir archivo de configuración y agregar alias:
