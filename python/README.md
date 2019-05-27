@@ -22,6 +22,7 @@ Agregar al final del archivo:
 ```
 export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3
 export WORKON_HOME=~/.virtualenvs
+export VIRTUALENVWRAPPER_VIRTUALENV=~/.local/bin/virtualenv
 source ~/.local/bin/virtualenvwrapper.sh
 ```
 
@@ -36,9 +37,9 @@ Listar virtualenv:
 $ lsvirtualenv
 ```
 
-Crear virtualenv:
+Crear virtualenv para python 2:
 ```
-$ mkvirtualenv NOMBRE
+$ mkvirtualenv --python=python2 NOMBRE
 ```
 
 Crear virtualenv para python 3:
