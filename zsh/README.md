@@ -71,10 +71,17 @@ POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(context dir newline vcs)
 POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status ram time)
 ```
 
-en caso de usr [tmux](tmux):
+en caso de usar [tmux](tmux):
 
 ```
 POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(dir newline vcs)
+POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status)
+```
+
+en caso de usar [tmux](tmux), [nodeenv](https://github.com/ekalinin/nodeenv) y [virtualenv](https://virtualenv.pypa.io/en/latest/):
+
+```
+POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(dir newline nodeenv virtualenv vcs)
 POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status)
 ```
 
