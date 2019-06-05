@@ -98,7 +98,7 @@ Y reemplazar la función `prompt_virtualenv` por:
 prompt_virtualenv() {
   [[ -z "$VIRTUAL_ENV" ]] && return
 
-  local info="\ue63c v$(python --version | cut -d' ' -f2)[${VIRTUAL_ENV:t}]"
+  local info="\ue63c v$(python -c 'from platform import python_version; print(python_version())')[${VIRTUAL_ENV:t}]"
   "$1_prompt_segment" "$0" "$2" "black" "green" "$info"
 }
 ```
