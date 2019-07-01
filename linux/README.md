@@ -164,6 +164,11 @@ $ df -h
 $ df -Th (con formato de archivo)
 ```
 
+Tamaño de carpetas:
+```
+$ du -ah . | sort -rh | head -30
+```
+
 Correr en segundo plano:
 ```
 $ nohup PROGRAMA &
