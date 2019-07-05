@@ -43,6 +43,20 @@ $ vim +PlugInstall +qall
 
 Abre `vim` normalmente
 
+### Configurar git
+
+Abrir vimrc
+
+```
+$ vim ~/.vimrc
+```
+
+Agregar
+
+```
+au FileType gitcommit setlocal tw=75
+```
+
 # Comandos/Shortcuts en Vim
 
 Ayuda:
