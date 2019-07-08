@@ -189,6 +189,11 @@ Buscar sin warning:
 $ find RUTA -name NOMBRE -print 2>/dev/null
 ```
 
+Cambiar CRLF a LF:
+```
+$ find . -type f -exec dos2unix {} \;
+```
+
 Probar puerto:
 ```
 $ telnet <<ip>> <<puerto>>
