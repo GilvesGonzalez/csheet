@@ -51,6 +51,7 @@ Shortcuts más utilizados en eclipse. Teclado en inglés recomendado.
 |Agregar import de método estático|Ctrl + Shift + M|
 |To upper case|Ctrl + Shift + X|
 |To lower case|Ctrl + Shift + Y|
+|Add javadoc|Alt + Shift + J|
 
 ### Búsqueda
 
