@@ -148,6 +148,12 @@ Actualizar:
 alias upgrade='sudo apt update -y && sudo apt upgrade -y && sudo apt autoremove'
 ```
 
+Ip wifi:
+
+```
+alias ipwifi="ip a | grep wlp | grep -Eo 'inet (addr:)?([0-9]*\.){3}[0-9]*' | grep -Eo '([0-9]*\.){3}[0-9]*'"
+```
+
 #### Git
 
 Pull rebase de muchos repositorios:
