@@ -32,6 +32,8 @@ $ source ~/.zshrc
 $ mkdir -p $WORKON_HOME
 ```
 
+## Usando virtualenvwrapper
+
 Listar virtualenv:
 ```
 $ lsvirtualenv
@@ -60,6 +62,28 @@ $ deactivate
 Remover virtualenv:
 ```
 $ rmvirtualenv NOMBRE
+```
+
+## Usando sólo virtualenv
+
+Crear virtualenv para python 2:
+```
+$ virtualenv --python=python2 NOMBRE
+```
+
+Crear virtualenv para python 3:
+```
+$ virtualenv --python=python3 NOMBRE
+```
+
+Activar virtualenv:
+```
+$ source NOMBRE/bin/activate
+```
+
+Desactivar virtualenv:
+```
+$ deactivate
 ```
 
 ### PIP
