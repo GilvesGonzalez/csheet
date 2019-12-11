@@ -58,7 +58,7 @@ actualizar plugin.
 
 Prefijo:
 ```
-Ctrl + b
+Ctrl + x (default Ctrl + b)
 ```
 
 ### Paneles
