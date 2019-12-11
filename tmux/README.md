@@ -32,12 +32,14 @@ set -g @themepack 'powerline/double/blue'
 run -b '~/.tmux/plugins/tpm/tpm'
 ```
 
+Activar nueva configuración:
+```
+$ tmux source ~/.tmux.conf
+```
+
 Activar/Actualizar plugins:
 ```
 Prefijo + I
-```
-```
-$ tmux source ~/.tmux.conf
 ```
 
 ## Tips para agregar memoria ram a la barra
