@@ -1,5 +1,23 @@
 # Comandos para linux
 
+## Utilitarios Ubuntu
+
+#### Cheat (https://www.putorius.net/linux-cheat-sheets.html):
+```
+$ sudo snap install cheat
+$ cheat.cheatsheet-setup
+```
+
+Agregar variable de entorno a `~/.zshrc`:
+```
+export EDITOR=vim
+```
+
+#### Sdkman (https://sdkman.io/install):
+```
+$ curl -s "https://get.sdkman.io" | bash
+```
+
 ## Comandos generales
 
 Directorios:
