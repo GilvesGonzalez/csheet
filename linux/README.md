@@ -500,6 +500,13 @@ Revisión de puestos escuchas con nmap:
 # nmap -sT -sU -O IP
 ```
 
+## Matar Proceso en Puerto
+
+```
+$ fuser -v -n tcp -k 80
+$ kill -9 $(sudo lsof -t -i:80)
+```
+
 ## Benchmark GPU
 
 Instalar utilitarios:
