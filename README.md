@@ -15,3 +15,4 @@ Base de conocimientos sobre comandos linux en español.
 - [proxmox](proxmox)
 - [gpg](gpg)
 - [intellij](intellij)
+- [aliases](aliases)
