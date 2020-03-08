@@ -1,4 +1,4 @@
-# Aliases Para Ubuntu
+# Aliases Ubuntu
 
 Abrir archivo de configuración y agregar alias (depende si usas `zsh` o `bash`):
 
