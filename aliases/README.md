@@ -71,6 +71,6 @@ Git status de muchos repositorios:
 alias gst-all='find . -mindepth 1 -maxdepth 1 -type d -printf "\n\n>>>>%f\n" -exec git --git-dir={}/.git --work-tree=$PWD/{} status \;'
 ```
 
-### Otros
+### Otros Usando ohmyzsh
 
 - [Cheat sheet](https://github.com/robbyrussell/oh-my-zsh/wiki/Cheatsheet)
