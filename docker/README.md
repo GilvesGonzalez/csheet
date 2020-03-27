@@ -101,3 +101,17 @@ Ver servicios:
 ```
 $ docker stack services NOMBRE
 ```
+
+### Lazy docker
+
+([Aquí](https://github.com/jesseduffield/lazydocker))
+
+Instalar:
+```
+$ curl https://raw.githubusercontent.com/jesseduffield/lazydocker/master/scripts/install_update_linux.sh | bash
+```
+
+Ejecutar:
+```
+$ lazydocker
+```
