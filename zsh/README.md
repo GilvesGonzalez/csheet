@@ -28,10 +28,18 @@ $ pkill -KILL -u $USER
 
 #### Actualizar tema a [agnoster](https://github.com/agnoster/agnoster-zsh-theme)
 
-instalar fuentes ([aquí](https://powerline.readthedocs.io/en/latest/installation/linux.html#fonts-installation)):
+instalar fuentes:
 
 ```
-# apt install fonts-powerline
+$ git clone git@github.com:powerline/fonts.git powerline-fonts
+$ cd powerline-fonts
+$ ./install
+```
+
+en elementary os:
+
+```
+$ gsettings set io.elementary.terminal.settings font 'Roboto Mono for Powerline 12' 
 ```
 
 abrir archivo de configuración:
