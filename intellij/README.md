@@ -62,7 +62,8 @@ Shortcuts más utilizados en IntelliJ ([ver](https://resources.jetbrains.com/sto
 
 |Descripción|Comando|
 |-|-|
-|Menú de autocompletado|Ctrl + Space|
+|Menú de autocompletado (2 veces para más profundidad)|Ctrl + Space|
+|Completar línea (; en java)|Ctrl + Shift + Enter|
 |Menú de sugerencias|Alt + Enter|
 |Información de parámetro|Ctrl + P|
 |Muestra información, incluye javadoc|Ctrl + Q|
