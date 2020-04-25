@@ -41,6 +41,7 @@ Shortcuts más utilizados en IntelliJ ([ver](https://resources.jetbrains.com/sto
 |Abrir bloque|Ctrl + +|
 |Cerrar todos los bloques|Ctrl + Shift + -|
 |Abrir todos los bloques|Ctrl + Shift + +|
+|Ir a prueba unitaria|Ctrl + Shift + T|
 
 ### Edición
 
@@ -48,9 +49,10 @@ Shortcuts más utilizados en IntelliJ ([ver](https://resources.jetbrains.com/sto
 |-|-|
 |Menú de autocompletado|Ctrl + Space|
 |Menú de sugerencias|Alt + Enter|
+|Menú para generación de código|Alt + Ins|
+|Menú para refactorizar|Ctrl + Shift + Alt + T|
 |Información de parámetro|Ctrl + P|
 |Muestra información, incluye javadoc|Ctrl + Q|
-|Menú para generación de código|Alt + Ins|
 |Sebreescribir método|Ctrl + O|
 |Implementar método|Ctrl + I|
 |Cerrar archivo|Ctrl + F4|
