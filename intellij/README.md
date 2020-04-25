@@ -25,6 +25,10 @@ Shortcuts más utilizados en IntelliJ ([ver](https://resources.jetbrains.com/sto
 |Reducir selección|Ctrl + Shift + W|
 |Seleccionar hasta inicio/final de la palabra|Ctrl + Shift + Right/Left|
 |Seleccionar hasta el principio/final del bloque|Ctrl + Shift + [/]|
+|Extender selección|Ctrl + W|
+|Seleccionar siguiente ocurrencia|Alt + J|
+|Deseleccionar última ocurrencia|Alt + Shift + J|
+|Seleccionar todas las ocurrencia|Ctrl + Alt + Shift + J|
 
 ### Navegación
 
