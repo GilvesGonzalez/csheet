@@ -6,9 +6,7 @@
 $ sudo apt install nodejs npm
 ```
 
-### Instalación de nvm
-
-[nvm](https://github.com/nvm-sh/nvm)
+### Instalación de [nvm](https://github.com/nvm-sh/nvm)
 
 ```
 $ curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.3/install.sh | zsh
@@ -22,12 +20,10 @@ Instalar:
 $ nvm install 14.0.0
 ```
 
-### Instalación de nodeenv
+### Instalación de [nodeenv](https://github.com/ekalinin/nodeenv)
 
 Primero instalar [python](https://github.com/sauljabin/linux-commands/tree/master/python) y [virtualenv](https://github.com/sauljabin/linux-commands/tree/master/python).
 
-
-[nodeenv](https://github.com/ekalinin/nodeenv).
 
 ```
 $ pip3 install nodeenv
