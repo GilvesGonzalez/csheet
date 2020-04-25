@@ -1,6 +1,6 @@
 # Configuración de node en linux
 
-### Instalación global
+### Instalación global (no recomendada)
 
 ```
 $ sudo apt install nodejs npm
@@ -14,7 +14,7 @@ $ curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.3/install.sh | zsh
 
 ### Comandos nvm
 
-Instalar:
+Instalar node:
 
 ```
 $ nvm install 14.0.0
@@ -74,7 +74,18 @@ Instalación de typescript (`-g` global):
 $ npm install -g typescript
 ```
 
-Compilación:
+Versión:
 ```
 $ tsc -v
+```
+
+Iniciar proyecto:
+```
+$ tsc -init
+```
+
+Compilación (`-w` continua, `*` todos):
+```
+$ tsc archivo.ts -w
+$ tsc *.ts -w
 ```
