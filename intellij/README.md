@@ -73,7 +73,9 @@ Shortcuts más utilizados en IntelliJ ([ver](https://resources.jetbrains.com/sto
 |Eliminar hasta el final de la palabra|Ctrl + Delete|
 |Eliminar hasta el inicio de la palabra|Ctrl + Backspace|
 |Mover bloque|Ctrl + Shift + Up/Down|
-|Mover línea|Alt + Shift + Up/Down
+|Mover línea|Alt + Shift + Up/Down|
+|Wrap|Ctrl + Alt + T|
+|Unwrap|Ctrl + Shift + Del|
 
 ### Búsqueda
 
