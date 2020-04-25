@@ -76,7 +76,6 @@ Shortcuts más utilizados en IntelliJ ([ver](https://resources.jetbrains.com/sto
 |Nueva línea abajo|Shift + Enter|
 |Nueva línea dejando cursor arriba|Ctrl + Enter|
 |Nueva línea arriba|Ctrl + Alt + Enter|
-|Seleccionar hasta al principio/final del bloque|Ctrl + Shift + [/]|
 |Eliminar hasta el final de la palabra|Ctrl + Delete|
 |Eliminar hasta el inicio de la palabra|Ctrl + Backspace|
 |Mover bloque|Ctrl + Shift + Up/Down|
