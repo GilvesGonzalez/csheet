@@ -47,3 +47,17 @@ Desactivar environment:
 ```
 (env) $ deactivate_node
 ```
+
+### Comandos npm
+
+Instalación de typescript:
+```
+$ npm install -g typescript
+```
+
+### Comandos typescript
+
+Compilación:
+```
+$ tsc helloworld.ts
+```
