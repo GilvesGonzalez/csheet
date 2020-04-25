@@ -24,7 +24,7 @@ Crear env:
 $ nodeenv env
 ```
 
-Crear node con version (usar --prebuilt para que sea mas rápido):
+Crear node con version (usar `--prebuilt` para que sea mas rápido):
 
 ```
 $ nodeenv --node=0.10.25 --prebuilt env
@@ -50,7 +50,7 @@ Desactivar environment:
 
 ### Comandos npm
 
-Instalación de typescript:
+Instalación de typescript (`-g` global):
 ```
 $ npm install -g typescript
 ```
@@ -59,5 +59,5 @@ $ npm install -g typescript
 
 Compilación:
 ```
-$ tsc helloworld.ts
+$ tsc -v
 ```
