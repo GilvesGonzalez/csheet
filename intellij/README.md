@@ -6,6 +6,8 @@ Shortcuts más utilizados en IntelliJ ([ver](https://resources.jetbrains.com/sto
 
 |Descripción|Comando|
 |-|-|
+|Menú para generación de código|Alt + Ins|
+|Menú para refactorizar|Ctrl + Shift + Alt + T|
 |Copiar clase|F5|
 |Mover clase o método|F6|
 |Renombrar|Shift + F6|
@@ -14,6 +16,15 @@ Shortcuts más utilizados en IntelliJ ([ver](https://resources.jetbrains.com/sto
 |Extraer variable|Ctrl + Alt + V|
 |Extraer atributo|Ctrl + Alt + F|
 |Extraer constante|Ctrl + Alt + C|
+
+### Selección
+
+|Descripción|Comando|
+|-|-|
+|Extender selección|Ctrl + W|
+|Reducir selección|Ctrl + Shift + W|
+|Seleccionar hasta inicio/final de la palabra|Ctrl + Shift + Right/Left|
+|Seleccionar hasta el principio/final del bloque|Ctrl + Shift + [/]|
 
 ### Navegación
 
@@ -49,8 +60,6 @@ Shortcuts más utilizados en IntelliJ ([ver](https://resources.jetbrains.com/sto
 |-|-|
 |Menú de autocompletado|Ctrl + Space|
 |Menú de sugerencias|Alt + Enter|
-|Menú para generación de código|Alt + Ins|
-|Menú para refactorizar|Ctrl + Shift + Alt + T|
 |Información de parámetro|Ctrl + P|
 |Muestra información, incluye javadoc|Ctrl + Q|
 |Sebreescribir método|Ctrl + O|
@@ -58,8 +67,6 @@ Shortcuts más utilizados en IntelliJ ([ver](https://resources.jetbrains.com/sto
 |Cerrar archivo|Ctrl + F4|
 |Comentar/Descomentar línea|Ctrl + /|
 |Comentar/Descomentar bloque|Ctrl + Shift + /|
-|Extender selección|Ctrl + W|
-|Reducir selección|Ctrl + Shift + W|
 |Formatear código|Ctrl + Alt + L|
 |Optimizar imports|Ctrl + Alt + O|
 |Duplicar línea|Ctrl + D|
