@@ -44,18 +44,18 @@ Shortcuts más utilizados en IntelliJ ([ver](https://resources.jetbrains.com/sto
 |Volver a editor (desde ventana interna)|Esc|
 |Cerrar ventana interna (desde ventana interna)|Shift + Esc|
 |**Ir a declaración**|Ctrl + B/Click|
-|Ir a definición|Ctrl + Shift + B|
-|Ir a padre (método o clase)|Ctrl + U|
 |Ir a implementación|Ctrl + Alt + B|
+|Ir a padre (método o clase)|Ctrl + U|
 |Ver árbol de herencia|Ctrl + H, Alt + 8|
 |Ver árbol de invocaciones|Ctrl + Alt + H|
-|Abrir ventana de navegación del archivo|Ctrl + F12|
+|**Abrir ventana de navegación del archivo**|Ctrl + F12|
 |Ir a barra de navegación|Alt + Home|
 |Cerrar bloque|Ctrl + -|
 |Abrir bloque|Ctrl + +|
 |Cerrar todos los bloques|Ctrl + Shift + -|
 |Abrir todos los bloques|Ctrl + Shift + +|
 |Ir a prueba unitaria|Ctrl + Shift + T|
+|**Ir a siguiente error**|F2|
 
 ### Edición
 
