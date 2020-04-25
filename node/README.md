@@ -2,7 +2,13 @@
 
 [nodeenv](https://github.com/ekalinin/nodeenv).
 
-### Instalación
+### Instalación global
+
+```
+$ sudo apt install nodejs npm
+```
+
+### Instalación de nodeenv
 
 Primero instalar [python](https://github.com/sauljabin/linux-commands/tree/master/python) y [virtualenv](https://github.com/sauljabin/linux-commands/tree/master/python).
 
@@ -10,7 +16,7 @@ Primero instalar [python](https://github.com/sauljabin/linux-commands/tree/maste
 $ pip3 install nodeenv
 ```
 
-### Comandos
+### Comandos nodeenv
 
 Lista de nodes disponibles:
 
@@ -48,14 +54,12 @@ Desactivar environment:
 (env) $ deactivate_node
 ```
 
-### Comandos npm
+### Comandos typescript
 
 Instalación de typescript (`-g` global):
 ```
 $ npm install -g typescript
 ```
-
-### Comandos typescript
 
 Compilación:
 ```
