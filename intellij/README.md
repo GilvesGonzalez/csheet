@@ -24,8 +24,8 @@ Shortcuts más utilizados en IntelliJ ([ver](https://resources.jetbrains.com/sto
 |-|-|
 |**Extender selección**|Ctrl + W|
 |Reducir selección|Ctrl + Shift + W|
-|**Seleccionar hasta inicio/final de la palabra**|Ctrl + Shift + Right/Left|
-|Seleccionar hasta el principio/final del bloque|Ctrl + Shift + [/]|
+|**Seleccionar hasta inicio/final de la palabra**|Ctrl + Shift + Right o Left|
+|Seleccionar hasta el principio/final del bloque|Ctrl + Shift + [ o ]|
 |**Seleccionar siguiente ocurrencia**|Alt + J|
 |Deseleccionar última ocurrencia|Alt + Shift + J|
 |Seleccionar todas las ocurrencia|Ctrl + Alt + Shift + J|
@@ -36,14 +36,14 @@ Shortcuts más utilizados en IntelliJ ([ver](https://resources.jetbrains.com/sto
 |-|-|
 |Ventana de navegación|Ctrl + E|
 |Ir a línea|Ctrl + G|
-|**Navegar entre archivos abiertos**|Alt + Right/Left|
-|**Ir a siguiente/previo método**|Alt + Up/Down|
-|**Ir al inicio/final de la palabra**|Ctrl + Right/Left|
-|Ir al principio/final del bloque|Ctrl + [/]|
+|**Navegar entre archivos abiertos**|Alt + Right o Left|
+|**Ir a siguiente/previo método**|Alt + Up o Down|
+|**Ir al inicio/final de la palabra**|Ctrl + Right o Left|
+|Ir al principio/final del bloque|Ctrl + [ o ]|
 |Abrir ventanas interna del IDE (Project, Structure, etc)|Alt + 0-9|
 |Volver a editor (desde ventana interna)|Esc|
 |Cerrar ventana interna (desde ventana interna)|Shift + Esc|
-|**Ir a declaración**|Ctrl + B/Click|
+|**Ir a declaración**|Ctrl + B o Click|
 |Ir a implementación|Ctrl + Alt + B|
 |Ir a padre (método o clase)|Ctrl + U|
 |Ver árbol de herencia|Ctrl + H, Alt + 8|
@@ -54,7 +54,7 @@ Shortcuts más utilizados en IntelliJ ([ver](https://resources.jetbrains.com/sto
 |Abrir bloque|Ctrl + +|
 |Cerrar todos los bloques|Ctrl + Shift + -|
 |Abrir todos los bloques|Ctrl + Shift + +|
-|Ir a prueba unitaria|Ctrl + Shift + T|
+|**Ir a prueba unitaria**|Ctrl + Shift + T|
 |**Ir a siguiente error**|F2|
 
 ### Edición
@@ -82,8 +82,8 @@ Shortcuts más utilizados en IntelliJ ([ver](https://resources.jetbrains.com/sto
 |**Nueva línea arriba**|Ctrl + Alt + Enter|
 |**Eliminar hasta el final de la palabra**|Ctrl + Delete|
 |Eliminar hasta el inicio de la palabra|Ctrl + Backspace|
-|Mover bloque|Ctrl + Shift + Up/Down|
-|**Mover línea**|Alt + Shift + Up/Down|
+|Mover bloque|Ctrl + Shift + Up o Down|
+|**Mover línea**|Alt + Shift + Up o Down|
 |Wrap|Ctrl + Alt + T|
 |Unwrap|Ctrl + Shift + Del|
 
