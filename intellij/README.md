@@ -37,6 +37,10 @@ Shortcuts más utilizados en IntelliJ ([ver](https://resources.jetbrains.com/sto
 |Ver definición en ventana emergente|Ctrl + Shift + I|
 |Abrir ventana de navegación del archivo|Ctrl + F12|
 |Ir a barra de navegación|Alt + Home|
+|Cerrar bloque|Ctrl + -|
+|Abrir bloque|Ctrl + +|
+|Cerrar todos los bloques|Ctrl + Shift + -|
+|Abrir todos los bloques|Ctrl + Shift + +|
 
 ### Edición
 
@@ -61,10 +65,12 @@ Shortcuts más utilizados en IntelliJ ([ver](https://resources.jetbrains.com/sto
 |Eliminar línea|Ctrl + Y|
 |Unir con línea de abajo|Ctrl + Shift + J|
 |Nueva línea abajo|Shift + Enter|
+|Nueva línea dejando cursor arriba|Ctrl + Enter|
 |Nueva línea arriba|Ctrl + Alt + Enter|
 |Seleccionar hasta al principio/final del bloque|Ctrl + Shift + [/]|
 |Eliminar hasta el final de la palabra|Ctrl + Delete|
 |Eliminar hasta el inicio de la palabra|Ctrl + Backspace|
+|Mover línea o bloque|Ctrl + Shift + Up/Down|
 
 ### Búsqueda
 
