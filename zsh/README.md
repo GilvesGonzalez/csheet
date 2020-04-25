@@ -12,18 +12,6 @@
 $ sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 ```
 
-actualizar el shell a zsh:
-
-```
-# chsh -s `which zsh`
-```
-
-y cerrar/iniciar sesión:
-
-```
-$ pkill -KILL -u $USER
-```
-
 ### Temas
 
 #### Actualizar tema a [agnoster](https://github.com/agnoster/agnoster-zsh-theme)
