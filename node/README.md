@@ -96,7 +96,7 @@ $ tsc
 ```
 o
 ```
-$
+$ tsc --sourceMap
 ```
 
 ### Comandos tslint
