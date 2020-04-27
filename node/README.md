@@ -89,3 +89,20 @@ Compilación (`-w` continua, `*` todos):
 $ tsc archivo.ts -w
 $ tsc *.ts -w
 ```
+
+### Comandos tslint
+
+Instalación (`-g` global):
+```
+$ npm install -g tslint
+```
+
+Iniciar tslint:
+```
+$ tslint --init
+```
+
+Correr tslint:
+```
+$ tslint *.ts
+```
