@@ -90,6 +90,15 @@ $ tsc archivo.ts -w
 $ tsc *.ts -w
 ```
 
+Generar source map:
+```
+$ tsc
+```
+o
+```
+$
+```
+
 ### Comandos tslint
 
 Instalación (`-g` global):
