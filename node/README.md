@@ -90,7 +90,7 @@ $ tsc archivo.ts -w
 $ tsc *.ts -w
 ```
 
-Generar source map:
+Generar source map (`-w` continua, `*` todos):
 ```
 $ tsc
 ```
