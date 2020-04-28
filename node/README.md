@@ -86,17 +86,9 @@ $ tsc -init
 
 Compilación (`-w` continua, `*` todos):
 ```
+$ tsc -w
 $ tsc archivo.ts -w
 $ tsc *.ts -w
-```
-
-Generar source map (`-w` continua, `*` todos):
-```
-$ tsc
-```
-o
-```
-$ tsc --sourceMap
 ```
 
 ### Comandos tslint
