@@ -24,7 +24,7 @@ Configurar tmux `vim ~/.tmux.conf`:
 set-option -g prefix C-x
 set -g @plugin 'tmux-plugins/tpm'
 set -g @plugin 'jimeh/tmux-themepack'
-set -g @themepack 'powerline/double/blue'
+set -g @themepack 'powerline/default/cyan'
 run -b '~/.tmux/plugins/tpm/tpm'
 ```
 
@@ -38,7 +38,7 @@ Activar/Actualizar plugins:
 Prefijo + I
 ```
 
-Instalar [fuente](https://github.com/powerline/fonts):
+Instalar [fuente](https://github.com/powerline/fonts) (no recomendada):
 
 ```
 $ git clone git@github.com:powerline/fonts.git ~/.powerline-fonts
@@ -46,7 +46,7 @@ $ cd ~/.powerline-fonts
 $ ./install
 ```
 
-O Instalar fuentes desde [nerd-fonts](https://github.com/romkatv/nerd-fonts)
+O Instalar fuentes desde [nerd-fonts](https://github.com/romkatv/nerd-fonts) (recomendada):
 
 ```
 $ git clone --depth=1 https://github.com/romkatv/nerd-fonts.git ~/.nerd-fonts
