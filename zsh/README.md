@@ -16,18 +16,12 @@ $ sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools
 
 #### Actualizar tema a [agnoster](https://github.com/agnoster/agnoster-zsh-theme)
 
-instalar fuentes:
+instalar [fuente](https://github.com/powerline/fonts):
 
 ```
-$ git clone git@github.com:powerline/fonts.git powerline-fonts
-$ cd powerline-fonts
+$ git clone git@github.com:powerline/fonts.git ~/.powerline-fonts
+$ cd ~/.powerline-fonts
 $ ./install
-```
-
-en elementary os:
-
-```
-$ gsettings set io.elementary.terminal.settings font 'Roboto Mono for Powerline 12' 
 ```
 
 abrir archivo de configuración:
