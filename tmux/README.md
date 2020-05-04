@@ -46,6 +46,14 @@ $ cd ~/.powerline-fonts
 $ ./install
 ```
 
+O Instalar fuentes desde [nerd-fonts](https://github.com/romkatv/nerd-fonts)
+
+```
+$ git clone --depth=1 https://github.com/romkatv/nerd-fonts.git ~/.nerd-fonts
+$ cd ~/.nerd-fonts
+$ ./install
+```
+
 ## Comandos
 
 Prefijo:
