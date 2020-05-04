@@ -1,4 +1,4 @@
-# Configuración de **zsh** (ubuntu 18.04)
+# Configuración de **zsh**
 
 ### Prerequisitos
 
@@ -16,7 +16,7 @@ $ sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools
 
 #### Actualizar tema a [agnoster](https://github.com/agnoster/agnoster-zsh-theme)
 
-instalar [fuente](https://github.com/powerline/fonts):
+instalar [fuente](https://github.com/powerline/fonts) (no recomendada):
 
 ```
 $ git clone git@github.com:powerline/fonts.git ~/.powerline-fonts
@@ -24,7 +24,7 @@ $ cd ~/.powerline-fonts
 $ ./install
 ```
 
-O Instalar fuentes desde [nerd-fonts](https://github.com/romkatv/nerd-fonts)
+O Instalar fuentes desde [nerd-fonts](https://github.com/romkatv/nerd-fonts) (recomendada):
 
 ```
 $ git clone --depth=1 https://github.com/romkatv/nerd-fonts.git ~/.nerd-fonts
@@ -60,4 +60,10 @@ actualizar tema:
 
 ```
 ZSH_THEME="powerlevel10k/powerlevel10k"
+```
+
+ejecutar:
+
+```
+$ p10k configure
 ```
