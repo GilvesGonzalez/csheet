@@ -24,7 +24,7 @@ Configurar tmux `vim ~/.tmux.conf`:
 set-option -g prefix C-x
 set -g @plugin 'tmux-plugins/tpm'
 set -g @plugin 'jimeh/tmux-themepack'
-set -g @themepack 'powerline/default/cyan'
+set -g @themepack 'powerline/default/blue'
 run -b '~/.tmux/plugins/tpm/tpm'
 ```
 
