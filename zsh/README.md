@@ -24,6 +24,14 @@ $ cd ~/.powerline-fonts
 $ ./install
 ```
 
+O Instalar fuentes desde [nerd-fonts](https://github.com/romkatv/nerd-fonts)
+
+```
+$ git clone --depth=1 https://github.com/romkatv/nerd-fonts.git ~/.nerd-fonts
+$ cd ~/.nerd-fonts
+$ ./install
+```
+
 abrir archivo de configuración:
 
 ```
@@ -36,10 +44,10 @@ actualizar tema:
 ZSH_THEME="agnoster"
 ```
 
-#### Instalar [powerlevel9k](https://github.com/bhilburn/powerlevel9k)
+#### Instalar [powerlevel10k](https://github.com/romkatv/powerlevel10k)
 
 ```
-$ git clone https://github.com/bhilburn/powerlevel9k.git ~/.oh-my-zsh/custom/themes/powerlevel9k
+$ git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/themes/powerlevel10k
 ```
 
 abrir archivo de configuración:
@@ -51,46 +59,5 @@ $ vi ~/.zshrc
 actualizar tema:
 
 ```
-ZSH_THEME="powerlevel9k/powerlevel9k"
+ZSH_THEME="powerlevel10k/powerlevel10k"
 ```
-
-agregar configuraciones:
-
-```
-POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(context dir newline vcs)
-POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status ram time)
-```
-
-en caso de usar [tmux](tmux):
-
-```
-POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(dir newline vcs)
-POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status)
-```
-
-en caso de usar [tmux](tmux), [nodeenv](https://github.com/ekalinin/nodeenv) y [virtualenv](https://virtualenv.pypa.io/en/latest/):
-
-```
-POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(dir newline nodeenv virtualenv vcs)
-POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status)
-```
-
-#### Mejora del elemento `virtualenv`
-Abrir archivo de configuración:
-
-```
-$ vi ~/.oh-my-zsh/custom/themes/powerlevel9k/powerlevel9k.zsh-theme
-```
-
-Y reemplazar la función `prompt_virtualenv` por:
-
-```
-prompt_virtualenv() {
-  [[ -z "$VIRTUAL_ENV" ]] && return
-
-  local info="\ue63c v$(python -c 'from platform import python_version; print(python_version())')[${VIRTUAL_ENV:t}]"
-  "$1_prompt_segment" "$0" "$2" "black" "green" "$info"
-}
-```
-
-Instalar en el sistema la fuente: [devicons](https://github.com/gabrielelana/awesome-terminal-fonts/blob/master/fonts/devicons-regular.ttf)
