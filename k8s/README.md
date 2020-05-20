@@ -16,9 +16,15 @@ $ docker run hello-world
 
 En caso de problemas con permisos reiniciar sesión.
 
+No activar el modo `swarm`, de lo contrario, desactivarlo con:
+
+```
+docker swarm leave --force
+```
+
 ## VirtualBox
 
-Istalar `VirtualBox` [aquí](https://www.virtualbox.org/wiki/Linux_Downloads).
+Instalar `VirtualBox` [aquí](https://www.virtualbox.org/wiki/Linux_Downloads).
 
 ### kubectl (kubernetes command line tool)
 
@@ -32,15 +38,9 @@ $ kubectl version --client
 ### minikube
 
 
-no activar como swarm, de lo contrario, desactivarlo con:
-
-```
-docker swarm leave --force
-```
-
 Instalar `minikube` [aquí](https://minikube.sigs.k8s.io/docs/start/):
 
-Iniciar (intentará seleccionar docker por defecto):
+Iniciar (intentará usar `docker` por defecto):
 ```
 $ minikube start
 ```
