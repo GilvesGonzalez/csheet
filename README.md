@@ -17,3 +17,5 @@ Base de conocimientos sobre comandos linux en español.
 - [intellij](intellij)
 - [aliases](aliases)
 - [node](node)
+- [k8s](k8s)
+- [vagrant](vagrant)
