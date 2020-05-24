@@ -26,7 +26,10 @@ docker swarm leave --force
 
 ## VirtualBox
 
-Instalar `VirtualBox` [aquí](https://www.virtualbox.org/wiki/Linux_Downloads).
+Instalar [VirtualBox](https://www.virtualbox.org/wiki/Linux_Downloads).
+```
+$ sudo apt install virtualbox
+```
 
 ### kubectl (kubernetes command line tool)
 
