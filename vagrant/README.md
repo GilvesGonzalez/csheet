@@ -7,8 +7,10 @@ Catalogo de boxes [aquí](https://app.vagrantup.com/boxes/search).
 
 ## VirtualBox
 
-Instalar `VirtualBox` [aquí](https://www.virtualbox.org/wiki/Linux_Downloads).
-
+Instalar [VirtualBox](https://www.virtualbox.org/wiki/Linux_Downloads).
+```
+$ sudo apt install virtualbox
+```
 
 ## Instalar Vagrant
 
