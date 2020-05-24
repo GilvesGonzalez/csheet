@@ -21,6 +21,8 @@ $ cd ~/.nerd-fonts
 $ ./install
 ```
 
+Configurar fuente `MesloLGS NF` en terminal [ver](https://github.com/romkatv/powerlevel10k#meslo-nerd-font-patched-for-powerlevel10k).
+
 Instalar tema:
 ```
 $ git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/themes/powerlevel10k
