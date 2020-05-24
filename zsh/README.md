@@ -21,7 +21,7 @@ $ cd ~/.nerd-fonts
 $ ./install.sh
 ```
 
-Configurar fuente `MesloLGS NF` en terminal [ver](https://github.com/romkatv/powerlevel10k#meslo-nerd-font-patched-for-powerlevel10k).
+Configurar fuente `MesloLGS Nerd Font Regular` en terminal [ver](https://github.com/romkatv/powerlevel10k#meslo-nerd-font-patched-for-powerlevel10k).
 
 Instalar tema:
 ```
