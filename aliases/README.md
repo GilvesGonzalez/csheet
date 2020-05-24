@@ -38,7 +38,7 @@ alias docker-destroy-all='docker rm -f $(docker ps -aq) ; docker volume rm $(doc
 Actualizar:
 
 ```
-alias upgrade='sudo apt update -y && sudo apt upgrade -y && sudo apt autoremove'
+alias upgrade='sudo apt update -y && sudo apt upgrade -y && sudo apt autoremove && sudo snap refresh'
 ```
 
 #### IP
