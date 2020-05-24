@@ -39,20 +39,12 @@ Activar/Actualizar plugins:
 Prefijo + I
 ```
 
-Instalar [fuente](https://github.com/powerline/fonts) (no recomendada):
-
-```
-$ git clone git@github.com:powerline/fonts.git ~/.powerline-fonts
-$ cd ~/.powerline-fonts
-$ ./install
-```
-
-O Instalar fuentes desde [nerd-fonts](https://github.com/romkatv/nerd-fonts) (recomendada):
+Instalar fuentes desde [nerd-fonts](https://github.com/romkatv/nerd-fonts):
 
 ```
 $ git clone --depth=1 https://github.com/romkatv/nerd-fonts.git ~/.nerd-fonts
 $ cd ~/.nerd-fonts
-$ ./install
+$ ./install.sh
 ```
 
 ## Comandos
