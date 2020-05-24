@@ -30,6 +30,11 @@ Correr:
 $ vagrant up
 ```
 
+Detener:
+```
+$ vagrant halt
+```
+
 Eliminar:
 ```
 $ vagrant destroy
