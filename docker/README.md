@@ -2,6 +2,8 @@
 
 ### Docker
 
+Instalar docker [aquí](https://docs.docker.com/engine/install/ubuntu/).
+
 Listar contenedores corriendo:
 ```
 $ docker ps
@@ -44,6 +46,8 @@ $ docker run -d -p LOCAL:CONTENEDOR -e VARIABLE=valor -v /LOCAL:/CONTENEDOR IMAG
 ```
 
 ### Docker Compose
+
+Instalar `docker-compose` [aquí](https://docs.docker.com/compose/install/).
 
 Borrar contenedores:
 ```
