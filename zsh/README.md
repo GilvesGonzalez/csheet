@@ -18,7 +18,7 @@ Instalar fuentes desde [nerd-fonts](https://github.com/romkatv/nerd-fonts):
 ```
 $ git clone --depth=1 https://github.com/romkatv/nerd-fonts.git ~/.nerd-fonts
 $ cd ~/.nerd-fonts
-$ ./install
+$ ./install.sh
 ```
 
 Configurar fuente `MesloLGS NF` en terminal [ver](https://github.com/romkatv/powerlevel10k#meslo-nerd-font-patched-for-powerlevel10k).
