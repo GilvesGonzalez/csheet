@@ -54,6 +54,11 @@ Para iniciar usando virtualbox (recomandado si estas corriendo docker en modo `s
 $ minikube start --vm-driver=virtualbox
 ```
 
+Eliminar cluster:
+```
+$ minikube delete --all
+```
+
 Ver dashboard:
 ```
 $ minikube dashboard
