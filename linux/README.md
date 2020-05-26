@@ -647,6 +647,18 @@ Extraer zip en archivo:
 $ unzip NOMBRE.zip ARCHIVO
 ```
 
+## Observar (`watch`)
+
+Ejecutar un comando en cada `n` segundos:
+```
+$ watch -n1 COMANDO
+```
+
+Ejecutar comando y ver que cambia:
+```
+$ watch -n1 -d COMANDO
+```
+
 ## Divertidos
 
 Cow Say:
