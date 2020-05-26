@@ -654,6 +654,11 @@ Ejecutar un comando en cada `n` segundos:
 $ watch -n1 COMANDO
 ```
 
+Ejecutar un comando en cada `n` segundos y ver solo la salida del comando sin el título de `watch`:
+```
+$ watch -n1 -t COMANDO
+```
+
 Ejecutar comando y ver que cambia:
 ```
 $ watch -n1 -d COMANDO
