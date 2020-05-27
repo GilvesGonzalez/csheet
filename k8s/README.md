@@ -69,6 +69,11 @@ Verificar `kubectl`:
 $ kubectl cluster-info
 ```
 
+Ver status de minikube:
+```
+$ minikube status
+```
+
 ### Correr app
 
 ```
