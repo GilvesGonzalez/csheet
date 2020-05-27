@@ -2,6 +2,19 @@
 
 ## Utilitarios Ubuntu
 
+### Atajos terminal
+
+- `Tab`: autocompleta comandos o rutas de directorios o archivos.
+- `Ctrl+a`: lleva el cursor al inicio de la línea de comandos.
+- `Ctrl+e`: lleva el cursor al final de la línea de comandos.
+- `Ctrl+l`: limpia la terminal, similar a lo que hace el comando clear.
+- `Ctrl+c`: termina el proceso que se esté ejecutando, útil para recuperar el control del sistema.
+- `Ctrl+d`: sale de la terminal, similar al comando exit.
+- `Ctrl+z`: suspende la ejecución del proceso que se está ejecutando y lo pone en segundo plano, con el comando `fg` podremos volver a continuar su ejecución.
+- `Ctrl+right`: mueve el cursor al inicio de la palabra siguiente de la línea.
+- `Ctrl+left`: mueve el cursor al inicio de la palabra anterior de la línea.
+- [Otros](https://picodotdev.github.io/blog-bitix/2016/06/atajos-de-teclado-basicos-de-la-terminal-en-gnu-linux/)
+
 #### Cheat (https://www.putorius.net/linux-cheat-sheets.html):
 ```
 $ sudo snap install cheat
