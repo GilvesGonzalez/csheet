@@ -138,3 +138,27 @@ $ kubectl logs <pod>
 Correr pod volatil para ejecutar comandos:
 ```
 $ kubectl run -i --tty <nombre> --image=<docker image> --restart=Never -- sh
+```
+
+### Compose
+
+Instalar:
+```
+$ sudo curl -L "https://github.com/docker/compose/releases/download/1.25.5/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+$ sudo chmod +x /usr/local/bin/docker-compose
+```
+
+Más comandos en [docker](../docker)
+
+### Kompose
+
+Instalar:
+```
+$ sudo curl -L https://github.com/kubernetes/kompose/releases/download/v1.19.0/kompose-linux-amd64 -o /usr/local/bin/kompose
+$ sudo chmod +x /usr/local/bin/kompose
+```
+
+Convertir:
+```
+$ kompose convert
+```
