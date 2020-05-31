@@ -49,6 +49,11 @@ Obtener ram en GB:
 alias ram="free -h --giga | awk 'FNR==2{print \$7}'"
 ```
 
+Abrir archivo con app asociada:
+```
+alias open='xdg-open'
+```
+
 #### IP
 
 ```
