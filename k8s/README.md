@@ -74,13 +74,18 @@ Ver status de minikube:
 $ minikube status
 ```
 
+Ip del cluster:
+```
+$ minikube ip
+```
+
 ### Correr app
 
 ```
 $ kubectl create -f ARCHIVO.yml
 ```
 
-Ver nodos (permite obtener la ip de los nodos):
+Ver nodos:
 ```
 $ kubectl get nodes
 ```
