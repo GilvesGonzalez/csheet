@@ -12,12 +12,30 @@ $ sudo apt install nodejs npm
 $ curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.3/install.sh | zsh
 ```
 
+### Comandos yarn
+
+Instalación:
+```
+$ sudo apt install yarn
+```
+
+Instalar dependencias:
+```
+$ yarn
+```
+
 ### Comandos nvm
 
 Instalar node:
 
 ```
 $ nvm install 14.0.0
+```
+
+o LTS
+
+```
+$ nvm install --lts
 ```
 
 ### Instalación de [nodeenv](https://github.com/ekalinin/nodeenv)
