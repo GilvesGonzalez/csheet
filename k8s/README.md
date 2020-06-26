@@ -79,6 +79,11 @@ Ip del cluster:
 $ minikube ip
 ```
 
+Obtener objetos soportados en el API:
+```
+$ kubectl api-resources
+```
+
 ### Correr app
 
 ```
