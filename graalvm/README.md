@@ -42,6 +42,20 @@ Correr:
 $ java CLASE
 ```
 
+Crear jar:
+```
+$ jar cfe NAME.jar ENTRADA *.class
+```
+
+> `c`  crea un nuevo archivo \
+> `f`  nombre del archivo \
+> `e`  especifica el entry point para la aplicación stand-alone
+
+Correr jar:
+```
+$ java -jar NAME.jar
+```
+
 ## Comandos Native Image
 
 Compilar `.java`:
@@ -62,6 +76,11 @@ $ ./COMPILADO
 Verificar compilado (`ldd` List Dynamic Dependencies):
 ```
 $ ldd COMPILADO
+```
+
+Crear una imagen nativa desde jar:
+```
+$ native-image -jar NAME.jar
 ```
 
 ## Comparar tiempos
