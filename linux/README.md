@@ -15,21 +15,26 @@
 - `Ctrl+left`: mueve el cursor al inicio de la palabra anterior de la línea.
 - [Otros](https://picodotdev.github.io/blog-bitix/2016/06/atajos-de-teclado-basicos-de-la-terminal-en-gnu-linux/)
 
-#### Cheat (https://www.putorius.net/linux-cheat-sheets.html):
-```
-$ sudo snap install cheat
-$ cheat.cheatsheet-setup
-```
+### Configurar editor de texto en terminal:
 
 Agregar variable de entorno a `~/.zshrc`:
 ```
 export EDITOR=vim
 ```
 
-#### Sdkman (https://sdkman.io/install):
+#### Cheat (https://www.putorius.net/linux-cheat-sheets.html):
+
+Instalar:
 ```
-$ curl -s "https://get.sdkman.io" | bash
+$ sudo snap install cheat
 ```
+
+Uso:
+```
+$ cheat COMANDO
+```
+
+> Ejemplo `cheat ssh`
 
 ## Comandos generales
 
