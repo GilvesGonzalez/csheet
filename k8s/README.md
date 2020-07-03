@@ -31,7 +31,7 @@ Instalar [VirtualBox](https://www.virtualbox.org/wiki/Linux_Downloads).
 $ sudo apt install virtualbox
 ```
 
-### kubectl (kubernetes command line tool)
+## kubectl (kubernetes command line tool)
 
 Instalar `kubectl` [aquí](https://kubernetes.io/docs/tasks/tools/install-kubectl/).
 
@@ -40,7 +40,7 @@ Verificar:
 $ kubectl version --client
 ```
 
-### minikube
+## minikube
 
 Instalar `minikube` [aquí](https://minikube.sigs.k8s.io/docs/start/):
 
@@ -84,7 +84,7 @@ Obtener objetos soportados en el API:
 $ kubectl api-resources
 ```
 
-### Correr app
+## Correr app
 
 ```
 $ kubectl create -f ARCHIVO.yml
@@ -150,7 +150,7 @@ Correr pod volatil para ejecutar comandos:
 $ kubectl run -i --tty <nombre> --image=<docker image> --restart=Never -- sh
 ```
 
-### Compose
+## Compose
 
 Instalar:
 ```
@@ -160,7 +160,7 @@ $ sudo chmod +x /usr/local/bin/docker-compose
 
 Más comandos en [docker](../docker)
 
-### Kompose
+## Kompose
 
 Instalar:
 ```
