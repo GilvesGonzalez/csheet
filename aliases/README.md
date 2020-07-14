@@ -41,7 +41,7 @@ alias docker-destroy-all='docker rm -f $(docker ps -aq) ; docker volume rm $(doc
 Actualizar:
 
 ```
-alias upgrade='sudo apt update -y && sudo apt upgrade -y && sudo apt autoremove && sudo snap refresh'
+alias upgrade='sudo apt update -y && sudo apt upgrade -y && sudo apt autoremove -y && sudo snap refresh'
 ```
 
 Obtener ram en GB:
