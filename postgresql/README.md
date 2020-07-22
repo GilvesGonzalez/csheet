@@ -5,6 +5,11 @@
 $ psql -l
 ```
 
+### Mostrar todas las configuraciones
+```
+$ psql -c 'show all'
+```
+
 #### Mostrar ayuda para backup:
 ```
 $ pg_dump -?

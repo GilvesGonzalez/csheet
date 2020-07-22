@@ -376,10 +376,11 @@ $ lsblk
 Mostrar información:
 ```
 $ lscpu   (cpu)
-$ nproc (número de procesadores)
+$ nproc   (número de procesadores)
 $ lsblk   (dispositivos)
 $ lsusb   (buses usb)
 $ lsmod   (módulos del kernel)
+$ free -h (memoria ram)
 ```
 
 Informacion del sistema:
