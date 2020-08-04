@@ -16,7 +16,11 @@ $ sudo apt install virtualbox
 
 Descargar desde [aquí](https://www.vagrantup.com/downloads.html).
 
-Instalar con `gdebi`.
+Instalar con `gdebi`, o con:
+
+```
+$ sudo apt install vagrant
+```
 
 ## Aprovisionar
 
