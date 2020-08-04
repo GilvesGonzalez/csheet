@@ -9,7 +9,7 @@ $ ansible --version
 
 ### Correr un `playbook.yml`
 
-> Para esto usaremos [vagrant](../vagrant) más información [aquí](https://www.vagrantup.com/docs/provisioning/ansible_intro)
+> Para esto usaremos [vagrant](../vagrant), para más información [aquí](https://www.vagrantup.com/docs/provisioning/ansible_intro)
 
 Agregar al archivo `Vagrantfile`:
 
@@ -35,9 +35,10 @@ Crear el archivo `playbook.yml` con lo siguiente:
 Luego para verificar:
 
 ```
+$ vagrant up
 $ vagrant ssh
 $ cat /tmp/testfile.txt
 ```
 
-> Notece el host `default`, esta configuración es generada automáticamente por vagrant
+> Nótese el host `default`, esta configuración es generada automáticamente por vagrant
 > en la ruta: `.vagrant/provisioners/ansible/inventory/vagrant_ansible_inventory`
