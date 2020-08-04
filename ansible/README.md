@@ -52,3 +52,11 @@ $ ansible-playbook -i hosts playbook.yml
 ```
 
 > Previamente se deben crear los archivos [hosts](https://docs.ansible.com/ansible/latest/user_guide/intro_inventory.html) y [playbook](https://docs.ansible.com/ansible/latest/user_guide/playbooks_intro.html).
+
+Probar la conexión de ansible a un host (usando ping):
+
+```
+$ ansible -i hosts -ping HOST
+```
+
+> `hosts` el archivo de configuración y `HOST` el host a alcanzar.
