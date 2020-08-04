@@ -60,3 +60,4 @@ $ ansible -i hosts -ping HOST
 ```
 
 > `hosts` el archivo de configuración y `HOST` el host a alcanzar.
+> se puede hacer ping a todos los hosts con `all`: `nsible -i hosts -ping all`
