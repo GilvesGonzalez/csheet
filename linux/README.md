@@ -689,3 +689,35 @@ Cow Say:
 ```
 $ cowsay MENSAJE
 ```
+
+## Generar valores
+
+Generar un número entero aleatorio:
+```
+$ shuf -i 1-10 -n 1 (del 1 al 10)
+```
+
+Generar un UUID random:
+```
+$ uuidgen
+```
+
+Generar md5:
+```
+$ echo -n "hola" | md5sum
+```
+
+Generar md5 de binario:
+```
+$ md5sum RUTAARCHIVO
+```
+
+Generar sha256 de binario:
+```
+$ sha256sum RUTAARCHIVO
+```
+
+Generar base64:
+```
+$ base64 -w0 RUTAARCHIVO
+```
