@@ -42,3 +42,13 @@ $ cat /tmp/testfile.txt
 
 > Nótese el host `default`, esta configuración es generada automáticamente por vagrant
 > en la ruta: `.vagrant/provisioners/ansible/inventory/vagrant_ansible_inventory`
+
+### Otros comandos
+
+Correr un playbook (pasando la configuración de host):
+
+```
+$ ansible-playbook -i hosts playbook.yml
+```
+
+> Previamente se deben crear los archivos [hosts](https://docs.ansible.com/ansible/latest/user_guide/intro_inventory.html) y [playbook](https://docs.ansible.com/ansible/latest/user_guide/playbooks_intro.html).
