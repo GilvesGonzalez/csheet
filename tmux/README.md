@@ -176,3 +176,20 @@ Mostrar/Eligir sesiones:
 ```
 Prefijo + s
 ```
+
+### Otros comandos
+
+Matar todo tmux:
+```
+$ tmux kill-server
+```
+
+Listar sesiones:
+```
+$ tmux list-sessions
+```
+
+Matar todas las sesiones menos la actual:
+```
+$ tmux kill-session -a
+```
