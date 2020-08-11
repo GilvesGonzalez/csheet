@@ -6,7 +6,7 @@ $ sudo apt install tmux
 
 Agregar variable de entorno al principio del archivo `vim ~/.zshrc`:
 ```
-[[ $TERM != "screen" ]] && exec tmux a
+[[ $TERM != "screen" ]] && exec tmux new-session -A
 export TERM="xterm-256color"
 ```
 
