@@ -9,7 +9,11 @@ $ sudo apt install nodejs npm
 ### Instalación de [nvm](https://github.com/nvm-sh/nvm)
 
 ```
-$ sudo apt install nvm
+$ curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.3/install.sh | bash
+```
+
+Mac:
+```
 $ brew install nvm
 ```
 
