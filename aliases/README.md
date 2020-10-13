@@ -18,7 +18,7 @@ Remover contenedores:
 alias rmps='docker rm -f $(docker ps -aq)'
 ```
 
-Remover contenedores y volúmenes:
+Remover volúmenes:
 
 ```
 alias rmvol='docker volume rm $(docker volume ls -q)'
