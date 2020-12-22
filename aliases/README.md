@@ -39,7 +39,7 @@ alias rmall='docker rm -f $(docker ps -aq) ; docker volume rm $(docker volume ls
 Remover dangling images:
 
 ```
-alias rmi-dangling='docker rmi -f $(docker images -f "dangling=true" -q)'
+alias rmidan='docker rmi -f $(docker images -f "dangling=true" -q)'
 ```
 
 #### Sistema
@@ -51,11 +51,13 @@ alias upgrade='sudo apt update -y && sudo apt upgrade -y && sudo apt autoremove 
 ```
 
 Obtener ram en GB:
+
 ```
 alias ram="free -h --giga | awk 'FNR==2{print \$7}'"
 ```
 
 Abrir archivo con app asociada:
+
 ```
 alias open='xdg-open'
 ```
@@ -78,16 +80,30 @@ Use `$ killport 80`
 
 #### Git
 
-Pull rebase de muchos repositorios:
+Pull rebase de muchos repositorios (recursivo):
 
 ```
-alias gup-all='find . -mindepth 1 -maxdepth 1 -type d -printf "\n\n>>>>%f\n" -exec git --git-dir={}/.git --work-tree=$PWD/{} pull -r origin master \;'
+alias gupr='find . -mindepth 1 -maxdepth 1 -type d -printf "\n\n>>>>%f\n" -exec git --git-dir={}/.git --work-tree=$PWD/{} pull -r origin master \;'
 ```
 
-Git status de muchos repositorios:
+Git status de muchos repositorios (recursivo):
 
 ```
-alias gst-all='find . -mindepth 1 -maxdepth 1 -type d -printf "\n\n>>>>%f\n" -exec git --git-dir={}/.git --work-tree=$PWD/{} status \;'
+alias gstr='find . -mindepth 1 -maxdepth 1 -type d -printf "\n\n>>>>%f\n" -exec git --git-dir={}/.git --work-tree=$PWD/{} status \;'
+```
+
+### Watch
+
+Ver las imagenes de docker:
+
+```
+alias wdi='watch -t docker images'
+```
+
+Ver contenedores de docker:
+
+```
+alias wps='watch -tx docker ps --format "table{{.Names}}\t{{.Image}}\t{{.Status}}\t{{.Ports}}"'
 ```
 
 ### Otros Usando ohmyzsh
