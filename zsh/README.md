@@ -45,7 +45,19 @@ verificar variable `TERM`:
 export TERM="xterm-256color"
 ```
 
-ejecutar:
+### COnfigurar tema
+
+Luego de los pasos anteriores cerrar e iniciar sesión de nuevo.
+
+En caso de ejecutar el terminal y no activarse el `zsh` ejecutar:
+
+```
+$ chsh -s $(which zsh)
+```
+
+Cerrar e iniciar sesión nuevamente.
+
+Ejecutar para configurar:
 
 ```
 $ p10k configure
