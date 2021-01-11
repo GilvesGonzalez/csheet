@@ -14,6 +14,7 @@ Usuario y correo:
 $ git config --global user.name "Saúl Piña"
 $ git config --global user.email "sauljabin@gmail.com"
 $ git config --global core.editor "vim"
+$ git config --global color.status "always"
 ```
 
 Listar configuración:
