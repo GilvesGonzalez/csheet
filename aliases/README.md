@@ -73,7 +73,7 @@ alias ipwifi="ip a | grep wlp | grep -Eo 'inet (addr:)?([0-9]*\.){3}[0-9]*' | gr
 IP pública:
 
 ```
-alias ippublic="curl checkip.amazonaws.com"
+alias ippublic='curl checkip.amazonaws.com'
 ```
 
 #### Procesos
@@ -112,6 +112,14 @@ Ver contenedores de docker:
 
 ```
 alias wps='watch -tx docker ps --format "table{{.Names}}\t{{.Image}}\t{{.Status}}\t{{.Ports}}"'
+```
+
+### Otros
+
+Random commit:
+
+```
+alias whatthecommit='curl http://whatthecommit.com/index.txt'
 ```
 
 ### Otros Usando ohmyzsh
