@@ -64,8 +64,16 @@ alias open='xdg-open'
 
 #### IP
 
+Wifi:
+
 ```
 alias ipwifi="ip a | grep wlp | grep -Eo 'inet (addr:)?([0-9]*\.){3}[0-9]*' | grep -Eo '([0-9]*\.){3}[0-9]*'"
+```
+
+IP pública:
+
+```
+alias ippublic="curl checkip.amazonaws.com"
 ```
 
 #### Procesos
