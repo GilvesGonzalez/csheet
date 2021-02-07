@@ -12,34 +12,46 @@ $ type ALIAS
 
 #### Docker
 
+Obtener procesos:
+
+```
+alias dps='docker ps --format "table{{.Names}}\t{{.Image}}\t{{.Status}}\t{{.Ports}}"'
+```
+
+Listar todos los contenedores incluidos los detenidos:
+
+```
+alias dpa='docker ps -a --format "table{{.Names}}\t{{.Image}}\t{{.Status}}\t{{.Ports}}"'
+```
+
+Listar imagenes:
+
+```
+alias dim='docker images'
+```
+
 Remover contenedores:
 
 ```
-alias rmps='docker rm -f $(docker ps -aq)'
+alias drmps='docker rm -f $(docker ps -aq)'
 ```
 
 Remover volúmenes:
 
 ```
-alias rmvol='docker volume rm $(docker volume ls -q)'
+alias drmvol='docker volume rm $(docker volume ls -q)'
 ```
 
 Remover imágenes:
 
 ```
-alias rmi='docker rmi -f $(docker images -aq)'
-```
-
-Remover todo:
-
-```
-alias rmall='docker rm -f $(docker ps -aq) ; docker volume rm $(docker volume ls -q) ; docker rmi -f $(docker images -aq)'
+alias drmim='docker rmi -f $(docker images -aq)'
 ```
 
 Remover dangling images:
 
 ```
-alias rmidan='docker rmi -f $(docker images -f "dangling=true" -q)'
+alias drmimd='docker rmi -f $(docker images -f "dangling=true" -q)'
 ```
 
 #### Sistema
@@ -59,7 +71,7 @@ alias ram="free -h --giga | awk 'FNR==2{print \$7}'"
 Abrir archivo con app asociada:
 
 ```
-alias open='xdg-open'
+alias open='xdg-open '
 ```
 
 #### IP
@@ -81,7 +93,7 @@ alias ippublic='curl checkip.amazonaws.com'
 Matar un proceso en un puerto:
 
 ```
-alias killport='fuser -v -n tcp -k'
+alias killport='fuser -v -n tcp -k '
 ```
 
 Use `$ killport 80`
@@ -102,16 +114,9 @@ alias gstr='find . -mindepth 1 -maxdepth 1 -type d -printf "\n\n>>>>%f\n" -exec 
 
 ### Watch
 
-Ver las imagenes de docker:
-
+Reescribir alias:
 ```
-alias wdi='watch -t docker images'
-```
-
-Ver contenedores de docker:
-
-```
-alias wps='watch -tx docker ps --format "table{{.Names}}\t{{.Image}}\t{{.Status}}\t{{.Ports}}"'
+alias watch='watch -txc '
 ```
 
 ### Otros
