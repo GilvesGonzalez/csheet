@@ -6,11 +6,7 @@ _Si usas zsh puedes activar el plugin **python** y **virtualenv**_
 
 Instalar:
 ```
-# apt install python python-pip python3 python3-pip
-```
-
-```
-$ pip3 install virtualenv virtualenvwrapper
+# apt install python3 python3-pip virtualenv virtualenvwrapper pipenv
 ```
 
 Abrir la configuración de zsh o bash:
@@ -23,7 +19,7 @@ Agregar al final del archivo:
 export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3
 export WORKON_HOME=~/.virtualenvs
 export VIRTUALENVWRAPPER_VIRTUALENV=~/.local/bin/virtualenv
-source ~/.local/bin/virtualenvwrapper.sh
+source /usr/share/virtualenvwrapper/virtualenvwrapper.sh
 ```
 
 Cargar configuraciones y crear carpeta para los virtualenv:
@@ -128,4 +124,16 @@ $ pip freeze > requirements.txt
 Instalar desde requirements.txt:
 ```
 $ pip install -r requirements.txt
+```
+
+### pipenv
+
+Crear nuevo proyecto:
+```
+$ pipenv --python 3.7
+```
+
+Abre el shell:
+```
+$ pipenv shell
 ```
