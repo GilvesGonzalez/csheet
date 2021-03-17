@@ -33,7 +33,7 @@ alias dvl='docker volume ls'
 Listar imagenes:
 
 ```
-alias dim='docker images'
+alias dim='docker images --format "table{{.Repository}}:{{.Tag}}\t{{.ID}}\t{{.Size}}"'
 ```
 
 Remover contenedores:
