@@ -23,9 +23,26 @@ $ git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 Configurar tmux `vim ~/.tmux.conf`:
 ```
 set-option -g prefix C-x
+
 set -g @plugin 'tmux-plugins/tpm'
 set -g @plugin 'jimeh/tmux-themepack'
 set -g @themepack 'powerline/default/blue'
+
+run -b '~/.tmux/plugins/tpm/tpm'
+```
+
+Configuración mac (mouse y clipboard) `vim ~/.tmux.conf`:
+```
+set-option -g prefix C-x
+
+set-option -g mouse on
+set-option -s set-clipboard off
+bind-key -T copy-mode MouseDragEnd1Pane send-keys -X copy-pipe-and-cancel "pbcopy"
+
+set -g @plugin 'tmux-plugins/tpm'
+set -g @plugin 'jimeh/tmux-themepack'
+set -g @themepack 'powerline/default/blue'
+
 run -b '~/.tmux/plugins/tpm/tpm'
 ```
 

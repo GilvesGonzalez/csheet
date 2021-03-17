@@ -24,6 +24,12 @@ Listar todos los contenedores incluidos los detenidos:
 alias dpa='docker ps -a --format "table{{.Names}}\t{{.Image}}\t{{.Status}}\t{{.Ports}}"'
 ```
 
+Listar todos los volúmenes:
+
+```
+alias dvl='docker volume ls'
+```
+
 Listar imagenes:
 
 ```
