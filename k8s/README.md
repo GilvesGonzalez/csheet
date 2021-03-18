@@ -172,3 +172,7 @@ Convertir:
 ```
 $ kompose convert
 ```
+
+## k9s
+
+Instalar `k9s` [aquí](https://k9scli.io/topics/install/)
