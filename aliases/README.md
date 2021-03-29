@@ -124,7 +124,7 @@ alias secret='python -c "import secrets; print(secrets.token_hex(16))"'
 
 ### Directorios
 ```
-alias dir="basename $(pwd)"
+alias dir='basename $(pwd)'
 ```
 
 ### Otros Usando ohmyzsh
