@@ -13,6 +13,7 @@ export TERM="xterm-256color"
 ## Tema
 
 - https://github.com/jimeh/tmux-themepack
+- https://github.com/wfxr/tmux-power
 - https://github.com/tmux-plugins/tpm
 
 Clonar:
@@ -20,13 +21,24 @@ Clonar:
 $ git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 ```
 
-Configurar tmux `vim ~/.tmux.conf`:
+Configurar (tmux-themepack) tmux `vim ~/.tmux.conf`:
 ```
 set-option -g prefix C-x
 
 set -g @plugin 'tmux-plugins/tpm'
 set -g @plugin 'jimeh/tmux-themepack'
 set -g @themepack 'powerline/default/blue'
+
+run -b '~/.tmux/plugins/tpm/tpm'
+```
+
+o configurar (tmux-power) tmux `vim ~/.tmux.conf`:
+```
+set-option -g prefix C-x
+
+set -g @plugin 'tmux-plugins/tpm'
+set -g @plugin 'wfxr/tmux-power'
+set -g @tmux_power_theme 'sky'
 
 run -b '~/.tmux/plugins/tpm/tpm'
 ```
