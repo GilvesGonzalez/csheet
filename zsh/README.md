@@ -111,3 +111,41 @@ if [ -x "$(command -v exa)" ]; then
     alias la="exa --icons --long --all --group"
 fi
 ```
+
+### Instalar monitores
+
+#### HTOP
+
+```bash
+$ sudo apt install htop
+```
+
+o
+
+```bash
+$ brew install htop
+```
+
+#### GOTOP
+
+```bash
+$ snap install gotop-cjbassi
+```
+
+o
+
+```bash
+$ brew install gotop
+```
+
+#### Lazydocker
+
+```bash
+$ snap install lazydocker
+```
+
+o
+
+```bash
+$ brew install lazydocker
+```
