@@ -4,57 +4,34 @@
 $ sudo apt install tmux
 ```
 
-Agregar variable de entorno al principio del archivo `vim ~/.zshrc`:
+o
+
 ```
+$ brew install tmux
+```
+
+Agregar variable de entorno al principio del archivo `vim ~/.zshrc`:
+```bash
 [[ $TERM != "screen" ]] && exec tmux new-session -A
 export TERM="xterm-256color"
 ```
 
-## Tema
-
-- https://github.com/jimeh/tmux-themepack
-- https://github.com/wfxr/tmux-power
-- https://github.com/tmux-plugins/tpm
+### Instalar manejador de plugins
 
 Clonar:
 ```
 $ git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 ```
 
-Configurar (tmux-themepack) tmux `vim ~/.tmux.conf`:
-```
+Configurar tmux `vi ~/.tmux.conf`:
+```bash
+# cambia C-b por C-x
 set-option -g prefix C-x
 
+# instala manejador de plugins
 set -g @plugin 'tmux-plugins/tpm'
-set -g @plugin 'jimeh/tmux-themepack'
-set -g @themepack 'powerline/default/blue'
 
-run -b '~/.tmux/plugins/tpm/tpm'
-```
-
-o configurar (tmux-power) tmux `vim ~/.tmux.conf`:
-```
-set-option -g prefix C-x
-
-set -g @plugin 'tmux-plugins/tpm'
-set -g @plugin 'wfxr/tmux-power'
-set -g @tmux_power_theme 'sky'
-
-run -b '~/.tmux/plugins/tpm/tpm'
-```
-
-Configuración mac (mouse y clipboard) `vim ~/.tmux.conf`:
-```
-set-option -g prefix C-x
-
-set-option -g mouse on
-set-option -s set-clipboard off
-bind-key -T copy-mode MouseDragEnd1Pane send-keys -X copy-pipe-and-cancel "pbcopy"
-
-set -g @plugin 'tmux-plugins/tpm'
-set -g @plugin 'jimeh/tmux-themepack'
-set -g @themepack 'powerline/default/blue'
-
+# inicializa manejador de plugins
 run -b '~/.tmux/plugins/tpm/tpm'
 ```
 
@@ -68,12 +45,55 @@ Activar/Actualizar plugins:
 Prefijo + I
 ```
 
+### Temas
+
 Instalar fuentes desde [nerd-fonts](https://github.com/romkatv/nerd-fonts):
 
 ```
-$ git clone --depth=1 https://github.com/romkatv/nerd-fonts.git ~/.nerd-fonts
+$ git clone https://github.com/romkatv/nerd-fonts.git ~/.nerd-fonts
 $ cd ~/.nerd-fonts
 $ ./install.sh
+```
+
+Configurar [tmux-themepack](https://github.com/jimeh/tmux-themepack) tmux `vim ~/.tmux.conf`:
+
+```bash
+...
+set -g @plugin 'jimeh/tmux-themepack'
+set -g @themepack 'powerline/default/blue'
+...
+```
+
+Configurar [tmux-power](https://github.com/wfxr/tmux-power) tmux `vim ~/.tmux.conf`:
+
+```bash
+...
+set -g @plugin 'wfxr/tmux-power'
+set -g @tmux_power_theme 'sky'
+...
+```
+
+Configurar [dracula](https://github.com/dracula/tmux) tmux `vim ~/.tmux.conf`:
+
+```bash
+...
+set -g @plugin 'dracula/tmux'
+set -g @dracula-plugins "battery network cpu-usage ram-usage time"
+set -g @dracula-show-left-icon session
+set -g @dracula-military-time true
+...
+```
+
+### Configuración mouse y clipboard en mac
+
+Abrir `vim ~/.tmux.conf`:
+
+```bash
+...
+set-option -g mouse on
+set-option -s set-clipboard off
+bind-key -T copy-mode MouseDragEnd1Pane send-keys -X copy-pipe-and-cancel "pbcopy"
+...
 ```
 
 ## Comandos
