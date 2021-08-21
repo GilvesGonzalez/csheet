@@ -12,7 +12,7 @@ $ brew install tmux
 
 Agregar variable de entorno al principio del archivo `vim ~/.zshrc`:
 ```bash
-[[ $TERM != "screen" ]] && exec tmux new-session -A
+[[ $TERM != "screen" ]] && exec tmux
 export TERM="xterm-256color"
 ```
 
@@ -103,8 +103,8 @@ o mac:
 
 ```bash
 ...
-set-option -g mouse on
-set-option -s set-clipboard off
+set -g mouse on
+set -s set-clipboard off
 bind-key -T copy-mode MouseDragEnd1Pane send-keys -X copy-pipe-and-cancel "pbcopy"
 ...
 ```
