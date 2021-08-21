@@ -114,7 +114,7 @@ fi
 
 ### Instalar monitores
 
-#### HTOP
+#### [htop](https://htop.dev/)
 
 ```bash
 $ sudo apt install htop
@@ -126,7 +126,7 @@ o
 $ brew install htop
 ```
 
-#### GOTOP
+#### [gotop](https://github.com/xxxserxxx/gotop)
 
 ```bash
 $ snap install gotop-cjbassi
@@ -138,7 +138,15 @@ o
 $ brew install gotop
 ```
 
-#### Lazydocker
+
+#### [gtop](https://github.com/aksakalli/gtop)
+
+```bash
+$ brew install node
+$ npm install gtop -g
+```
+
+#### [lazydocker](https://github.com/jesseduffield/lazydocker)
 
 ```bash
 $ snap install lazydocker
