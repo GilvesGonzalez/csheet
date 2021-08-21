@@ -97,6 +97,7 @@ agregar en linux:
 ```bash
 if [ -x "$(command -v colorls)" ]; then
     alias ls="colorls"
+    alias tree="colorls --tree"
     alias la="colorls -al"
 fi
 ```
@@ -106,6 +107,7 @@ o mac:
 ```bash
 if [ -x "$(command -v exa)" ]; then
     alias ls="exa --icons"
+    alias tree="exa --icons --tree"
     alias la="exa --icons --long --all --group"
 fi
 ```
