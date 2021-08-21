@@ -25,13 +25,10 @@ $ git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 
 Configurar tmux `vi ~/.tmux.conf`:
 ```bash
-# cambia C-b por C-x
-set-option -g prefix C-x
+set -g prefix C-Space
 
-# instala manejador de plugins
 set -g @plugin 'tmux-plugins/tpm'
 
-# inicializa manejador de plugins
 run -b '~/.tmux/plugins/tpm/tpm'
 ```
 
@@ -84,9 +81,21 @@ set -g @dracula-military-time true
 ...
 ```
 
-### Configuración mouse y clipboard en mac
+### Configuración mouse
+
+sudo apt install xclip
 
 Abrir `vim ~/.tmux.conf`:
+
+```bash
+...
+set -g mouse on
+set -s set-clipboard off
+bind-key -T copy-mode MouseDragEnd1Pane send-keys -X copy-pipe-and-cancel "xclip -selection clipboard -i"
+...
+```
+
+o mac:
 
 ```bash
 ...
@@ -100,7 +109,7 @@ bind-key -T copy-mode MouseDragEnd1Pane send-keys -X copy-pipe-and-cancel "pbcop
 
 Prefijo:
 ```
-Ctrl + x (default Ctrl + b)
+Ctrl + Space (default Ctrl + b)
 ```
 
 ### Paneles
