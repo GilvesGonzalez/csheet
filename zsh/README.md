@@ -7,7 +7,7 @@ $ sudo apt install zsh vim git curl wget ruby-full
 $ sudo gem install colorls
 ```
 
-o
+o mac:
 
 ```bash
 $ brew install zsh vim git curl wget exa
@@ -92,9 +92,7 @@ abrir archivo de configuración:
 $ vi ~/.zshrc
 ```
 
-y agregar:
-
-para linux:
+agregar en linux:
 
 ```bash
 if [ -x "$(command -v colorls)" ]; then
@@ -103,7 +101,7 @@ if [ -x "$(command -v colorls)" ]; then
 fi
 ```
 
-para mac:
+o mac:
 
 ```bash
 if [ -x "$(command -v exa)" ]; then
@@ -120,39 +118,35 @@ fi
 $ sudo apt install htop
 ```
 
-o
+o mac:
 
 ```bash
 $ brew install htop
 ```
 
-#### [gotop](https://github.com/xxxserxxx/gotop)
-
-```bash
-$ snap install gotop-cjbassi
-```
-
-o
-
-```bash
-$ brew install gotop
-```
-
-
 #### [gtop](https://github.com/aksakalli/gtop)
 
 ```bash
-$ brew install node
+$ curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.38.0/install.sh | bash
+$ nvm install 16
+$ npm install gtop -g
+```
+
+o mac:
+
+```bash
+$ brew install nvm
+$ nvm install 16
 $ npm install gtop -g
 ```
 
 #### [lazydocker](https://github.com/jesseduffield/lazydocker)
 
 ```bash
-$ snap install lazydocker
+$ curl https://raw.githubusercontent.com/jesseduffield/lazydocker/master/scripts/install_update_linux.sh | bash
 ```
 
-o
+o mac:
 
 ```bash
 $ brew install lazydocker
