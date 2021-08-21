@@ -83,7 +83,11 @@ set -g @dracula-military-time true
 
 ### Configuración mouse
 
+Linux:
+
+```bash
 sudo apt install xclip
+```
 
 Abrir `vim ~/.tmux.conf`:
 
