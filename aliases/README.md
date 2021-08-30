@@ -10,7 +10,7 @@ Para describir un alias:
 $ type ALIAS
 ```
 
-#### Docker
+### Docker
 
 Obtener procesos:
 ```
@@ -53,7 +53,7 @@ Remover dangling images:
 alias drmimd='docker rmi -f $(docker images -f "dangling=true" -q)'
 ```
 
-#### Sistema
+### Sistema
 
 Actualizar:
 ```
@@ -70,7 +70,7 @@ Abrir archivo con app asociada:
 alias open='xdg-open '
 ```
 
-#### IP
+### IP
 
 Wifi:
 ```
@@ -82,7 +82,7 @@ IP pública:
 alias ippublic='curl checkip.amazonaws.com'
 ```
 
-#### Procesos
+### Procesos
 
 Matar un proceso en un puerto:
 ```
@@ -91,7 +91,7 @@ alias killport='fuser -v -n tcp -k '
 
 Use `$ killport 80`
 
-#### Git
+### Git
 
 Pull rebase de muchos repositorios (recursivo):
 ```
@@ -103,16 +103,9 @@ Git status de muchos repositorios (recursivo):
 alias gstr='find . -mindepth 1 -maxdepth 1 -type d -printf "\n\n>>>>%f\n" -exec git --git-dir={}/.git --work-tree=$PWD/{} status \;'
 ```
 
-### Watch
-
-Reescribir alias:
-```
-alias watch='watch -txc '
-```
-
 ### Random
 
-Random commit:
+Random mensaje de commit:
 ```
 alias whatthecommit='curl http://whatthecommit.com/index.txt'
 ```
@@ -125,6 +118,45 @@ alias secret='python -c "import secrets; print(secrets.token_hex(16))"'
 ### Directorios
 ```
 alias dir='basename $(pwd)'
+```
+
+### Mejorar el `ls`
+
+```bash
+$ sudo apt ruby-full
+$ sudo gem install colorls
+```
+
+o mac:
+
+```bash
+$ brew exa
+```
+
+abrir archivo de configuración:
+
+```bash
+$ vi ~/.zshrc
+```
+
+agregar en linux:
+
+```bash
+if [ -x "$(command -v colorls)" ]; then
+    alias ls="colorls"
+    alias tree="colorls --tree"
+    alias la="colorls -al"
+fi
+```
+
+o mac:
+
+```bash
+if [ -x "$(command -v exa)" ]; then
+    alias ls="exa --icons"
+    alias tree="exa --icons --tree"
+    alias la="exa --icons --long --all --group"
+fi
 ```
 
 ### Otros Usando ohmyzsh

@@ -24,3 +24,4 @@ Base de conocimientos sobre comandos linux en español.
 - [ui](ui)
 - [ansible](ansible)
 - [gh](gh)
+- [monitors](monitors)

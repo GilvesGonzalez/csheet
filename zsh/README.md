@@ -3,14 +3,13 @@
 ### Prerequisitos
 
 ```bash
-$ sudo apt install zsh vim git curl wget ruby-full
-$ sudo gem install colorls
+$ sudo apt install zsh vim git curl wget
 ```
 
 o mac:
 
 ```bash
-$ brew install zsh vim git curl wget exa
+$ brew install zsh vim git curl wget
 ```
 
 ### Instalar [oh my zsh](https://ohmyz.sh/)
@@ -82,74 +81,4 @@ actualizar los plugins:
 
 ```bash
 plugins=( git zsh-syntax-highlighting zsh-autosuggestions )
-```
-
-### Mejorar el `ls`
-
-abrir archivo de configuración:
-
-```bash
-$ vi ~/.zshrc
-```
-
-agregar en linux:
-
-```bash
-if [ -x "$(command -v colorls)" ]; then
-    alias ls="colorls"
-    alias tree="colorls --tree"
-    alias la="colorls -al"
-fi
-```
-
-o mac:
-
-```bash
-if [ -x "$(command -v exa)" ]; then
-    alias ls="exa --icons"
-    alias tree="exa --icons --tree"
-    alias la="exa --icons --long --all --group"
-fi
-```
-
-### Instalar monitores
-
-#### [htop](https://htop.dev/)
-
-```bash
-$ sudo apt install htop
-```
-
-o mac:
-
-```bash
-$ brew install htop
-```
-
-#### [gtop](https://github.com/aksakalli/gtop)
-
-```bash
-$ curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.38.0/install.sh | bash
-$ nvm install 16
-$ npm install gtop -g
-```
-
-o mac:
-
-```bash
-$ brew install nvm
-$ nvm install 16
-$ npm install gtop -g
-```
-
-#### [lazydocker](https://github.com/jesseduffield/lazydocker)
-
-```bash
-$ curl https://raw.githubusercontent.com/jesseduffield/lazydocker/master/scripts/install_update_linux.sh | bash
-```
-
-o mac:
-
-```bash
-$ brew install lazydocker
 ```
