@@ -721,3 +721,15 @@ Generar base64:
 ```
 $ base64 -w0 RUTAARCHIVO
 ```
+
+## Mardown
+
+Instalar `glow`:
+```
+$ sudo snap install glow
+```
+
+Leer archivo markdown:
+```
+$ glow RUTAARCHIVO
+```
