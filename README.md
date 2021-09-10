@@ -25,3 +25,4 @@ Base de conocimientos sobre comandos linux en español.
 - [ansible](ansible)
 - [gh](gh)
 - [monitors](monitors)
+- [vscode](vscode)
