@@ -12,7 +12,7 @@ $ brew install tmux
 
 Agregar variable de entorno al principio del archivo `vim ~/.zshrc`:
 ```bash
-[[ "$TERMINAL_EMULATOR" != "JetBrains-JediTerm" ]] && [[ "$TERM" != "screen" ]] && exec tmux
+[[ "$TERM_PROGRAM" != "vscode" ]] && [[ "$TERMINAL_EMULATOR" != "JetBrains-JediTerm" ]] && [[ "$TERM" != "screen" ]] && exec tmux
 export TERM="xterm-256color"
 ```
 
