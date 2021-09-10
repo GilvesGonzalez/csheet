@@ -116,8 +116,20 @@ alias secret='python -c "import secrets; print(secrets.token_hex(16))"'
 ```
 
 ### Directorios
+
+Nombre del directorio actual:
 ```
 alias dir='basename $(pwd)'
+```
+
+Subir nivel:
+```
+alias cd..='cd ..'
+```
+
+Eliminar directorio:
+```
+alias rmdir='rm -rf '
 ```
 
 ### Mejorar el `ls`
