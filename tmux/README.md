@@ -65,7 +65,7 @@ Configurar [tmux-power](https://github.com/wfxr/tmux-power) tmux `vim ~/.tmux.co
 ```bash
 ...
 set -g @plugin 'wfxr/tmux-power'
-set -g @tmux_power_theme 'sky'
+set -g @tmux_power_theme 'default'
 ...
 ```
 
