@@ -1,17 +1,49 @@
 # Comandos en python
 
-_Si usas zsh puedes activar el plugin **python** y **virtualenv**_
+_Si usas zsh puedes activar el plugin **python**, **pyenv** y **virtualenv**_
+
+### Usando pyenv
+
+Prerrequisitos:
+
+```
+sudo apt install zlib1g-dev libedit-dev libssl-dev libbz2-dev libreadline-dev libsqlite3-dev build-essential
+```
+
+Instalar:
+```
+curl https://pyenv.run | bash
+```
+
+Agregar a `.zshrc`:
+```
+export PYENV_ROOT="$HOME/.pyenv"
+export PATH="$HOME/.pyenv/bin:$PATH"
+eval "$(pyenv init --path)"
+eval "$(pyenv virtualenv-init -)"
+```
+
+Instalar python:
+```
+pyenv install 3.9.7
+pyenv global 3.9.7
+```
+
+Virtual env:
+```
+pyenv virtualenv 3.9.7 python3-env
+```
 
 ### virtualenv/virtualenvwrapper
 
 Instalar:
 ```
-# apt install python3 python3-pip virtualenv virtualenvwrapper pipenv
+sudo apt install python3 python3-pip virtualenv virtualenvwrapper pipenv
 ```
 
 Abrir la configuración de zsh o bash:
 ```
-$ vi ~/.zshrc
+vi ~/.zshrc
 ```
 
 Agregar al final del archivo:
@@ -24,116 +56,116 @@ source /usr/share/virtualenvwrapper/virtualenvwrapper.sh
 
 Cargar configuraciones y crear carpeta para los virtualenv:
 ```
-$ source ~/.zshrc
-$ mkdir -p $WORKON_HOME
+source ~/.zshrc
+mkdir -p $WORKON_HOME
 ```
 
 ## Usando virtualenvwrapper
 
 Listar virtualenv:
 ```
-$ lsvirtualenv
+lsvirtualenv
 ```
 
 Crear virtualenv para python 2:
 ```
-$ mkvirtualenv --python=python2 NOMBRE
+mkvirtualenv --python=python2 NOMBRE
 ```
 
 Crear virtualenv para python 3:
 ```
-$ mkvirtualenv --python=python3 NOMBRE
+mkvirtualenv --python=python3 NOMBRE
 ```
 
 Activar virtualenv:
 ```
-$ workon NOMBRE
+workon NOMBRE
 ```
 
 Desactivar virtualenv:
 ```
-$ deactivate
+deactivate
 ```
 
 Remover virtualenv:
 ```
-$ rmvirtualenv NOMBRE
+rmvirtualenv NOMBRE
 ```
 
 ## Usando sólo virtualenv
 
 Crear virtualenv para python 2:
 ```
-$ virtualenv --python=python2 NOMBRE
+virtualenv --python=python2 NOMBRE
 ```
 
 Crear virtualenv para python 3:
 ```
-$ virtualenv --python=python3 NOMBRE
+virtualenv --python=python3 NOMBRE
 ```
 
 Activar virtualenv:
 ```
-$ source NOMBRE/bin/activate
+source NOMBRE/bin/activate
 ```
 
 Desactivar virtualenv:
 ```
-$ deactivate
+deactivate
 ```
 
 ### PIP
 
 Listar paquetes:
 ```
-$ pip list
-$ pip freeze
+pip list
+pip freeze
 ```
 
 Listar paquetes desactualizados:
 ```
-$ pip list --outdated
+pip list --outdated
 ```
 
 Mostrar información de un paquete:
 ```
-$ pip show NOMBRE
-$ pip show --files NOMBRE
+pip show NOMBRE
+pip show --files NOMBRE
 ```
 
 Instalar paquete:
 ```
-$ pip install NOMBRE
+pip install NOMBRE
 ```
 
 Desinstalar paquete:
 ```
-$ pip uninstall NOMBRE
+pip uninstall NOMBRE
 ```
 
 Actualizar paquete:
 ```
-$ pip install --upgrade NOMBRE
+pip install --upgrade NOMBRE
 ```
 
 Generar archivo requirements.txt:
 ```
-$ pip freeze > requirements.txt
+pip freeze > requirements.txt
 ```
 
 Instalar desde requirements.txt:
 ```
-$ pip install -r requirements.txt
+pip install -r requirements.txt
 ```
 
 ### pipenv
 
 Crear nuevo proyecto:
 ```
-$ pipenv --python 3.7
+pipenv --python 3.7
 ```
 
 Abre el shell:
 ```
-$ pipenv shell
+pipenv shell
 ```

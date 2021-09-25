@@ -4,6 +4,7 @@
 
 ```bash
 $ sudo apt install zsh vim git curl wget
+$ chsh -s $(which zsh)
 ```
 
 o mac:

@@ -26,9 +26,8 @@ $ git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 Configurar tmux `vi ~/.tmux.conf`:
 ```bash
 set -g prefix C-Space
-
+set -g default-shell /bin/zsh
 set -g @plugin 'tmux-plugins/tpm'
-
 run -b '~/.tmux/plugins/tpm/tpm'
 ```
 
