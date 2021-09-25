@@ -23,7 +23,7 @@ $ sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools
 Instalar fuentes desde [nerd-fonts](https://github.com/romkatv/nerd-fonts):
 
 ```bash
-$ git clone https://github.com/romkatv/nerd-fonts.git ~/.nerd-fonts
+$ git clone --depth 1 https://github.com/romkatv/nerd-fonts.git ~/.nerd-fonts
 $ cd ~/.nerd-fonts
 $ ./install.sh
 ```
