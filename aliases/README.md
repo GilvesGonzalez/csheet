@@ -135,7 +135,7 @@ alias rmdir='rm -rf '
 ### Mejorar el `ls`
 
 ```bash
-$ sudo apt ruby-full
+$ sudo apt install ruby-full
 $ sudo gem install colorls
 ```
 
