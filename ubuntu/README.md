@@ -42,3 +42,7 @@ cd ~/.gogh/themes
 
 - [zsh](../zsh)
 - [tmux](../tmux)
+
+# Configuración
+
+- Instalar [brew](https://brew.sh/)

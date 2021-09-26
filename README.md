@@ -27,3 +27,4 @@ Base de conocimientos sobre comandos linux en español.
 - [monitors](monitors)
 - [vscode](vscode)
 - [ubuntu](ubuntu)
+- [brew](brew)
