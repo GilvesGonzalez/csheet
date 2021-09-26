@@ -11,11 +11,8 @@ sudo apt upgrade -y
 
 # install utilities
 sudo apt install -y \
-# basic
     zsh vim git curl wget httpie jq tmux build-essential apt-transport-https ca-certificates gnupg lsb-release dconf-cli uuid-runtime software-properties-common \
-# python
-    pip python3   \
-# ui
+    pip python3 \
     gnome-tweaks gnome-shell-extensions papirus-icon-theme plank
 
 # install python apps
@@ -28,8 +25,7 @@ curl -s "https://get.sdkman.io" | sh
 
 # install docker
 curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg
-echo "deb [arch=amd64 signed-by=/usr/share/keyrings/docker-archive-keyring.gpg] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable" \
-     | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
+echo "deb [arch=amd64 signed-by=/usr/share/keyrings/docker-archive-keyring.gpg] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
 sudo apt update
 sudo apt install -y docker-ce docker-ce-cli containerd.io
 sudo usermod -aG docker $USER
