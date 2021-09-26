@@ -58,7 +58,7 @@ eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 brew install kubectl kubectx
 
 echo ">> Install spotify"
-sudo snap insta;; spotify
+sudo snap install spotify
 
 echo ">> Install oh-my-zsh"
 sh -c "$(wget https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh -O -)"
@@ -84,3 +84,7 @@ echo ">> Install zsh theme"
 git clone https://github.com/Mayccoll/Gogh.git ~/.gogh
 cd ~/.gogh/themes
 ./afterglow.sh
+
+echo ">> Restore files"
+cp .tmux.conf ~/.tmux.conf
+cp .zshrc ~/.zshrc
