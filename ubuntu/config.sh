@@ -3,7 +3,7 @@
 echo "Welcome to ubuntu configurer"
 
 # add ppa
-sudo add-apt-repository ppa:papirus/papirus
+sudo add-apt-repository -y ppa:papirus/papirus
 
 # update and upgrade
 sudo apt update
@@ -31,29 +31,29 @@ curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o 
 echo "deb [arch=amd64 signed-by=/usr/share/keyrings/docker-archive-keyring.gpg] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable" \
      | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
 sudo apt update
-sudo apt install docker-ce docker-ce-cli containerd.io
+sudo apt install -y docker-ce docker-ce-cli containerd.io
 sudo usermod -aG docker $USER
 
 # install enpass
 echo "deb https://apt.enpass.io/ stable main" > sudo tee /etc/apt/sources.list.d/enpass.list
 wget -O - https://apt.enpass.io/keys/enpass-linux.key | sudo tee /etc/apt/trusted.gpg.d/enpass.asc
 sudo apt update
-sudo apt install enpass
+sudo apt install -y enpass
 
 # install vscode
 wget -q https://packages.microsoft.com/keys/microsoft.asc -O- | sudo apt-key add -
 sudo add-apt-repository "deb [arch=amd64] https://packages.microsoft.com/repos/vscode stable main"
 sudo apt update
-sudo apt install code
+sudo apt install -y code
 
 # intall google chrome
 wget -q -O - https://dl.google.com/linux/linux_signing_key.pub | sudo apt-key add -
 sudo sh -c 'echo "deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list.d/google-chrome.list'
 sudo apt update
-sudo apt install google-chrome-stable
+sudo apt install -y google-chrome-stable
 
 # install kuberneres
-sudo apt install virtualbox minikube 
+sudo apt install -y virtualbox minikube
 eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 brew install kubectl kubectx
 
