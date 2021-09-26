@@ -1,7 +1,7 @@
 # Configuración a través de un archivo de configuración
 
 ```
-sh -c "$(wget http://pepe.sh -O -)"
+sh -c "$(wget https://raw.githubusercontent.com/sauljabin/linux-commands/main/ubuntu/config.sh -O -)"
 ```
 
 
