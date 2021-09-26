@@ -1,3 +1,15 @@
+# Configuración inicial
+
+```
+sudo apt update
+sudo apt upgrade
+sudo apt install -y zsh vim git curl wget pip python3 build-essential httpie jq tmux apt-transport-https ca-certificates gnupg lsb-release
+```
+
+# Agregar aliases
+
+[aliases](../aliases)
+
 # Temas
 
 ### Extensions
@@ -46,3 +58,7 @@ cd ~/.gogh/themes
 # Configuración
 
 - Instalar [brew](https://brew.sh/)
+- Instalar [sdk](https://sdkman.io/)
+- Instalar [docker](https://docs.docker.com/install/linux/docker-ce/ubuntu/)
+- Instalar [k8s](https://kubernetes.io/docs/tasks/tools/)
+
