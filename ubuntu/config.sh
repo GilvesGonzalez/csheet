@@ -7,7 +7,7 @@ sudo add-apt-repository -y ppa:papirus/papirus
 
 # update and upgrade
 sudo apt update
-sudo apt upgrade
+sudo apt upgrade -y
 
 # install utilities
 sudo apt install -y \
