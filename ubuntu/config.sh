@@ -36,7 +36,7 @@ sudo apt install -y docker-ce docker-ce-cli containerd.io
 sudo usermod -aG docker $USER
 
 echo ">> Install enpass"
-echo "deb https://apt.enpass.io/ stable main" > sudo tee /etc/apt/sources.list.d/enpass.list
+echo "deb https://apt.enpass.io/ stable main" | sudo tee /etc/apt/sources.list.d/enpass.list > /dev/null
 wget -O - https://apt.enpass.io/keys/enpass-linux.key | sudo tee /etc/apt/trusted.gpg.d/enpass.asc
 sudo apt update
 sudo apt install -y enpass
