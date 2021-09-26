@@ -41,7 +41,7 @@ sudo apt install plank
 
 ### Terminal theme
 
-[temas](/afterglow.sh)
+[temas](https://mayccoll.github.io/Gogh/)
 
 ```
 sudo apt-get install dconf-cli uuid-runtime
