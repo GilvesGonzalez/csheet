@@ -1,6 +1,6 @@
 #!/bin/sh
 
-set -Eeo pipefail
+set -e
 
 echo ">> Adding PPA"
 sudo add-apt-repository -y ppa:papirus/papirus
