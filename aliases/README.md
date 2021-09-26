@@ -171,6 +171,14 @@ if [ -x "$(command -v exa)" ]; then
 fi
 ```
 
+### Watch
+
+Disco:
+
+```
+alias wdisk="watch -tc 'df -H | grep -vE \"(tmpfs|loop|udev)\"'"
+```
+
 ### Otros Usando ohmyzsh
 
 - [Cheat sheet](https://github.com/robbyrussell/oh-my-zsh/wiki/Cheatsheet)
