@@ -9,7 +9,7 @@ $ sudo apt install nodejs npm
 ### Instalación de [nvm](https://github.com/nvm-sh/nvm)
 
 ```
-$ curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.3/install.sh | bash
+$ curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.38.0/install.sh | bash
 ```
 
 Mac:
@@ -19,16 +19,9 @@ $ brew install nvm
 
 ### Comandos nvm
 
-Instalar node:
-
-```
-$ nvm install 14.0.0
-```
-
-o LTS
-
 ```
 $ nvm install --lts
+$ nvm alias default stable
 ```
 
 ### Comandos typescript
