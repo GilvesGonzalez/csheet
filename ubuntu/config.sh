@@ -13,7 +13,11 @@ echo ">> Install utilities"
 sudo apt install -y \
     zsh vim git curl wget httpie jq tmux build-essential apt-transport-https ca-certificates gnupg lsb-release dconf-cli uuid-runtime software-properties-common \
     pip python3 \
-    gnome-tweaks gnome-shell-extensions papirus-icon-theme plank
+    gnome-tweaks gnome-shell-extensions papirus-icon-theme plank\
+
+echo ">> Config git"
+git config --global user.name "Saúl Piña"
+git config --global user.email "sauljabin@gmail.com"
 
 echo ">> Install pip apps"
 pip install --upgrade pip
