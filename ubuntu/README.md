@@ -29,11 +29,13 @@ sudo apt install plank
 
 ### Terminal theme
 
+[temas](/afterglow.sh)
+
 ```
 sudo apt-get install dconf-cli uuid-runtime
 git clone https://github.com/Mayccoll/Gogh.git ~/.gogh
 cd ~/.gogh/themes
-./tokyo-night.sh
+./afterglow.sh
 ```
 
 ### Zsh y Tux
