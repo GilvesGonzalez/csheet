@@ -20,8 +20,8 @@ pip install --upgrade pip
 pip install poetry licensegh gitignoregh
 
 echo ">> Install package manager"
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-curl -s "https://get.sdkman.io" | sh
+echo | bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+curl -s "https://get.sdkman.io" | bash
 
 echo ">> Install docker"
 curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg
