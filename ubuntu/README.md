@@ -55,7 +55,7 @@ cd ~/.gogh/themes
 - [zsh](../zsh)
 - [tmux](../tmux)
 
-# Configuración
+# Otras herramientas
 
 - Instalar [brew](https://brew.sh/)
 - Instalar [sdk](https://sdkman.io/)
