@@ -1,3 +1,10 @@
+# Configuración a través de un archivo de configuración
+
+```
+sh -c "$(wget http://pepe.sh -O -)"
+```
+
+
 # Configuración inicial
 
 ```
