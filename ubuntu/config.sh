@@ -87,5 +87,5 @@ cd ~/.gogh/themes
 ./afterglow.sh
 
 echo ">> Restore files"
-wget -O https://raw.githubusercontent.com/sauljabin/linux-commands/main/ubuntu/.zshrc ~/.zshrc
-wget -O https://raw.githubusercontent.com/sauljabin/linux-commands/main/ubuntu/.tmux.conf ~/.tmux.conf
+wget -O ~/.zshrc https://raw.githubusercontent.com/sauljabin/linux-commands/main/ubuntu/.zshrc 
+wget -O ~/.tmux.conf https://raw.githubusercontent.com/sauljabin/linux-commands/main/ubuntu/.tmux.conf 
