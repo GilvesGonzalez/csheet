@@ -142,7 +142,7 @@ $ sudo gem install colorls
 o mac:
 
 ```bash
-$ brew exa
+$ brew install exa
 ```
 
 abrir archivo de configuración:
