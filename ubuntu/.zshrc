@@ -67,4 +67,5 @@ alias ls="colorls"
 alias tree="colorls --tree"
 alias la="colorls -al"
 alias wdisk="watch -tc 'df -H | grep -vE \"(tmpfs|loop|udev)\"'"
+alias code.="code ."
 
