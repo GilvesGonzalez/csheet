@@ -38,7 +38,7 @@ $ tsc -v
 
 Iniciar proyecto:
 ```
-$ tsc -init
+$ tsc --init
 ```
 
 Compilación (`-w` continua, `*` todos):

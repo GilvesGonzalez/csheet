@@ -12,20 +12,10 @@ o mac:
 $ brew install htop
 ```
 
-### Sistema [gtop](https://github.com/aksakalli/gtop)
+### Sistema [btm](https://github.com/ClementTsang/bottom)
 
 ```bash
-$ curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.38.0/install.sh | bash
-$ nvm install 16
-$ npm install gtop -g
-```
-
-o mac:
-
-```bash
-$ brew install nvm
-$ nvm install 16
-$ npm install gtop -g
+$ brew install bottom
 ```
 
 ### Tamaño de archivo [ncdu](https://dev.yorhel.nl/ncdu)
