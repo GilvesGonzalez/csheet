@@ -540,3 +540,8 @@ Rebase: Situarse en la rama que va a fusionar
 $ git rebase BRANCH
 (alias) $ grb BRANCH
 ```
+
+Cambiar autor de varios commits:
+```
+git rebase -i <hash-commit> -x "git commit --amend --reset-author -CHEAD"
+```
