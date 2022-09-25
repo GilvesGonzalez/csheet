@@ -130,7 +130,7 @@ Cheatsheets are licensed under [Creative Commons CC0 1.0][cc0]. See
 - [cheatsheets][]
 - [personal cheatsheets][]
 
-[LICENSE]: https://github.com/sauljabin/cheatsheets/blob/main/LICENSE
+[LICENSE]: https://github.com/sauljabin/cheatsheets/blob/main/.github/LICENSE
 [cc0]: https://creativecommons.org/publicdomain/zero/1.0/legalcode
 [cheat]:  https://github.com/cheat/cheat
 [docopt]: http://docopt.org
