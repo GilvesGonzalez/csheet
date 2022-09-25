@@ -1,4 +1,4 @@
-# cheatsheets-personal
+# cheatsheets
 
 This repository contains personal cheatsheets to be used with
 [cheat][] and similar applications.
@@ -13,12 +13,12 @@ brew install cheat
 
 or check the [cheat installation] page.
 
-### Install cheatsheets-personal
+### Install cheatsheets
 
 > First verify cheat's conf.yml file, generally at `~/.config/cheat/conf.yml`
 
 ```sh
-git clone https://github.com/sauljabin/cheatsheets-personal.git ~/.config/cheat/cheatsheets/personal
+git clone https://github.com/sauljabin/cheatsheets.git ~/.config/cheat/cheatsheets/personal
 ```
 
 ## Format
@@ -55,12 +55,12 @@ Cheatsheets are licensed under [Creative Commons CC0 1.0][cc0]. See
 
 - [cheat][]
 - [cheatsheets][]
-- [cheatsheets-personal][]
+- [personal cheatsheets][]
 
-[LICENSE]: https://github.com/sauljabin/cheatsheets-personal/blob/main/LICENSE
+[LICENSE]: https://github.com/sauljabin/cheatsheets/blob/main/LICENSE
 [cc0]: https://creativecommons.org/publicdomain/zero/1.0/legalcode
 [cheat]:  https://github.com/cheat/cheat
 [docopt]: http://docopt.org
 [cheatsheets]: https://github.com/cheat/cheatsheets
-[cheatsheets-personal]: https://github.com/sauljabin/cheatsheets-personal
+[personal cheatsheets]: https://github.com/sauljabin/cheatsheets
 [cheat installation]: https://github.com/cheat/cheat/blob/master/INSTALLING.md
