@@ -1,4 +1,0 @@
-# Install
-
-https://brew.sh/
-

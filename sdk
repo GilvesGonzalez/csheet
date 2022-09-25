@@ -1,0 +1,23 @@
+---
+tags: [ packaging ]
+---
+# To install sdk:
+curl -s "https://get.sdkman.io" | bash
+
+# To list available sdks:
+sdk list
+
+# To list available sdk versions:
+sdk list <sdk>
+
+# To see current installed sdks:
+sdk current
+
+# To install sdk:
+sdk install <sdk> <version>
+
+# To use sdk version:
+sdk use <sdk> <version>
+
+# To set a sdk version permanently:
+sdk default <sdk> <version>

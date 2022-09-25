@@ -1,0 +1,23 @@
+---
+tags: [ docker ]
+---
+# To remove all images:
+docker rmi -f $(docker images -aq)
+
+# To remove all volumes:
+docker volume rm $(docker volume ls -q)
+
+# To stop all containers:
+docker stop $(docker ps -aq)
+
+# To remove all stopped containers:
+docker rm -f $(docker ps -aq)
+
+# To prune whole system:
+docker system prune -af --volumes
+
+# To start a container with volume and variable:
+docker run -d -p <host-port>:<container-port> -e <variable-key>=<variable-value> -v <host-path>:<container-path> <image-name>
+
+# To remove dangling images:
+docker rmi -f $(docker images -f "dangling=true" -q)

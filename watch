@@ -1,0 +1,5 @@
+---
+tags: [ watch ]
+---
+# To watch disk usage:
+watch -tc 'df -H | grep -vE "(tmpfs|loop|udev)"'

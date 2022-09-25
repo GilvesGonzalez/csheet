@@ -1,0 +1,26 @@
+---
+tags: [ tui ]
+---
+# bottom system monitor: https://github.com/ClementTsang/bottom
+brew install bottom
+btm
+
+# lazydocker docker interface: https://github.com/jesseduffield/lazydocker
+brew install lazydocker
+lazydocker
+
+# k9s kubernetes administrator: https://github.com/derailed/k9s
+brew install k9s
+k9s
+
+# kaskade kafka interface: https://github.com/sauljabin/kaskade
+pip install kaskade
+kskd
+
+# ncdu disk usage monitor: https://dev.yorhel.nl/ncdu/scr
+brew install ncdu
+ncdu
+
+# htop processes monitor: https://github.com/htop-dev/htop
+brew install htop
+htop

@@ -4,3 +4,5 @@
 .Trash-*
 .DS_Store
 *.swp
+.dccache
+.idea

@@ -1,0 +1,46 @@
+---
+tags: [ alias ]
+---
+# To describe a alias:
+type <alias>
+
+# To get docker process:
+alias dps='docker ps --format "table{{.Names}}\t{{.Image}}\t{{.Status}}\t{{.Ports}}"'
+
+# To get docker processes including the stopped ones:
+alias dpa='docker ps -a --format "table{{.Names}}\t{{.Image}}\t{{.Status}}\t{{.Ports}}"'
+
+# To list docker volumes:
+alias dvl='docker volume ls'
+
+# To list docker images:
+alias dim='docker images --format "table{{.Repository}}:{{.Tag}}\t{{.ID}}\t{{.Size}}"'
+
+# To get available ram:
+alias ram="free -h --giga | awk 'FNR==2{print \$7}'"
+
+# To get wifi's ip:
+alias wifisip="ip a | grep wlp | grep -Eo 'inet (addr:)?([0-9]*\.){3}[0-9]*' | grep -Eo '([0-9]*\.){3}[0-9]*'"
+
+# To get public ip:
+alias publicip='curl checkip.amazonaws.com'
+
+# To kill processes using port:
+alias killport='fuser -v -n tcp -k '
+killport <port>
+
+# To get current directory:
+alias dir='basename $(pwd)'
+
+# To go up:
+alias cd..='cd ..'
+
+# To improve ls command:
+alias ls='exa --icons'
+alias la='exa --icons --long --all --group'
+
+# To improve tree command:
+alias tree='exa --icons --tree'
+
+# To improve cat command:
+alias cat='bat '
