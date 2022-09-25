@@ -1,7 +1,6 @@
 # cheatsheets
 
-This repository contains personal cheatsheets to be used with
-[cheat][] and similar applications.
+This repository contains personal cheatsheets to be used with [cheat][].
 
 ## Installation and Usage
 
@@ -15,8 +14,8 @@ or check the [cheat installation] page.
 
 ### Install cheatsheets
 
-> First verify cheat's conf.yml file, generally at `~/.config/cheat/conf.yml`
-> Run `cheat -d` to see the paths
+> First verify cheat's conf.yml file, generally at `~/.config/cheat/conf.yml`.
+> Run `cheat -d` to see the paths.
 
 ```sh
 git clone https://github.com/sauljabin/cheatsheets.git ~/.config/cheat/cheatsheets/personal
