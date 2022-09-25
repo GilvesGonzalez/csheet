@@ -16,9 +16,82 @@ or check the [cheat installation] page.
 ### Install cheatsheets
 
 > First verify cheat's conf.yml file, generally at `~/.config/cheat/conf.yml`
+> Run `cheat -d` to see the paths
 
 ```sh
 git clone https://github.com/sauljabin/cheatsheets.git ~/.config/cheat/cheatsheets/personal
+```
+
+### Usage
+
+To view a cheatsheet:
+
+```sh
+cheat tar      # a "top-level" cheatsheet
+cheat foo/bar  # a "nested" cheatsheet
+```
+
+To view a cheatsheet inside a path:
+
+```sh
+cheat -p community tar
+cheat -p personal tar
+```
+
+To view a cheatsheet inside all paths:
+
+```sh
+cheat -a tar
+```
+
+To edit a cheatsheet:
+
+```sh
+cheat -e tar     # opens the "tar" cheatsheet for editing, or creates it if it does not exist
+cheat -e foo/bar # nested cheatsheets are accessed like this
+```
+
+To view the configured cheatpaths:
+
+```sh
+cheat -d
+```
+
+To list all available cheatsheets:
+
+```sh
+cheat -l
+```
+
+To list all cheatsheets that are tagged with "networking":
+
+```sh
+cheat -l -t networking
+```
+
+To list all cheatsheets on the "personal" path:
+
+```sh
+cheat -l -p personal
+```
+
+To search for the phrase "ssh" among cheatsheets:
+
+```sh
+cheat -s ssh
+```
+
+To search (by regex) for cheatsheets that contain an IP address:
+
+```sh
+cheat -r -s '(?:[0-9]{1,3}\.){3}[0-9]{1,3}'
+```
+
+Flags may be combined in intuitive ways. Example: to search sheets on the
+"personal" cheatpath that are tagged with "networking" and match a regex:
+
+```sh
+cheat -p personal -t networking --regex -s '(?:[0-9]{1,3}\.){3}[0-9]{1,3}'
 ```
 
 ## Format
