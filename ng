@@ -1,0 +1,28 @@
+---
+tags: [ ng, angular ]
+---
+# To install ng:
+npm install -g @angular/cli
+
+# To generate new project:
+ng new my-first-project
+cd my-first-project
+ng serve
+
+# To install project:
+npm install
+
+# To generate element:
+ng generate <directive|pipe|service|class|guard|interface|enum|module> <name>
+
+# To build project:
+ng build
+
+# To test project:
+ng test
+
+# To test headeless:
+ng test --no-watch --no-progress --browsers ChromeHeadless
+
+# To lint project:
+ng lint

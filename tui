@@ -1,5 +1,5 @@
 ---
-tags: [ tui ]
+tags: [ tui, terminal ]
 ---
 # bottom system monitor: https://github.com/ClementTsang/bottom
 brew install bottom
@@ -16,6 +16,10 @@ k9s
 # kaskade kafka interface: https://github.com/sauljabin/kaskade
 pip install kaskade
 kskd
+
+# kayak ksqldb interface: https://github.com/sauljabin/kayak
+pip install kayak
+kyk
 
 # ncdu disk usage monitor: https://dev.yorhel.nl/ncdu/scr
 brew install ncdu
