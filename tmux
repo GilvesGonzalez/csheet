@@ -7,7 +7,7 @@ vim ~/.zshrc
 
   and add some configurations at the begining of the file:
 
-[[ "$TERM_PROGRAM" != "vscode" ]] && [[ "$TERMINAL_EMULATOR" != "JetBrains-JediTerm" ]] && [[ "$TERM" != "screen" ]] && [[ -z "$TMUX" ]] && exec tmux
+[[ "$TERM_PROGRAM" != "vscode" ]] && [[ "$TERMINAL_EMULATOR" != "JetBrains-JediTerm" ]] && [[ "$TERM" != "screen" ]] && [[ -z "$TMUX" ]] && { tmux attach || exec tmux new-session && exit;}
 export TERM="xterm-256color"
 
 # To install plugins:
@@ -74,3 +74,6 @@ Ctrl-Space + w
 # To kill window (also killing all panels):
 Ctrl-Space + : 
 kill-w -t <0-9>
+
+# To kill all:
+tmux kill-server
