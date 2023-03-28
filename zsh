@@ -1,5 +1,5 @@
 ---
-tags: [ theme ]
+tags: [ zsh ]
 ---
 # To install nerd-fonts: https://github.com/romkatv/nerd-fonts
 git clone --depth 1 https://github.com/romkatv/nerd-fonts.git ~/.nerd-fonts
@@ -32,17 +32,3 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
   then:
 
 p10k configure
-
-# To install Gogh: https://gogh-co.github.io/Gogh/
-bash -c "$(wget -qO- https://git.io/vQgMr)"
-
-# To improve commands:
-brew install exa bat
-vim ~/.zshrc
-
-  and add some alias:
-
-alias ls='exa --icons'
-alias la='exa --icons --long --all --group'
-alias tree='exa --icons --tree'
-alias cat='bat '

@@ -36,6 +36,7 @@ alias dir='basename $(pwd)'
 alias cd..='cd ..'
 
 # To improve ls command:
+brew install exa
 alias ls='exa --icons'
 alias la='exa --icons --long --all --group'
 
@@ -43,4 +44,5 @@ alias la='exa --icons --long --all --group'
 alias tree='exa --icons --tree'
 
 # To improve cat command:
+brew install bat
 alias cat='bat '
