@@ -7,7 +7,7 @@ vim ~/.zshrc
 
   and add some configurations at the begining of the file:
 
-[[ "$TERM_PROGRAM" != "vscode" ]] && [[ "$TERMINAL_EMULATOR" != "JetBrains-JediTerm" ]] && [[ "$TERM" != "screen" ]] && [[ -z "$TMUX" ]] && { tmux attach || exec tmux new-session && exit;}
+[[ "$TERM_PROGRAM" != "vscode" ]] && [[ "$TERMINAL_EMULATOR" != "JetBrains-JediTerm" ]] && [[ "$TERM" != "screen" ]] && [[ -z "$TMUX" ]] && exec tmux new-session
 export TERM="xterm-256color"
 
 # To install plugins:
