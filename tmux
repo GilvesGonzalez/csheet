@@ -45,6 +45,9 @@ Ctrl-Space + Ctrl-arrows
 
 # To close panel:
 Ctrl-Space + x
+
+  or 
+
 Ctrl + d
 
 # To zoom in or out over a panel:
@@ -72,8 +75,25 @@ Ctrl-Space + 0-9
 Ctrl-Space + w
 
 # To kill window (also killing all panels):
-Ctrl-Space + : 
+Ctrl-Space + :
 kill-w -t <0-9>
+
+# To create a new session:
+Ctrl-Space + :
+new-s
+
+# To kill session:
+Ctrl-Space + :
+kill-ses -t 0-9
+
+# To move to previous session:
+Ctrl-Space + (
+
+# To move to next session:
+Ctrl-Space + )
+
+# To show sessions:
+Ctrl-Space + s
 
 # To kill all:
 tmux kill-server
