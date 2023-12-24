@@ -17,10 +17,6 @@ k9s
 pip install kaskade
 kskd
 
-# kayak ksqldb interface: https://github.com/sauljabin/kayak
-pip install kayak
-kyk
-
 # ncdu disk usage monitor: https://dev.yorhel.nl/ncdu/scr
 brew install ncdu
 ncdu
