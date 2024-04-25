@@ -1,6 +1,9 @@
 ---
 tags: [ packaging ]
 ---
+# To install brew:
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+
 # To add repository:
 brew tap homebrew/cask-font
 
