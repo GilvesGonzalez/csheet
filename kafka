@@ -1,8 +1,8 @@
 ---
 tags: [ kafka ]
 ---
-# To install commands:
-curl -s "https://raw.githubusercontent.com/sauljabin/kafka-cli-installer/main/install.sh" | bash
+# To install cli tools:
+brew install kafka
 
 # To create a topic:
 kafka-topics --create --bootstrap-server <server> \
