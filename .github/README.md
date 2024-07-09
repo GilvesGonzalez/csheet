@@ -12,13 +12,14 @@ brew install cheat
 
 or check the [cheat installation] page.
 
-### Install cheatsheets
+### Install this cheatsheets
 
 > First verify cheat's conf.yml file, generally at `~/.config/cheat/conf.yml`.
 > Run `cheat -d` to see the paths.
 
 ```sh
 git clone https://github.com/sauljabin/cheatsheets.git ~/.config/cheat/cheatsheets/personal
+cheat -l -p personal
 ```
 
 ### Usage
@@ -26,8 +27,7 @@ git clone https://github.com/sauljabin/cheatsheets.git ~/.config/cheat/cheatshee
 To view a cheatsheet:
 
 ```sh
-cheat tar      # a "top-level" cheatsheet
-cheat foo/bar  # a "nested" cheatsheet
+cheat tar
 ```
 
 To view a cheatsheet inside a path:
@@ -41,13 +41,6 @@ To view a cheatsheet inside all paths:
 
 ```sh
 cheat -a tar
-```
-
-To edit a cheatsheet:
-
-```sh
-cheat -e tar     # opens the "tar" cheatsheet for editing, or creates it if it does not exist
-cheat -e foo/bar # nested cheatsheets are accessed like this
 ```
 
 To view the configured cheatpaths:
@@ -126,13 +119,11 @@ Cheatsheets are licensed under [Creative Commons CC0 1.0][cc0]. See
 ## Other links
 
 - [cheat][]
-- [cheatsheets][]
-- [personal cheatsheets][]
+- [community cheatsheets][]
 
 [LICENSE]: https://github.com/sauljabin/cheatsheets/blob/main/.github/LICENSE
 [cc0]: https://creativecommons.org/publicdomain/zero/1.0/legalcode
 [cheat]:  https://github.com/cheat/cheat
 [docopt]: http://docopt.org
-[cheatsheets]: https://github.com/cheat/cheatsheets
-[personal cheatsheets]: https://github.com/sauljabin/cheatsheets
+[community cheatsheets]: https://github.com/cheat/cheatsheets
 [cheat installation]: https://github.com/cheat/cheat/blob/master/INSTALLING.md
