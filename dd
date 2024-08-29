@@ -5,4 +5,4 @@ tags: [ util, usb, iso ]
 lsblk
 
 # To burn an iso:
-sudo dd bs=4M if=ubuntu-24.04-desktop-amd64.iso of=/dev/<name>
+sudo dd bs=1M oflag=sync status=progress if=ubuntu-24.04-desktop-amd64.iso of=/dev/<name>
