@@ -1,0 +1,8 @@
+---
+tags: [ util, usb, iso ]
+---
+# To list disks:
+lsblk
+
+# To burn an iso:
+sudo dd bs=4M if=ubuntu-24.04-desktop-amd64.iso of=/dev/<name>
