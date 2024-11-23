@@ -3,3 +3,9 @@ tags: [ vcs ]
 ---
 # To amend author from commit:
 git rebase -i <hash-commit> -x "git commit --amend --reset-author -CHEAD"
+
+# To find a file in the history:
+git log --all --full-history --patch -- "**/*<key word>*"
+
+# To restore a deleted file:
+git checkout <hash-commit where was deledted>^ -- <file path>
