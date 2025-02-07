@@ -18,7 +18,7 @@ or check the [cheat installation] page.
 > Run `cheat -d` to see the paths.
 
 ```sh
-git clone https://github.com/sauljabin/cheatsheets.git ~/.config/cheat/cheatsheets/personal
+git clone https://github.com/GilvesGonzalez/cheatsheets.git ~/.config/cheat/cheatsheets/personal
 cheat -l -p personal
 ```
 
@@ -121,7 +121,7 @@ Cheatsheets are licensed under [Creative Commons CC0 1.0][cc0]. See
 - [cheat][]
 - [community cheatsheets][]
 
-[LICENSE]: https://github.com/sauljabin/cheatsheets/blob/main/.github/LICENSE
+[LICENSE]: https://github.com/GilvesGonzalez/cheatsheets/blob/main/.github/LICENSE
 [cc0]: https://creativecommons.org/publicdomain/zero/1.0/legalcode
 [cheat]:  https://github.com/cheat/cheat
 [docopt]: http://docopt.org

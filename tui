@@ -9,7 +9,7 @@ lazydocker
 brew install k9s
 k9s
 
-# kaskade kafka interface: https://github.com/sauljabin/kaskade
+# kaskade kafka interface: https://github.com/GilvesGonzalez/kaskade
 brew install kaskade
 kaskade
 
